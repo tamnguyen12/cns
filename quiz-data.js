@@ -1,0 +1,1687 @@
+let quizQuestions = [
+  {
+    category: "Khái niệm nền tảng",
+    q: "Theo tài liệu, dữ liệu (Data) được hiểu đúng nhất là gì?",
+    options: ["Kết quả đã được xử lý để ra quyết định", "Các sự kiện, số liệu, ký hiệu thô chưa được xử lý", "Một chương trình điều khiển phần cứng", "Thiết bị lưu trữ thông tin lâu dài"],
+    correct: 1,
+    explanation: "Dữ liệu là các yếu tố thô như số, chữ, hình ảnh, âm thanh, chưa có nhiều ý nghĩa nếu chưa đặt vào bối cảnh và xử lý."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Điểm khác biệt chính giữa dữ liệu và thông tin là gì?",
+    options: ["Thông tin là dữ liệu đã được xử lý, tổ chức và có ý nghĩa", "Dữ liệu luôn chính xác hơn thông tin", "Thông tin chỉ tồn tại dưới dạng số", "Dữ liệu chỉ xuất hiện trên Internet"],
+    correct: 0,
+    explanation: "Thông tin được tạo ra khi dữ liệu được sắp xếp, xử lý và đặt trong bối cảnh giúp con người hiểu và ra quyết định."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Ví dụ '8, 7, 9' trở thành thông tin khi nào?",
+    options: ["Khi được lưu trong ổ cứng", "Khi được đặt trong bối cảnh điểm thi của một sinh viên", "Khi được đổi sang dạng nhị phân", "Khi được in ra giấy"],
+    correct: 1,
+    explanation: "Các con số rời rạc là dữ liệu; khi biết đó là điểm thi Toán, Lý, Hóa của một sinh viên, chúng mang ý nghĩa cụ thể."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Máy tính được mô tả tổng quát là thiết bị có khả năng nào?",
+    options: ["Chỉ lưu trữ dữ liệu", "Chỉ kết nối Internet", "Tự động nhận dữ liệu, xử lý theo chương trình, lưu trữ và xuất kết quả", "Chỉ hiển thị hình ảnh"],
+    correct: 2,
+    explanation: "Máy tính là thiết bị điện tử hoạt động theo chương trình để nhận input, xử lý, lưu trữ và tạo output hữu ích."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Cốt lõi của xử lý thông tin trên máy tính là biểu diễn dữ liệu bằng gì?",
+    options: ["Mã màu RGB", "Tín hiệu nhị phân 0 và 1", "Chữ cái tiếng Anh", "Sóng âm analog"],
+    correct: 1,
+    explanation: "Máy tính xử lý mọi loại dữ liệu số hóa dưới dạng bit 0 và 1, từ văn bản đến âm thanh, hình ảnh, video."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Giai đoạn nào mô tả việc CPU thực hiện tính toán, so sánh và logic?",
+    options: ["Input", "Processing", "Output", "Storage"],
+    correct: 1,
+    explanation: "Processing là giai đoạn xử lý dữ liệu, nơi CPU thực hiện các phép toán và logic theo chương trình."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Khi người dùng gõ bàn phím, dữ liệu đang đi vào giai đoạn nào?",
+    options: ["Tiếp nhận dữ liệu", "Xuất thông tin", "Lưu trữ dài hạn", "Gỡ bỏ ứng dụng"],
+    correct: 0,
+    explanation: "Gõ phím là hành động đưa dữ liệu và lệnh vào máy tính, thuộc giai đoạn input."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Ví dụ nào thuộc giai đoạn Output?",
+    options: ["CPU tính toán công thức", "RAM lưu tạm dữ liệu", "Văn bản được hiển thị trên màn hình", "Người dùng nhập mật khẩu"],
+    correct: 2,
+    explanation: "Output là lúc máy tính cung cấp kết quả cho người dùng, như hiển thị trên màn hình, phát qua loa hoặc in ra giấy."
+  },
+  {
+    category: "Khái niệm nền tảng",
+    q: "Storage trong chu trình xử lý thông tin có ý nghĩa gì?",
+    options: ["Chỉ tạo giao diện người dùng", "Lưu trữ dữ liệu, chương trình và kết quả xử lý", "Chỉ phát âm thanh", "Chỉ nhận lệnh từ chuột"],
+    correct: 1,
+    explanation: "Storage gồm cả lưu tạm thời trong RAM và lưu lâu dài trên thiết bị lưu trữ như HDD/SSD."
+  },
+  {
+    category: "Công nghệ số",
+    q: "Công nghệ số được hiểu là gì?",
+    options: ["Chỉ là điện thoại thông minh", "Hệ sinh thái công cụ, hệ thống, thiết bị và tài nguyên điện tử dựa trên dữ liệu số", "Một loại dây cáp mạng", "Một phần mềm soạn thảo văn bản"],
+    correct: 1,
+    explanation: "Công nghệ số bao gồm thiết bị, nền tảng, hệ thống và tài nguyên hoạt động bằng việc tạo, lưu trữ, xử lý hoặc truyền dữ liệu số."
+  },
+  {
+    category: "Công nghệ số",
+    q: "Yếu tố nào thuộc nhóm công cụ và thiết bị điện tử trong công nghệ số?",
+    options: ["Sách giấy", "Máy tính, điện thoại thông minh, cảm biến IoT", "Bàn ghế lớp học", "Bảng trắng truyền thống"],
+    correct: 1,
+    explanation: "Tài liệu nêu máy tính, smartphone, tablet, smartwatch, cảm biến IoT và máy chủ là các phương tiện vật lý của công nghệ số."
+  },
+  {
+    category: "Công nghệ số",
+    q: "Ví dụ nào thuộc nhóm hệ thống và nền tảng số?",
+    options: ["Internet và LMS", "Bút bi", "Giấy in", "Bàn phím cơ"],
+    correct: 0,
+    explanation: "Internet, LMS, mạng xã hội và lưu trữ đám mây là các hệ thống hoặc nền tảng số."
+  },
+  {
+    category: "Công nghệ số",
+    q: "Tài nguyên và nội dung số bao gồm ví dụ nào?",
+    options: ["Trang web, ebook, video bài giảng, cơ sở dữ liệu khoa học", "Ổ cắm điện và dây nguồn", "Bàn học và ghế", "Vỏ máy tính"],
+    correct: 0,
+    explanation: "Đây là dữ liệu và thông tin đã được số hóa, có thể dùng trong học tập, nghiên cứu và đời sống."
+  },
+  {
+    category: "Công nghệ số",
+    q: "Vai trò nào của công nghệ số được nhấn mạnh với sinh viên đại học?",
+    options: ["Chỉ dùng để giải trí", "Hỗ trợ học tập, nghiên cứu, giao tiếp, hợp tác và quản lý học tập", "Thay thế hoàn toàn giảng viên", "Chỉ dùng khi thi trực tuyến"],
+    correct: 1,
+    explanation: "Tài liệu nêu công nghệ số là công cụ học tập, nghiên cứu, giao tiếp, hợp tác và nền tảng quản lý học tập qua LMS."
+  },
+  {
+    category: "Công nghệ số",
+    q: "LMS trong bối cảnh đại học chủ yếu dùng để làm gì?",
+    options: ["Tăng tốc CPU", "Cung cấp tài liệu, giao bài, tổ chức thi và quản lý điểm", "Thay pin laptop", "Kết nối tai nghe Bluetooth"],
+    correct: 1,
+    explanation: "Hệ thống quản lý học tập giúp giảng viên và sinh viên quản lý tài liệu, bài tập, kiểm tra và điểm số có hệ thống."
+  },
+  {
+    category: "Công nghệ số",
+    q: "Vì sao năng lực số được xem là kỹ năng thiết yếu?",
+    options: ["Vì mọi phần mềm đều miễn phí", "Vì thị trường lao động kỷ nguyên số đòi hỏi khả năng thích ứng với công nghệ", "Vì không cần học kiến thức chuyên môn", "Vì chỉ cần dùng mạng xã hội"],
+    correct: 1,
+    explanation: "Tài liệu nhấn mạnh thành thạo công nghệ số là nền tảng cho học tập, phát triển cá nhân và nghề nghiệp bền vững."
+  },
+  {
+    category: "Phần cứng",
+    q: "Một hệ thống máy tính hoàn chỉnh gồm hai thành phần chính nào?",
+    options: ["CPU và chuột", "Phần cứng và phần mềm", "Màn hình và bàn phím", "Internet và Wi-Fi"],
+    correct: 1,
+    explanation: "Phần mềm ra lệnh, phần cứng thực thi; hai thành phần này phối hợp để tạo nên hệ thống máy tính hoàn chỉnh."
+  },
+  {
+    category: "Phần cứng",
+    q: "Phần cứng (Hardware) là gì?",
+    options: ["Các chương trình điều khiển máy", "Các bộ phận vật lý có thể nhìn thấy và chạm vào", "Tài khoản trực tuyến", "Dữ liệu lưu trên đám mây"],
+    correct: 1,
+    explanation: "Phần cứng là phần hữu hình của máy tính như CPU, RAM, ổ cứng, bàn phím, màn hình, mainboard."
+  },
+  {
+    category: "Phần cứng",
+    q: "CPU thường được ví như bộ phận nào của máy tính?",
+    options: ["Bộ não", "Dạ dày", "Cổng kết nối", "Màn hình"],
+    correct: 0,
+    explanation: "CPU thực hiện lệnh chương trình, phép toán số học, logic và điều khiển hoạt động xử lý dữ liệu."
+  },
+  {
+    category: "Phần cứng",
+    q: "NPU trong CPU hiện đại có chức năng nổi bật nào?",
+    options: ["Chỉ in tài liệu", "Chuyên xử lý các tác vụ AI hiệu quả và tiết kiệm năng lượng", "Tăng kích thước màn hình", "Lưu trữ dữ liệu lâu dài"],
+    correct: 1,
+    explanation: "NPU là bộ xử lý thần kinh chuyên dụng cho AI, giúp chạy ứng dụng AI trên thiết bị nhanh và hiệu quả hơn."
+  },
+  {
+    category: "Phần cứng",
+    q: "RAM có vai trò gì?",
+    options: ["Lưu trữ tạm thời dữ liệu của hệ điều hành và ứng dụng đang chạy", "Lưu dữ liệu vĩnh viễn khi tắt máy", "Kết nối Internet", "In tài liệu"],
+    correct: 0,
+    explanation: "RAM là không gian làm việc tạm thời để CPU truy cập nhanh; dữ liệu trong RAM mất khi tắt nguồn."
+  },
+  {
+    category: "Phần cứng",
+    q: "Dung lượng RAM lớn giúp máy tính chủ yếu làm gì tốt hơn?",
+    options: ["Chạy nhiều ứng dụng cùng lúc mượt mà hơn", "In nhanh hơn", "Có màn hình sáng hơn", "Tự động cập nhật Windows"],
+    correct: 0,
+    explanation: "RAM lớn tăng khả năng đa nhiệm vì nhiều dữ liệu ứng dụng có thể được giữ sẵn cho CPU truy cập."
+  },
+  {
+    category: "Phần cứng",
+    q: "Điểm đúng về ROM là gì?",
+    options: ["Mất dữ liệu khi tắt nguồn", "Chứa chương trình khởi động và firmware thiết yếu", "Chỉ dùng để xem video", "Luôn được người dùng sửa hằng ngày"],
+    correct: 1,
+    explanation: "ROM là bộ nhớ chỉ đọc, chứa phần sụn và chương trình khởi động do nhà sản xuất cài đặt, không mất khi tắt nguồn."
+  },
+  {
+    category: "Phần cứng",
+    q: "HDD có đặc điểm nào theo tài liệu?",
+    options: ["Dùng chip nhớ flash và không có bộ phận chuyển động", "Dùng đĩa từ quay, dung lượng lớn với giá rẻ", "Chỉ dùng cho điện thoại", "Không thể lưu hệ điều hành"],
+    correct: 1,
+    explanation: "HDD là công nghệ cũ hơn, dùng đĩa từ quay để đọc ghi, ưu điểm là dung lượng lớn và giá thành thấp."
+  },
+  {
+    category: "Phần cứng",
+    q: "Ưu điểm nổi bật của SSD so với HDD là gì?",
+    options: ["Có nhiều bộ phận cơ học hơn", "Tốc độ đọc/ghi nhanh hơn nhiều", "Chỉ hoạt động khi có Wi-Fi", "Không lưu được hệ điều hành"],
+    correct: 1,
+    explanation: "SSD dùng chip nhớ flash, không có bộ phận chuyển động nên giúp khởi động, mở ứng dụng và sao chép dữ liệu nhanh hơn."
+  },
+  {
+    category: "Phần cứng",
+    q: "NVMe là chuẩn kết nối hiệu năng cao dùng giao tiếp nào?",
+    options: ["PCIe", "VGA", "RJ45", "NFC"],
+    correct: 0,
+    explanation: "NVMe sử dụng PCIe để đạt tốc độ vượt trội so với chuẩn SATA cũ."
+  },
+  {
+    category: "Phần cứng",
+    q: "Thiết bị nào là thiết bị đầu vào?",
+    options: ["Màn hình", "Máy in", "Bàn phím", "Loa"],
+    correct: 2,
+    explanation: "Bàn phím, chuột, webcam, micro và máy quét đưa dữ liệu hoặc lệnh từ người dùng vào máy tính."
+  },
+  {
+    category: "Phần cứng",
+    q: "Thiết bị nào là thiết bị đầu ra?",
+    options: ["Micro", "Máy quét", "Màn hình", "Chuột"],
+    correct: 2,
+    explanation: "Màn hình hiển thị thông tin đã xử lý cho người dùng, nên là thiết bị đầu ra."
+  },
+  {
+    category: "Phần cứng",
+    q: "Mainboard/Motherboard được mô tả như gì?",
+    options: ["Xương sống kết nối các thành phần phần cứng", "Phần mềm diệt virus", "Bộ nhớ tạm thời", "Ứng dụng văn phòng"],
+    correct: 0,
+    explanation: "Bo mạch chủ kết nối CPU, RAM, ổ cứng, card mở rộng để các thành phần giao tiếp và hoạt động đồng bộ."
+  },
+  {
+    category: "Phần mềm",
+    q: "Phần mềm (Software) là gì?",
+    options: ["Tập hợp chương trình, tập lệnh và dữ liệu hướng dẫn phần cứng thực hiện tác vụ", "Tất cả linh kiện vật lý", "Một loại cổng USB", "Tên gọi khác của màn hình"],
+    correct: 0,
+    explanation: "Phần mềm là phần vô hình của máy tính, ra lệnh và hướng dẫn phần cứng."
+  },
+  {
+    category: "Phần mềm",
+    q: "Phần mềm hệ thống có vai trò chính nào?",
+    options: ["Chỉ tạo slide", "Quản lý phần cứng và tạo môi trường cho phần mềm khác hoạt động", "Chỉ duyệt web", "Chỉ chỉnh sửa ảnh"],
+    correct: 1,
+    explanation: "Phần mềm hệ thống gồm hệ điều hành, driver và tiện ích hệ thống, giúp điều phối hoạt động của máy."
+  },
+  {
+    category: "Phần mềm",
+    q: "Ví dụ tiêu biểu nhất của phần mềm hệ thống là gì?",
+    options: ["Photoshop", "Hệ điều hành", "PowerPoint", "Zalo"],
+    correct: 1,
+    explanation: "Hệ điều hành là thành phần quan trọng và quen thuộc nhất của phần mềm hệ thống."
+  },
+  {
+    category: "Phần mềm",
+    q: "Phần mềm ứng dụng được thiết kế để làm gì?",
+    options: ["Thực hiện các công việc cụ thể phục vụ trực tiếp người dùng", "Thay thế CPU", "Làm cáp mạng nhanh hơn", "Lưu firmware trong ROM"],
+    correct: 0,
+    explanation: "Trình duyệt, bộ Office, Canva, Zoom, game là các ứng dụng phục vụ nhu cầu cụ thể của người dùng."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Ưu điểm lớn của máy tính để bàn là gì?",
+    options: ["Di động nhất", "Hiệu năng trên giá tốt, tản nhiệt tốt và dễ nâng cấp", "Không cần nguồn điện", "Luôn có màn hình cảm ứng"],
+    correct: 1,
+    explanation: "Desktop phù hợp tác vụ nặng vì dễ nâng cấp, hiệu năng/giá tốt và tản nhiệt hiệu quả."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Nhược điểm chính của máy tính để bàn là gì?",
+    options: ["Không thể nâng cấp", "Cồng kềnh, kém di động, phụ thuộc nguồn điện trực tiếp", "Màn hình quá nhỏ", "Không thể dùng bàn phím"],
+    correct: 1,
+    explanation: "Desktop thường cố định tại nhà hoặc văn phòng, không tiện mang đi và cần nguồn điện trực tiếp."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Laptop phù hợp nhất với nhóm người dùng nào?",
+    options: ["Chỉ máy chủ trung tâm", "Sinh viên, nhân viên văn phòng, người thường xuyên di chuyển", "Chỉ người cần máy cố định", "Chỉ thiết bị đeo"],
+    correct: 1,
+    explanation: "Laptop tích hợp màn hình, bàn phím, touchpad và pin trong một khối gọn nhẹ nên phù hợp học tập và làm việc di động."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Máy tính bảng có phương thức nhập liệu chính là gì?",
+    options: ["Cảm ứng và thao tác chạm/vuốt", "Dây mạng RJ45", "Máy in", "Ổ cứng ngoài"],
+    correct: 0,
+    explanation: "Tablet được tối ưu cho màn hình cảm ứng, có thể dùng bút stylus để ghi chú nhanh."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Điểm hạn chế của tablet khi làm việc phức tạp là gì?",
+    options: ["Không có pin", "Hiệu năng hạn chế và bàn phím ảo không thuận tiện cho văn bản dài", "Không đọc được sách", "Không thể lướt web"],
+    correct: 1,
+    explanation: "Tablet rất tiện để đọc, ghi chú và giải trí nhưng không tối ưu cho công việc phức tạp hoặc nhập văn bản dài."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Điện thoại thông minh có ưu điểm nổi bật nào?",
+    options: ["Dễ nâng cấp CPU", "Luôn bên người và kết nối Internet mọi lúc mọi nơi", "Màn hình lớn nhất", "Tản nhiệt tốt hơn desktop"],
+    correct: 1,
+    explanation: "Smartphone nhỏ gọn, đa năng, kết nối qua Wi-Fi hoặc mạng di động và có hệ sinh thái ứng dụng lớn."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Thiết bị nào dùng màn hình mực điện tử E-ink?",
+    options: ["Máy đọc sách điện tử", "Máy in laser", "Webcam", "Router Wi-Fi"],
+    correct: 0,
+    explanation: "E-reader dùng màn hình E-ink cho trải nghiệm giống giấy, ít mỏi mắt và pin kéo dài."
+  },
+  {
+    category: "Thiết bị cá nhân",
+    q: "Đồng hồ thông minh (Smartwatch) trong tài liệu có thể làm gì ngoài xem giờ?",
+    options: ["Nhận thông báo, theo dõi sức khỏe, luyện tập, nghe nhạc và thanh toán không chạm", "Chỉ thay thế ổ cứng ngoài", "Chỉ dùng để gỡ ứng dụng Windows", "Chỉ tạo mạng LAN trong lớp học"],
+    correct: 0,
+    explanation: "Smartwatch là thiết bị số cá nhân/thiết bị đeo, hỗ trợ thông báo, theo dõi sức khỏe, hoạt động thể thao và một số tiện ích số khác."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "Hệ điều hành (OS) đóng vai trò gì?",
+    options: ["Trung gian giao tiếp giữa người dùng và phần cứng", "Một loại ổ cứng", "Một cổng sạc", "Một thiết bị đầu ra"],
+    correct: 0,
+    explanation: "OS là phần mềm hệ thống phức tạp giúp phần cứng trở nên sử dụng được và tạo môi trường tương tác cho người dùng."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "Chức năng nào thuộc quản lý tài nguyên phần cứng của OS?",
+    options: ["Quyết định chương trình dùng CPU, RAM, ổ cứng và thiết bị ngoại vi", "Chỉ tạo tài khoản mạng xã hội", "Chỉ thiết kế poster", "Chỉ nén ảnh"],
+    correct: 0,
+    explanation: "OS phân bổ tài nguyên như CPU, bộ nhớ, đọc/ghi ổ cứng và điều khiển máy in, webcam."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "File System Management của OS giúp người dùng làm gì?",
+    options: ["Tổ chức, lưu trữ và truy xuất dữ liệu có cấu trúc", "Tăng độ sáng màn hình bằng phần cứng", "Ghép nối NFC", "Tự viết bài luận"],
+    correct: 0,
+    explanation: "Quản lý tệp tin và thư mục giúp dữ liệu được tổ chức khoa học, dễ tìm kiếm và quản lý."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "Hệ điều hành nào phổ biến nhất trên máy tính cá nhân theo tài liệu?",
+    options: ["Microsoft Windows", "iOS", "Android", "NFC"],
+    correct: 0,
+    explanation: "Windows được mô tả là hệ điều hành phổ biến nhất thế giới trên desktop/laptop."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "Ưu điểm lớn của Windows là gì?",
+    options: ["Chỉ chạy trên Mac", "Giao diện thân thiện và tương thích hệ sinh thái phần cứng, phần mềm lớn", "Không bao giờ bị phần mềm độc hại nhắm tới", "Mã nguồn mở hoàn toàn"],
+    correct: 1,
+    explanation: "Windows dễ dùng và hỗ trợ rất rộng phần cứng, phần mềm, game và ứng dụng thương mại."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "Ưu điểm lớn của Windows là gì?",
+    options: ["Giao diện thân thiện và tương thích với hệ sinh thái phần cứng, phần mềm rất lớn", "Chỉ chạy trên thiết bị Apple", "Không bao giờ là mục tiêu của phần mềm độc hại", "Là hệ điều hành mã nguồn mở hoàn toàn"],
+    correct: 0,
+    explanation: "Windows phổ biến nhờ dễ sử dụng và hỗ trợ rất rộng phần cứng, phần mềm, game và ứng dụng thương mại."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "Linux nổi bật bởi đặc điểm nào?",
+    options: ["Mã nguồn mở, miễn phí, linh hoạt và tùy biến cao", "Chỉ chạy trên iPhone", "Không có bản phân phối", "Không dùng được cho lập trình"],
+    correct: 0,
+    explanation: "Linux có nhiều bản phân phối như Ubuntu, Fedora, Linux Mint và phổ biến trong lập trình, server, khoa học dữ liệu."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "Android được phát triển bởi ai?",
+    options: ["Google", "Apple", "Microsoft", "Cisco"],
+    correct: 0,
+    explanation: "Android là hệ điều hành di động do Google phát triển, dùng trên nhiều hãng thiết bị."
+  },
+  {
+    category: "Hệ điều hành",
+    q: "iOS là hệ điều hành dành cho thiết bị nào?",
+    options: ["iPhone", "Máy tính Windows", "Router Wi-Fi", "Máy in"],
+    correct: 0,
+    explanation: "iOS là hệ điều hành độc quyền cho iPhone; iPadOS là biến thể dành cho iPad."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "GUI là gì?",
+    options: ["Giao diện đồ họa người dùng", "Chuẩn cáp mạng", "Bộ nhớ chỉ đọc", "Công nghệ thanh toán"],
+    correct: 0,
+    explanation: "GUI dùng biểu tượng, cửa sổ, màn hình nền và thao tác chuột/bàn phím để người dùng tương tác trực quan."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "Thành phần nào của GUI là khu vực làm việc chính?",
+    options: ["Desktop", "Firmware", "RJ45", "RAM"],
+    correct: 0,
+    explanation: "Desktop là màn hình nền, nơi chứa biểu tượng và các cửa sổ đang làm việc."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "Taskbar trên Windows hoặc Dock trên macOS dùng để làm gì?",
+    options: ["Chứa biểu tượng ứng dụng thường dùng và ứng dụng đang chạy", "Lưu dữ liệu vĩnh viễn", "Kết nối NFC", "Quét tài liệu giấy"],
+    correct: 0,
+    explanation: "Taskbar/Dock giúp truy cập nhanh và quản lý các ứng dụng đang mở."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "CLI có ưu điểm nào so với GUI trong một số tác vụ?",
+    options: ["Mạnh, hiệu quả, ít tốn tài nguyên, phù hợp tự động hóa và quản trị", "Luôn dễ nhìn hơn GUI", "Chỉ dùng để xem ảnh", "Không cần nhập lệnh"],
+    correct: 0,
+    explanation: "CLI tương tác bằng lệnh văn bản, ít trực quan hơn nhưng rất hiệu quả cho lập trình, quản trị hệ thống và tự động hóa."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "Tệp tin (File) là gì?",
+    options: ["Đơn vị cơ bản để lưu trữ thông tin trên máy tính", "Thiết bị xuất âm thanh", "Một loại cáp", "Một thao tác chuột"],
+    correct: 0,
+    explanation: "File có thể chứa tài liệu, ảnh, nhạc hoặc chương trình; thường có tên và phần mở rộng."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "Phần mở rộng trong tên tệp giúp điều gì?",
+    options: ["Nhận biết loại tệp", "Tăng dung lượng RAM", "Sạc laptop nhanh hơn", "Tạo mạng LAN"],
+    correct: 0,
+    explanation: "Ví dụ .docx, .jpg giúp hệ điều hành và người dùng biết tệp thuộc loại nào."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "Phần mở rộng trong tên tệp như .docx hoặc .jpg giúp điều gì?",
+    options: ["Giúp hệ điều hành và người dùng nhận biết loại tệp", "Tăng dung lượng RAM", "Sạc laptop nhanh hơn", "Tạo mạng LAN"],
+    correct: 0,
+    explanation: "Tên tệp thường gồm tên và phần mở rộng; phần mở rộng giúp xác định tệp là tài liệu, hình ảnh, âm thanh, chương trình..."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "Đường dẫn (Path) là gì?",
+    options: ["Địa chỉ đầy đủ chỉ vị trí tệp hoặc thư mục trong cấu trúc cây", "Một phần mềm họp trực tuyến", "Một loại CPU", "Một tiêu chuẩn Bluetooth"],
+    correct: 0,
+    explanation: "Path như D:\\HocTap\\Nam_1\\DaiSo\\Baitap.docx cho biết vị trí đầy đủ của tệp."
+  },
+  {
+    category: "Giao diện và tệp tin",
+    q: "Ứng dụng quản lý tệp trên macOS là gì?",
+    options: ["Finder", "File Explorer", "Ubuntu Software", "Google Meet"],
+    correct: 0,
+    explanation: "macOS dùng Finder; Windows dùng File Explorer; Ubuntu dùng Files."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Bước quan trọng nhất khi cài đặt phần mềm là gì?",
+    options: ["Tìm nguồn cài đặt an toàn", "Tắt tất cả cập nhật", "Tải từ liên kết quảng cáo bất kỳ", "Bỏ qua mọi cảnh báo"],
+    correct: 0,
+    explanation: "Nguồn chính thức hoặc cửa hàng ứng dụng giúp tránh virus, phần mềm độc hại và phần mềm cài kèm không mong muốn."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Nguồn tải phần mềm nào an toàn nhất theo tài liệu?",
+    options: ["Trang web chính thức của nhà phát triển", "Email không rõ nguồn gốc", "Trang quảng cáo lạ", "File chia sẻ không rõ tác giả"],
+    correct: 0,
+    explanation: "Trang chính thức như google.com/chrome là nguồn đáng tin cậy để tải ứng dụng."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Tệp cài đặt trên Windows thường có đuôi nào?",
+    options: [".exe hoặc .msi", ".dmg", ".jpg", ".mp3"],
+    correct: 0,
+    explanation: "Windows thường dùng tệp .exe hoặc .msi để cài đặt chương trình."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Tệp cài đặt trên Windows thường có đuôi nào?",
+    options: [".exe hoặc .msi", ".dmg", ".jpg", ".mp3"],
+    correct: 0,
+    explanation: "Trên Windows, trình cài đặt thường là tệp .exe hoặc .msi; người dùng nhấp đúp và làm theo hướng dẫn."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Khi cài phần mềm miễn phí trên Windows, cần chú ý điều gì?",
+    options: ["Đọc kỹ tùy chọn để tránh phần mềm quảng cáo hoặc thanh công cụ cài kèm", "Luôn chọn mọi tùy chọn", "Tắt trình cài đặt giữa chừng", "Đổi tên ổ cứng"],
+    correct: 0,
+    explanation: "Một số phần mềm miễn phí có thể cài kèm thành phần không mong muốn, nên cần đọc kỹ và bỏ chọn nếu có."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Trên Windows, muốn gỡ ứng dụng thường vào đâu?",
+    options: ["Settings -> Apps -> Apps & features", "Finder -> Applications", "Google Play", "Terminal chỉ đọc"],
+    correct: 0,
+    explanation: "Tài liệu hướng dẫn vào Settings, Apps, Apps & features, chọn ứng dụng rồi Uninstall."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Trên macOS, cách gỡ ứng dụng phổ biến là gì?",
+    options: ["Kéo biểu tượng ứng dụng từ Applications vào Trash", "Nhấn nút RJ45", "Rút RAM", "Đổi mật khẩu Wi-Fi"],
+    correct: 0,
+    explanation: "macOS thường gỡ ứng dụng bằng cách mở Applications trong Finder và kéo app vào Thùng rác."
+  },
+  {
+    category: "Cài đặt ứng dụng",
+    q: "Vì sao cập nhật ứng dụng quan trọng?",
+    options: ["Bổ sung tính năng mới và vá lỗ hổng bảo mật", "Luôn làm máy chậm hơn", "Xóa toàn bộ tài liệu", "Chỉ thay đổi hình nền"],
+    correct: 0,
+    explanation: "Update không chỉ mang tính năng mới mà còn sửa lỗi và vá các lỗ hổng bảo mật đã phát hiện."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "Mạng máy tính là gì?",
+    options: ["Tập hợp hai hay nhiều thiết bị được kết nối để chia sẻ tài nguyên và giao tiếp", "Một loại phần mềm ghi chú", "Một cổng USB-C", "Một thanh công cụ trình duyệt"],
+    correct: 0,
+    explanation: "Mạng kết nối máy tính, điện thoại, máy in bằng dây hoặc sóng không dây để chia sẻ dữ liệu, phần cứng và giao tiếp."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "Lợi ích nào thuộc mạng máy tính?",
+    options: ["Chia sẻ dữ liệu, phần cứng, phần mềm và giao tiếp", "Làm pin laptop không bao giờ hết", "Tăng kích thước màn hình vật lý", "Thay thế RAM bằng ROM"],
+    correct: 0,
+    explanation: "Mạng giúp gửi nhận tài liệu, dùng chung máy in, truy cập ứng dụng/cơ sở dữ liệu trung tâm và giao tiếp qua email, video."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "LAN là loại mạng như thế nào?",
+    options: ["Kết nối thiết bị trong phạm vi hẹp như nhà, văn phòng, tòa nhà", "Kết nối toàn cầu mọi mạng LAN", "Một giao thức thanh toán", "Một phần mềm trình chiếu"],
+    correct: 0,
+    explanation: "LAN là mạng cục bộ, phạm vi địa lý nhỏ."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "Internet được mô tả là gì?",
+    options: ["Mạng WAN lớn nhất thế giới", "Một thiết bị đầu vào", "Một loại RAM", "Một ứng dụng gỡ phần mềm"],
+    correct: 0,
+    explanation: "WAN kết nối phạm vi rộng, thường nối nhiều LAN; Internet là ví dụ lớn nhất."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "WAN là loại mạng như thế nào?",
+    options: ["Mạng diện rộng, kết nối thiết bị hoặc nhiều LAN trên phạm vi địa lý lớn", "Mạng chỉ hoạt động trong vài centimet", "Một chuẩn lưu trữ SSD", "Một phần mềm soạn thảo văn bản"],
+    correct: 0,
+    explanation: "WAN kết nối trên phạm vi rộng; Internet được nêu là mạng WAN lớn nhất thế giới."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "Ưu điểm của kết nối có dây là gì?",
+    options: ["Tốc độ ổn định, độ trễ thấp và ít nhiễu", "Linh hoạt hơn mọi kết nối không dây", "Không cần dây", "Chỉ dùng trong vài centimet"],
+    correct: 0,
+    explanation: "Ethernet thường nhanh, ổn định, latency thấp và ít bị nhiễu sóng hơn Wi-Fi."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "Nhược điểm của Wi-Fi là gì?",
+    options: ["Dễ bị ảnh hưởng bởi vật cản và nhiễu, tốc độ có thể kém ổn định hơn dây", "Bắt buộc dùng đĩa từ quay", "Chỉ hoạt động qua cáp RJ45", "Không cần mật khẩu bảo mật"],
+    correct: 0,
+    explanation: "Wi-Fi tiện lợi nhưng có thể bị tường, đồ đạc, thiết bị khác gây nhiễu; cần mật khẩu để đảm bảo an toàn."
+  },
+  {
+    category: "Kết nối không dây",
+    q: "Wi-Fi dùng chuẩn nào?",
+    options: ["IEEE 802.11", "PCIe", "APA", "E-ink"],
+    correct: 0,
+    explanation: "Wi-Fi hoạt động theo các chuẩn IEEE 802.11 để kết nối thiết bị vào LAN và Internet."
+  },
+  {
+    category: "Kết nối không dây",
+    q: "Wi-Fi 7 còn được gọi là chuẩn nào?",
+    options: ["802.11be", "802.3 RJ45", "Bluetooth 5.4", "USB4"],
+    correct: 0,
+    explanation: "Tài liệu nêu Wi-Fi 7 là 802.11be, hoàn thiện và chứng nhận từ đầu năm 2024."
+  },
+  {
+    category: "Kết nối không dây",
+    q: "Công nghệ nào của Wi-Fi 7 giúp cải thiện tốc độ và độ trễ?",
+    options: ["Băng thông 320 MHz và MLO", "E-ink và ROM", "Trash và Finder", "APA và Harvard"],
+    correct: 0,
+    explanation: "Wi-Fi 7 dùng băng thông 320 MHz và Vận hành đa liên kết (MLO) để đạt tốc độ cao và độ trễ thấp."
+  },
+  {
+    category: "Kết nối không dây",
+    q: "Bluetooth phù hợp nhất với loại kết nối nào?",
+    options: ["Không dây tầm ngắn khoảng 10 mét, tiêu thụ ít năng lượng", "Kết nối WAN toàn cầu", "Thanh toán trong vài kilomet", "Kết nối bằng cáp RJ45"],
+    correct: 0,
+    explanation: "Bluetooth dùng cho chuột, bàn phím, tai nghe, loa và truyền file nhỏ giữa thiết bị trong phạm vi ngắn."
+  },
+  {
+    category: "Kết nối không dây",
+    q: "Bluetooth 5.4 cải thiện điểm nào?",
+    options: ["Độ ổn định, hiệu quả năng lượng và giảm độ trễ", "Tạo thư mục tự động", "Lưu firmware trong ROM", "Chỉnh sửa video 4K"],
+    correct: 0,
+    explanation: "Tài liệu nêu Bluetooth 5.4 hữu ích cho tai nghe TWS và thiết bị IoT nhờ ổn định, tiết kiệm năng lượng, giảm trễ."
+  },
+  {
+    category: "Kết nối không dây",
+    q: "NFC hoạt động trong khoảng cách nào?",
+    options: ["Vài centimet", "Vài chục mét", "Vài kilomet", "Toàn cầu"],
+    correct: 0,
+    explanation: "NFC là giao tiếp trường gần, tầm cực ngắn, thường chỉ vài centimet."
+  },
+  {
+    category: "Kết nối không dây",
+    q: "Ứng dụng nào là ví dụ của NFC?",
+    options: ["Thanh toán không chạm", "Chạy nhiều ứng dụng bằng RAM", "Dựng phim trên desktop", "Soạn mục lục Word"],
+    correct: 0,
+    explanation: "NFC dùng trong thanh toán không chạm, ghép nối nhanh, truyền dữ liệu gần và đọc chip CCCD."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Thiết bị ngoại vi (Peripherals) là gì?",
+    options: ["Thiết bị phần cứng kết nối với máy tính để bổ sung hoặc mở rộng chức năng", "Một loại phần mềm hệ thống", "Một phương pháp tìm kiếm", "Một chuẩn trích dẫn"],
+    correct: 0,
+    explanation: "Thiết bị ngoại vi như webcam, micro, màn hình, máy in, ổ cứng ngoài giúp mở rộng khả năng máy tính."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Webcam và microphone đặc biệt quan trọng cho hoạt động nào?",
+    options: ["Học trực tuyến, họp nhóm và gọi video", "Lưu trữ firmware", "Tạo ổ SSD NVMe", "Tăng độ dài đường dẫn"],
+    correct: 0,
+    explanation: "Dù laptop có sẵn, webcam và micro rời thường cho chất lượng hình ảnh, âm thanh tốt hơn."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Máy quét (Scanner) dùng để làm gì?",
+    options: ["Số hóa tài liệu giấy thành PDF hoặc hình ảnh", "Phát nhạc", "Tạo mạng WAN", "Tăng tốc CPU"],
+    correct: 0,
+    explanation: "Scanner biến tài liệu giấy, sách, ghi chú viết tay thành tệp số để lưu trữ và chia sẻ."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Lợi ích của màn hình ngoài với laptop là gì?",
+    options: ["Mở rộng không gian làm việc", "Thay thế hệ điều hành", "Tăng phạm vi NFC", "Tự động gỡ phần mềm"],
+    correct: 0,
+    explanation: "Màn hình ngoài giúp vừa xem tài liệu vừa soạn thảo thoải mái hơn."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Ổ cứng di động quan trọng vì sao?",
+    options: ["Sao lưu dữ liệu quan trọng để phòng hỏng hoặc mất máy", "Chỉ để trang trí bàn học", "Thay thế toàn bộ RAM", "Là thiết bị nhập liệu chính"],
+    correct: 0,
+    explanation: "External HDD/SSD giúp backup bài tập lớn, luận văn và dữ liệu lớn."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "USB-C là gì theo tài liệu?",
+    options: ["Tên kiểu dáng cổng kết nối, còn khả năng phụ thuộc giao thức hỗ trợ", "Luôn đồng nghĩa với Thunderbolt 5", "Một hệ điều hành di động", "Một phần mềm ghi chú"],
+    correct: 0,
+    explanation: "Một cổng USB-C có thể chỉ là USB 3.2 hoặc có thể hỗ trợ USB4/Thunderbolt với năng lực cao hơn."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Thunderbolt 4 có tốc độ truyền dữ liệu được nêu là bao nhiêu?",
+    options: ["40 Gbps", "4 Mbps", "10 KBps", "1 Gbps"],
+    correct: 0,
+    explanation: "Tài liệu nêu Thunderbolt 4 đạt 40 Gbps."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Thunderbolt 5 có thể đạt băng thông bao nhiêu cho tác vụ video?",
+    options: ["Tới 120 Gbps", "Tới 12 Mbps", "Tới 240 KBps", "Tới 5 Gbps"],
+    correct: 0,
+    explanation: "Thunderbolt 5 có băng thông hai chiều 80 Gbps và có thể tăng lên 120 Gbps cho tác vụ video."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Dấu hiệu thường dùng để nhận biết cổng Thunderbolt là gì?",
+    options: ["Biểu tượng tia sét", "Biểu tượng thùng rác", "Biểu tượng kính lúp", "Biểu tượng loa tắt"],
+    correct: 0,
+    explanation: "Tài liệu nói cổng Thunderbolt thường có biểu tượng tia sét bên cạnh."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "Khi chọn webcam cho học trực tuyến, tiêu chí nào được gợi ý?",
+    options: ["Tối thiểu Full HD 1080p và thu sáng tốt", "Luôn chọn loại không có micro", "Chỉ chọn loại dùng đĩa từ", "Không quan tâm độ phân giải"],
+    correct: 0,
+    explanation: "Bảng thiết bị ngoại vi khuyên chọn webcam chất lượng cao, tối thiểu Full HD 1080p, thu sáng tốt."
+  },
+  {
+    category: "Ứng dụng văn phòng",
+    q: "Bộ phần mềm văn phòng quan trọng với sinh viên vì sao?",
+    options: ["Được dùng trong hầu hết môn học để soạn thảo, tính toán, trình chiếu", "Chỉ dùng để chơi game", "Chỉ dùng để thay pin", "Chỉ dùng khi không có Internet"],
+    correct: 0,
+    explanation: "Microsoft Office và Google Workspace cung cấp công cụ cốt lõi cho bài tập, báo cáo, dữ liệu và thuyết trình."
+  },
+  {
+    category: "Ứng dụng văn phòng",
+    q: "Công cụ nào thuộc nhóm soạn thảo văn bản?",
+    options: ["Microsoft Word và Google Docs", "Excel và Google Sheets", "PowerPoint và Google Slides", "Zoom và Webex"],
+    correct: 0,
+    explanation: "Word Processing dùng để soạn tiểu luận, báo cáo, đơn từ, ghi chép và định dạng văn bản."
+  },
+  {
+    category: "Ứng dụng văn phòng",
+    q: "Bảng tính được dùng chủ yếu cho việc nào?",
+    options: ["Xử lý số liệu, tính toán, lập biểu đồ và phân tích dữ liệu", "Gọi video đồng bộ", "Quản lý cổng USB-C", "Đọc chip NFC"],
+    correct: 0,
+    explanation: "Excel và Google Sheets giúp tự động hóa phép tính phức tạp và trực quan hóa dữ liệu."
+  },
+  {
+    category: "Ứng dụng văn phòng",
+    q: "PowerPoint và Google Slides thuộc nhóm nào?",
+    options: ["Trình chiếu", "Bảng tính", "Quản lý tài liệu tham khảo", "Hệ điều hành"],
+    correct: 0,
+    explanation: "Presentation software dùng để thiết kế slide báo cáo và trình bày dự án nhóm."
+  },
+  {
+    category: "Ứng dụng văn phòng",
+    q: "Google Workspace có thế mạnh nào trong bảng so sánh?",
+    options: ["Cộng tác thời gian thực rất tốt", "Chỉ chạy offline", "Hoàn toàn không cần trình duyệt", "Không tích hợp dịch vụ Google"],
+    correct: 0,
+    explanation: "Google Workspace hoạt động trực tuyến và tích hợp sẵn khả năng cộng tác thời gian thực."
+  },
+  {
+    category: "Ứng dụng văn phòng",
+    q: "LibreOffice có mô hình chi phí nào?",
+    options: ["Hoàn toàn miễn phí", "Chỉ trả phí theo tháng", "Chỉ mua kèm Mac", "Chỉ dùng trong doanh nghiệp"],
+    correct: 0,
+    explanation: "Bảng so sánh nêu LibreOffice là bộ phần mềm cài trên máy tính và hoàn toàn miễn phí."
+  },
+  {
+    category: "Mạng máy tính",
+    q: "Trình duyệt web được ví như gì?",
+    options: ["Cánh cửa bước vào thế giới thông tin Internet", "Bộ nhớ chỉ đọc", "Ổ cứng ngoài", "Bảng mạch chủ"],
+    correct: 0,
+    explanation: "Trình duyệt giúp truy cập và hiển thị nội dung trang web."
+  },
+  {
+    category: "Trình duyệt và tìm kiếm",
+    q: "Trình duyệt nào phổ biến trên thiết bị Apple?",
+    options: ["Safari", "Ubuntu", "Finder", "Moodle"],
+    correct: 0,
+    explanation: "Safari là trình duyệt trên các thiết bị Apple; Chrome, Firefox, Edge cũng là trình duyệt phổ biến."
+  },
+  {
+    category: "Trình duyệt và tìm kiếm",
+    q: "Chức năng nào thuộc trình duyệt web?",
+    options: ["Quản lý tab, lịch sử, dấu trang và tiện ích mở rộng", "Phân bổ RAM cho mọi ứng dụng", "Sạc laptop qua Thunderbolt", "Đọc firmware ROM"],
+    correct: 0,
+    explanation: "Trình duyệt không chỉ hiển thị web mà còn quản lý tab, bookmarks, lịch sử và extensions."
+  },
+  {
+    category: "Trình duyệt và tìm kiếm",
+    q: "Kỹ năng tìm kiếm cơ bản sinh viên cần biết là gì?",
+    options: ["Dùng từ khóa chính xác và toán tử tìm kiếm đơn giản", "Chỉ gõ câu thật dài", "Không cần kiểm tra nguồn", "Chỉ tìm trong lịch sử trình duyệt"],
+    correct: 0,
+    explanation: "Tài liệu nhấn mạnh dùng từ khóa chính xác và toán tử đơn giản để thu hẹp kết quả."
+  },
+  {
+    category: "Trình duyệt và tìm kiếm",
+    q: "Theo bảng so sánh, trình duyệt nào có thị phần cao nhất năm 2025?",
+    options: ["Google Chrome", "Firefox", "Edge", "Safari"],
+    correct: 0,
+    explanation: "Bảng 1.5 nêu Chrome có thị phần cao nhất, khoảng 65%."
+  },
+  {
+    category: "Trình duyệt và tìm kiếm",
+    q: "Ưu điểm nổi bật của kết nối Ethernet có dây là gì?",
+    options: ["Tốc độ thường nhanh, ổn định, độ trễ thấp và ít bị nhiễu", "Không cần dây và dùng được mọi nơi trong vùng phủ sóng", "Chỉ hoạt động trong vài centimet", "Dùng để đọc chip CCCD"],
+    correct: 0,
+    explanation: "Ethernet có dây kém linh hoạt hơn Wi-Fi nhưng thường ổn định hơn, ít nhiễu và có độ trễ thấp."
+  },
+  {
+    category: "Phần cứng",
+    q: "Mendeley, Zotero, EndNote thuộc nhóm phần mềm nào?",
+    options: ["Quản lý tài liệu tham khảo", "Họp trực tuyến", "Hệ điều hành di động", "Thiết bị ngoại vi"],
+    correct: 0,
+    explanation: "Các công cụ này giúp thu thập, tổ chức tài liệu tham khảo và tạo trích dẫn."
+  },
+  {
+    category: "Học tập và nghiên cứu",
+    q: "Lợi ích quan trọng của phần mềm quản lý tài liệu tham khảo là gì?",
+    options: ["Tự động tạo danh mục tham khảo và chèn trích dẫn đúng chuẩn", "Tăng dung lượng SSD", "Tạo sóng Wi-Fi", "Gỡ phần mềm độc hại"],
+    correct: 0,
+    explanation: "Chúng hỗ trợ các chuẩn như APA, Harvard, tiết kiệm thời gian và giảm lỗi đạo văn."
+  },
+  {
+    category: "Học tập và nghiên cứu",
+    q: "Notion, OneNote, Evernote, Obsidian thuộc nhóm nào?",
+    options: ["Phần mềm ghi chú", "Phần mềm diệt virus", "Hệ điều hành", "Trình điều khiển thiết bị"],
+    correct: 0,
+    explanation: "Các ứng dụng ghi chú giúp tạo một bộ não số để ghi chép, sắp xếp ý tưởng và liên kết thông tin."
+  },
+  {
+    category: "Học tập và nghiên cứu",
+    q: "Google Calendar, Trello, Asana có lợi ích gì?",
+    options: ["Quản lý thời gian, lịch học, lịch thi, tiến độ bài tập và dự án", "Đọc chip CCCD", "Tạo ổ HDD", "Thay thế GUI"],
+    correct: 0,
+    explanation: "Đây là các công cụ lập kế hoạch giúp sinh viên theo dõi lịch và tiến độ công việc."
+  },
+  {
+    category: "Học tập và nghiên cứu",
+    q: "Ưu điểm nổi bật của SSD so với HDD là gì?",
+    options: ["Tốc độ đọc/ghi nhanh hơn nhiều, giúp khởi động và mở ứng dụng nhanh hơn", "Có nhiều bộ phận cơ học hơn", "Chỉ hoạt động khi có Wi-Fi", "Không thể lưu hệ điều hành"],
+    correct: 0,
+    explanation: "SSD dùng chip nhớ flash, không có bộ phận chuyển động nên nhanh hơn HDD rõ rệt."
+  },
+  {
+    category: "Thiết bị ngoại vi",
+    q: "E-learning trong chương này được hiểu là gì?",
+    options: ["Học tập trực tuyến là một phần không thể thiếu của giáo dục hiện đại", "Một loại cổng USB-C", "Một chuẩn ổ cứng", "Một phần mở rộng tệp"],
+    correct: 0,
+    explanation: "Tài liệu giới thiệu e-learning qua LMS và phần mềm hội nghị truyền hình."
+  },
+  {
+    category: "Học tập trực tuyến",
+    q: "Ví dụ nào là hệ thống quản lý học tập LMS?",
+    options: ["VNU-LMS, Moodle, Canvas, Blackboard", "Zoom, Google Meet, Teams", "Chrome, Firefox, Edge", "Word, Excel, PowerPoint"],
+    correct: 0,
+    explanation: "LMS là lớp học ảo chính thức để tải tài liệu, giao bài, kiểm tra và theo dõi điểm."
+  },
+  {
+    category: "Học tập trực tuyến",
+    q: "Trong LMS, sinh viên thường làm gì?",
+    options: ["Nộp bài, làm bài kiểm tra và theo dõi điểm", "Thay mainboard", "Cài firmware ROM", "Tăng băng thông Thunderbolt"],
+    correct: 0,
+    explanation: "Giảng viên đăng tài liệu, bài giảng, bài tập; sinh viên nộp bài, kiểm tra và xem điểm trên LMS."
+  },
+  {
+    category: "Học tập trực tuyến",
+    q: "Zoom, Google Meet, Microsoft Teams thuộc nhóm nào?",
+    options: ["Phần mềm hội nghị truyền hình", "Phần mềm quản lý tệp", "Hệ điều hành", "Cổng kết nối"],
+    correct: 0,
+    explanation: "Các công cụ này phục vụ lớp học đồng bộ, nơi giảng viên và sinh viên tương tác trực tiếp qua video."
+  },
+  {
+    category: "Học tập trực tuyến",
+    q: "Kỹ năng nào cần có khi dùng phần mềm hội nghị truyền hình?",
+    options: ["Bật/tắt micro, camera, chia sẻ màn hình, tham gia phòng thảo luận", "Tháo lắp CPU", "Đổi chuẩn RAM", "Tự tạo cáp RJ45"],
+    correct: 0,
+    explanation: "Đây là các thao tác thiết yếu để tham gia lớp học trực tuyến hiệu quả."
+  },
+  {
+    category: "Học tập trực tuyến",
+    q: "Thunderbolt 5 có thể đạt băng thông bao nhiêu cho tác vụ video?",
+    options: ["Tới 120 Gbps", "Tới 12 Mbps", "Tới 240 KBps", "Tới 5 Gbps"],
+    correct: 0,
+    explanation: "Tài liệu nêu Thunderbolt 5 có băng thông hai chiều 80 Gbps và có thể tăng lên 120 Gbps cho tác vụ video."
+  },
+  {
+    category: "Phần cứng",
+    q: "Bộ ba công nghệ phần cứng hiện đại được tổng kết trong chương là gì?",
+    options: ["CPU tích hợp NPU, RAM DDR5, SSD NVMe", "HDD, VGA, CD-ROM", "Printer, Scanner, Speaker", "APA, Harvard, Chicago"],
+    correct: 0,
+    explanation: "Phần tổng kết nhấn mạnh CPU có NPU, RAM DDR5 và SSD NVMe là các công nghệ mới đáng chú ý."
+  },
+  {
+    category: "Tổng kết chương",
+    q: "ROM khác RAM ở điểm nào quan trọng?",
+    options: ["ROM chứa chương trình khởi động/firmware và không mất dữ liệu khi tắt nguồn", "ROM luôn mất dữ liệu khi tắt nguồn", "ROM chỉ dùng để kết nối Wi-Fi", "ROM là thiết bị xuất âm thanh"],
+    correct: 0,
+    explanation: "RAM là bộ nhớ làm việc tạm thời, còn ROM chứa phần sụn/chương trình khởi động và dữ liệu không mất khi tắt máy."
+  },
+  {
+    category: "Tổng kết chương",
+    q: "Mục tiêu bao quát của Chương 1 là gì?",
+    options: ["Cung cấp nền tảng về máy tính, công nghệ số, hệ điều hành, ngoại vi và phần mềm ứng dụng", "Dạy lập trình nâng cao bằng một ngôn ngữ cụ thể", "Chỉ hướng dẫn lắp ráp máy tính", "Chỉ so sánh giá thiết bị"],
+    correct: 0,
+    explanation: "Chương 1 giúp sinh viên năm nhất làm quen khái niệm cơ bản và kỹ năng thực hành thiết yếu trong môi trường số."
+  },
+  {
+    category: "Tổng kết chương",
+    q: "Nhận định nào đúng nhất về mối quan hệ phần mềm và phần cứng?",
+    options: ["Phần mềm ra lệnh, phần cứng thực thi", "Phần cứng luôn tự hoạt động mà không cần phần mềm", "Phần mềm là bộ phận có thể chạm vào", "Phần mềm chỉ là màn hình"],
+    correct: 0,
+    explanation: "Tài liệu nhấn mạnh hai thành phần không thể tách rời: phần mềm hướng dẫn, phần cứng thực hiện."
+  },
+  {
+    category: "Tổng kết chương",
+    q: "Khi chọn thiết bị cho học tập đại học, nguyên tắc đúng nhất là gì?",
+    options: ["Hiểu ưu, nhược điểm từng loại thiết bị để chọn phù hợp nhu cầu", "Luôn chọn thiết bị đắt nhất", "Chỉ chọn thiết bị nhỏ nhất", "Không cần quan tâm tác vụ sử dụng"],
+    correct: 0,
+    explanation: "Phân loại desktop, laptop, tablet, smartphone giúp người học chọn thiết bị phù hợp tác vụ, tính di động và ngân sách."
+  }
+];
+
+quizQuestions = quizQuestions.filter((_, index) => {
+  const remove = new Set([3, 7, 8, 11, 12, 22, 23, 25, 35, 38, 46, 52, 56, 62, 66, 71, 73, 89, 91]);
+  return !remove.has(index + 1);
+});
+
+let quizQuestionsChapter2 = [
+  { category: "DIKW", q: "Chương 2 tập trung vào nội dung chính nào?", options: ["Khai thác, quản lý, đánh giá và sử dụng dữ liệu, thông tin có trách nhiệm", "Lắp ráp phần cứng máy tính", "Thiết kế mạng doanh nghiệp nâng cao", "Lập trình ứng dụng di động"], correct: 0, explanation: "Chương 2 trang bị kỹ năng khai thác dữ liệu/thông tin, tổ chức lưu trữ, tìm kiếm, đánh giá nguồn và sử dụng thông tin có đạo đức." },
+  { category: "DIKW", q: "Dữ liệu (Data) trong môi trường số được hiểu là gì?", options: ["Sự kiện, số liệu, ký hiệu, hình ảnh, âm thanh dạng thô, chưa xử lý", "Nhận định đã được phân tích để hành động", "Nguồn tin đã được trích dẫn Harvard", "Một hệ thống lưu trữ đám mây"], correct: 0, explanation: "Dữ liệu là dạng thô, rời rạc, chưa có ngữ cảnh cụ thể nên tự nó chưa mang nhiều ý nghĩa." },
+  { category: "DIKW", q: "Thông tin (Information) khác dữ liệu ở điểm nào?", options: ["Thông tin là dữ liệu đã được xử lý, tổ chức và đặt trong ngữ cảnh", "Thông tin luôn là tệp PDF", "Thông tin chỉ tồn tại trên Google Scholar", "Thông tin không cần ngữ cảnh"], correct: 0, explanation: "Thông tin giúp trả lời các câu hỏi như ai, cái gì, ở đâu, khi nào nhờ dữ liệu đã được xử lý trong bối cảnh cụ thể." },
+  { category: "DIKW", q: "Tri thức (Knowledge) giúp con người trả lời nhóm câu hỏi nào?", options: ["Tại sao, như thế nào, nên làm gì", "Tệp có đuôi gì", "Mật khẩu dài bao nhiêu ký tự", "Trang web thuộc tên miền nào"], correct: 0, explanation: "Tri thức là hiểu biết từ phân tích, tổng hợp, đánh giá và áp dụng thông tin để nhận định, dự đoán, quyết định hành động." },
+  { category: "DIKW", q: "Mô hình DIKW sắp xếp các tầng theo thứ tự nào?", options: ["Data -> Information -> Knowledge -> Wisdom", "Wisdom -> Data -> File -> Cloud", "Information -> Data -> Backup -> AI", "File -> Folder -> Database -> Website"], correct: 0, explanation: "DIKW xem dữ liệu là nền tảng, được xử lý thành thông tin, chuyển hóa thành tri thức và cao hơn là thông thái." },
+  { category: "DIKW", q: "Ví dụ nào là dữ liệu, chưa phải thông tin?", options: ["Con số 7.5 đứng riêng lẻ", "Điểm giữa kỳ môn Nhập môn Công nghệ số của sinh viên A là 7.5", "Sinh viên A cần nỗ lực để đạt loại Khá", "Máy bay là phương tiện nhanh nhất từ Hà Nội đến TP.HCM"], correct: 0, explanation: "Con số 7.5 chưa có ngữ cảnh nên chỉ là dữ liệu thô." },
+  { category: "DIKW", q: "Ví dụ nào là thông tin?", options: ["Từ 'Hà Nội' đứng riêng", "Hà Nội là thủ đô của Việt Nam", "Cần chọn nguồn đáng tin cậy", "Áp dụng CRAAP để loại bỏ nguồn kém chất lượng"], correct: 1, explanation: "Khi dữ liệu được đặt vào ngữ cảnh có ý nghĩa, nó trở thành thông tin." },
+  { category: "DIKW", q: "Ví dụ nào thể hiện tri thức?", options: ["Danh sách điểm 8, 7, 9, 5", "Điểm trung bình của sinh viên A là 7.25", "Phương pháp học tập mới giúp cải thiện kết quả thi", "Tệp .csv phân tách bằng dấu phẩy"], correct: 2, explanation: "Tri thức cho phép hiểu, dự đoán, ra quyết định hoặc hành động, không chỉ mô tả sự kiện." },
+  { category: "DIKW", q: "Theo bảng so sánh, dữ liệu có bản chất gì?", options: ["Thô, chưa xử lý, rời rạc", "Đã hiểu và có thể áp dụng", "Luôn có bằng chứng khoa học", "Luôn là nguồn học thuật"], correct: 0, explanation: "Dữ liệu là lớp nền của DIKW, chưa được xử lý và chưa có nhiều ý nghĩa." },
+  { category: "DIKW", q: "Theo bảng so sánh, mục đích của thông tin là gì?", options: ["Ghi nhận sự kiện", "Mô tả, giải thích", "Ra quyết định và hành động", "Nén nhiều tệp thành một tệp"], correct: 1, explanation: "Thông tin đã có ngữ cảnh nên có thể mô tả và giải thích sự vật, hiện tượng." },
+  { category: "DIKW", q: "Wisdom trong mô hình DIKW được hiểu gần nhất là gì?", options: ["Áp dụng tri thức sâu sắc và có đạo đức", "Tên một định dạng tệp", "Công cụ tìm kiếm học thuật", "Một quy tắc sao lưu"], correct: 0, explanation: "Thông thái là mức áp dụng tri thức một cách sâu sắc, phù hợp và có đạo đức." },
+  { category: "DIKW", q: "Vì sao phân biệt dữ liệu, thông tin và tri thức là bước đầu quan trọng?", options: ["Vì giúp khai thác hiệu quả tài nguyên tri thức trong môi trường số", "Vì giúp tăng dung lượng miễn phí của đám mây", "Vì giúp bỏ qua việc trích dẫn", "Vì mọi dữ liệu đều tự động đáng tin"], correct: 0, explanation: "Hiểu ba khái niệm nền tảng giúp người học xử lý, đánh giá và sử dụng thông tin đúng mức." },
+
+  { category: "Loại dữ liệu và tệp", q: "Dữ liệu có cấu trúc (Structured) thường được tổ chức như thế nào?", options: ["Theo hàng, cột rõ ràng", "Không có cấu trúc rõ ràng", "Chỉ dùng thẻ đánh dấu", "Chỉ là video và audio"], correct: 0, explanation: "Dữ liệu có cấu trúc xuất hiện trong bảng tính Excel hoặc cơ sở dữ liệu quan hệ." },
+  { category: "Loại dữ liệu và tệp", q: "XML và JSON là ví dụ của loại dữ liệu nào?", options: ["Có cấu trúc", "Bán cấu trúc", "Phi cấu trúc", "Dữ liệu địa lý duy nhất"], correct: 1, explanation: "Dữ liệu bán cấu trúc có cấu trúc nhưng không cố định, thường dùng thẻ hoặc cặp khóa-giá trị." },
+  { category: "Loại dữ liệu và tệp", q: "Văn bản Word, email, hình ảnh, video thường thuộc nhóm dữ liệu nào?", options: ["Phi cấu trúc", "Có cấu trúc theo hàng cột", "Chỉ là dữ liệu số", "Chỉ là dữ liệu nén"], correct: 0, explanation: "Dữ liệu phi cấu trúc không có khuôn hàng-cột rõ ràng." },
+  { category: "Loại dữ liệu và tệp", q: "Phân loại dữ liệu theo nội dung có thể gồm nhóm nào?", options: ["Văn bản, số, hình ảnh, âm thanh, video, địa lý", "Chỉ có PDF và DOCX", "Chỉ có dữ liệu đúng và sai", "Chỉ có dữ liệu học thuật"], correct: 0, explanation: "Ngoài cấu trúc, dữ liệu còn được phân loại theo nội dung như văn bản, số, ảnh, âm thanh, video, địa lý." },
+  { category: "Loại dữ liệu và tệp", q: "Định dạng .txt phù hợp với mô tả nào?", options: ["Văn bản thuần túy, không định dạng, mở được trên mọi thiết bị", "Video nén phổ biến", "Ảnh hỗ trợ nền trong suốt", "Tệp nén nhiều thư mục"], correct: 0, explanation: ".txt là văn bản thuần túy, đơn giản và có tính tương thích cao." },
+  { category: "Loại dữ liệu và tệp", q: ".doc/.docx thường dùng để làm gì?", options: ["Soạn thảo tài liệu Microsoft Word với định dạng phong phú", "Nén nhiều tệp", "Lưu âm thanh không nén", "Lưu video Apple QuickTime"], correct: 0, explanation: ".doc/.docx là định dạng tài liệu Word phổ biến trong soạn thảo." },
+  { category: "Loại dữ liệu và tệp", q: "Ưu điểm chính của PDF là gì?", options: ["Giữ nguyên định dạng trên nhiều thiết bị, thuận tiện chia sẻ và in ấn", "Dễ chỉnh sửa trực tiếp hơn mọi định dạng", "Chỉ dùng cho bảng tính", "Chỉ lưu âm thanh chất lượng cao"], correct: 0, explanation: "PDF là Portable Document Format, nổi bật ở khả năng giữ định dạng ổn định khi chia sẻ." },
+  { category: "Loại dữ liệu và tệp", q: ".xls/.xlsx là định dạng thường dùng cho loại nội dung nào?", options: ["Bảng tính để xử lý số liệu, tính toán, tạo biểu đồ", "Ảnh động", "Video web", "Tài liệu nén"], correct: 0, explanation: ".xls/.xlsx là định dạng Excel dùng cho bảng tính." },
+  { category: "Loại dữ liệu và tệp", q: "CSV là viết tắt và công dụng gần nhất của gì?", options: ["Comma-Separated Values, trao đổi dữ liệu giữa phần mềm phân tích", "Cloud Safe Version, sao lưu đám mây", "Citation Standard Value, chuẩn trích dẫn", "Compressed Sound Video, nén âm thanh"], correct: 0, explanation: ".csv chứa dữ liệu phân tách bằng dấu phẩy, dễ trao đổi giữa các công cụ phân tích." },
+  { category: "Loại dữ liệu và tệp", q: ".ppt/.pptx thường dùng cho mục đích nào?", options: ["Bài trình chiếu Microsoft PowerPoint", "Tệp âm thanh không nén", "Ảnh nén không mất dữ liệu", "Tệp cơ sở dữ liệu quan hệ"], correct: 0, explanation: ".ppt/.pptx là định dạng bài trình chiếu dùng trong thuyết trình." },
+  { category: "Loại dữ liệu và tệp", q: "Định dạng ảnh nào hỗ trợ nền trong suốt và nén không mất dữ liệu?", options: [".png", ".jpg", ".mp3", ".csv"], correct: 0, explanation: "PNG phù hợp cho logo, icon vì hỗ trợ trong suốt và nén không mất dữ liệu." },
+  { category: "Loại dữ liệu và tệp", q: ".jpg/.jpeg phù hợp nhất với tình huống nào?", options: ["Ảnh nén phổ biến cho nhiếp ảnh và web", "Âm thanh không nén", "Tệp trình chiếu", "Dữ liệu phân tách bằng dấu phẩy"], correct: 0, explanation: "JPEG tối ưu dung lượng, rất phổ biến cho ảnh web và nhiếp ảnh." },
+  { category: "Loại dữ liệu và tệp", q: ".wav khác .mp3 ở điểm nào nổi bật?", options: [".wav thường là âm thanh không nén, chất lượng cao, dung lượng lớn", ".wav là tệp nén nhiều thư mục", ".wav là định dạng trình chiếu", ".wav chỉ dùng cho ảnh động"], correct: 0, explanation: "WAV thường dùng trong sản xuất âm nhạc chuyên nghiệp vì chất lượng cao nhưng dung lượng lớn." },
+  { category: "Loại dữ liệu và tệp", q: ".zip và .rar được dùng để làm gì?", options: ["Nén nhiều tệp hoặc thư mục thành một tệp duy nhất", "Tạo bài báo khoa học", "Lưu ảnh nền trong suốt", "Tạo trích dẫn Harvard"], correct: 0, explanation: "Tệp nén giúp giảm dung lượng và gửi nhiều tệp thuận tiện hơn." },
+
+  { category: "Big Data", q: "Big Data là gì?", options: ["Tập dữ liệu rất lớn, tạo ra nhanh, đa dạng, vượt khả năng xử lý truyền thống", "Một loại tệp văn bản thuần túy", "Một phần mềm ghi chú", "Một chuẩn trích dẫn"], correct: 0, explanation: "Big Data được mô tả bằng khối lượng lớn, tốc độ cao, đa dạng và cần công cụ/phương pháp xử lý mới." },
+  { category: "Big Data", q: "Mô hình 5Vs của Big Data gồm những yếu tố nào?", options: ["Volume, Velocity, Variety, Veracity, Value", "View, Vote, Version, Virus, Video", "Valid, Visual, Virtual, Voice, Vector", "Volume, Video, Voice, VNU, Value"], correct: 0, explanation: "5Vs là khối lượng, tốc độ, đa dạng, độ tin cậy và giá trị." },
+  { category: "Big Data", q: "Volume trong Big Data chỉ điều gì?", options: ["Khối lượng dữ liệu khổng lồ", "Tốc độ tạo dữ liệu", "Độ chính xác của nguồn", "Mục đích của bài viết"], correct: 0, explanation: "Volume nói về lượng dữ liệu có thể tính bằng TB, PB hoặc lớn hơn." },
+  { category: "Big Data", q: "Velocity trong Big Data nhấn mạnh điều gì?", options: ["Dữ liệu được tạo ra và cần xử lý rất nhanh, gần thời gian thực", "Dữ liệu có nhiều định dạng", "Dữ liệu cần trích dẫn Harvard", "Dữ liệu là ảnh PNG"], correct: 0, explanation: "Ví dụ Velocity gồm dữ liệu cảm biến IoT, luồng tweet, giao dịch chứng khoán." },
+  { category: "Big Data", q: "Variety trong Big Data nghĩa là gì?", options: ["Dữ liệu đến từ nhiều nguồn và nhiều định dạng", "Dữ liệu luôn chính xác", "Dữ liệu chỉ có một bảng", "Dữ liệu không có giá trị"], correct: 0, explanation: "Variety bao gồm dữ liệu có cấu trúc, bán cấu trúc và phi cấu trúc." },
+  { category: "Big Data", q: "Veracity trong Big Data đề cập đến vấn đề nào?", options: ["Chất lượng và độ chính xác của dữ liệu không đồng đều, có thể nhiễu", "Dung lượng miễn phí của Google Drive", "Tên miền .edu", "Tốc độ đồng bộ Dropbox"], correct: 0, explanation: "Veracity đòi hỏi làm sạch và tiền xử lý dữ liệu trước khi phân tích." },
+  { category: "Big Data", q: "Value được xem là yếu tố quan trọng vì sao?", options: ["Giá trị nằm ở khả năng khai thác insights, quy luật ẩn và hỗ trợ quyết định", "Vì dữ liệu càng nhiều thì luôn đúng", "Vì mọi dữ liệu đều miễn phí", "Vì dữ liệu chỉ dùng để nén file"], correct: 0, explanation: "Big Data chỉ thực sự có ý nghĩa khi tạo ra hiểu biết và hỗ trợ quyết định." },
+  { category: "Big Data", q: "Ứng dụng Big Data trong kinh doanh và marketing là gì?", options: ["Phân tích hành vi khách hàng, cá nhân hóa trải nghiệm, đề xuất sản phẩm", "Chỉ đổi phần mở rộng tệp", "Chỉ tạo thư mục sâu hơn 5 cấp", "Chỉ phát hiện lỗi chính tả"], correct: 0, explanation: "Amazon, Spotify và sàn thương mại điện tử dùng Big Data để cá nhân hóa và tối ưu quảng cáo." },
+  { category: "Big Data", q: "Big Data trong y tế có thể hỗ trợ việc nào?", options: ["Phân tích bệnh án, dữ liệu thiết bị đeo, dự báo dịch bệnh, cá nhân hóa điều trị", "Tạo ảnh GIF", "Xóa yêu cầu trích dẫn", "Tăng số quảng cáo trên web"], correct: 0, explanation: "Dữ liệu y tế lớn kết hợp AI giúp nghiên cứu thuốc, dự báo và giám sát hiệu quả hơn." },
+  { category: "Big Data", q: "Big Data trong giáo dục giúp gì?", options: ["Phân tích dữ liệu học tập để cá nhân hóa lộ trình và phát hiện sinh viên có nguy cơ học kém", "Chỉ thay thế mọi giảng viên", "Chỉ tạo tệp ZIP", "Chỉ kiểm tra tên miền website"], correct: 0, explanation: "Phân tích dữ liệu học tập giúp nâng cao chất lượng giảng dạy và hỗ trợ cá nhân hóa." },
+  { category: "Big Data", q: "Trong nông nghiệp, Big Data có thể kết hợp dữ liệu từ đâu?", options: ["Cảm biến, máy bay không người lái và vệ tinh", "Chỉ từ file .docx", "Chỉ từ Google Scholar", "Chỉ từ trích dẫn Harvard"], correct: 0, explanation: "Dữ liệu nông nghiệp giúp tối ưu tưới tiêu, bón phân, dự báo sâu bệnh và tăng năng suất." },
+  { category: "Big Data", q: "Trong tài chính - ngân hàng, Big Data thường dùng để làm gì?", options: ["Phân tích rủi ro tín dụng, phát hiện gian lận và rửa tiền", "Chỉ tạo bài trình chiếu", "Chỉ lưu hình ảnh .png", "Chỉ đổi mật khẩu"], correct: 0, explanation: "Big Data giúp ngân hàng nhận diện rủi ro và các giao dịch bất thường." },
+
+  { category: "Quản lý dữ liệu", q: "Vì sao cần tổ chức, quản lý và lưu trữ thông tin hiệu quả?", options: ["Để tiết kiệm thời gian, giảm căng thẳng và tăng năng suất học tập/làm việc", "Để không cần sao lưu", "Để bỏ qua bảo mật", "Để tránh dùng thư mục"], correct: 0, explanation: "Quản lý thông tin tốt giúp dễ tìm lại tài liệu khi cần và làm việc khoa học hơn." },
+  { category: "Quản lý dữ liệu", q: "Một cấu trúc thư mục tốt cho sinh viên nên có đặc điểm nào?", options: ["Phân cấp rõ ràng, logic và nhất quán", "Càng sâu càng tốt, trên 10 cấp", "Không cần thư mục con", "Chỉ dùng tên ngẫu nhiên"], correct: 0, explanation: "Tài liệu gợi ý cấu trúc theo năm học, học kỳ, môn học và loại tài liệu." },
+  { category: "Quản lý dữ liệu", q: "Trong thư mục môn học, các thư mục con gợi ý gồm gì?", options: ["BaiGiang, BaiTap, TaiLieuThamKhao, NhomLamViec, DeThiCu", "Volume, Velocity, Variety", "Currency, Relevance, Authority", "MP3, WAV, MOV"], correct: 0, explanation: "Các thư mục con theo loại tài liệu giúp lưu và tìm kiếm nhanh hơn." },
+  { category: "Quản lý dữ liệu", q: "Vì sao không nên tạo quá nhiều cấp thư mục sâu hơn 4-5 cấp?", options: ["Vì sẽ khó điều hướng", "Vì máy tính không hỗ trợ thư mục", "Vì Google Scholar không đọc được", "Vì làm mất trích dẫn"], correct: 0, explanation: "Cấu trúc quá sâu khiến người dùng mất thời gian mở nhiều lớp thư mục." },
+  { category: "Quản lý dữ liệu", q: "Công thức đặt tên tệp được gợi ý có thành phần nào?", options: ["YYYY-MM-DD_[Mã môn học]_[Loại tài liệu]_[Nội dung chính]_[Phiên bản]", "[Mật khẩu]_[Số điện thoại]_[Email]", "[Ngẫu nhiên]_[Không dấu thời gian]", "[Tên file] không cần quy ước"], correct: 0, explanation: "Quy ước tên tệp nhất quán giúp nhận biết nội dung mà không cần mở file." },
+  { category: "Quản lý dữ liệu", q: "Vì sao định dạng ngày YYYY-MM-DD hữu ích khi đặt tên tệp?", options: ["Giúp tệp tự sắp xếp theo thứ tự thời gian", "Giúp tệp tự động trích dẫn", "Giúp tăng dung lượng cloud", "Giúp tệp không cần sao lưu"], correct: 0, explanation: "Ngày theo thứ tự năm-tháng-ngày sẽ sắp xếp tự nhiên đúng trình tự thời gian." },
+  { category: "Quản lý dữ liệu", q: "Tại sao nên dùng dấu gạch dưới hoặc gạch nối thay cho dấu cách trong tên tệp?", options: ["Để tránh lỗi trên một số hệ thống", "Để file thành PDF", "Để file tự sao lưu 3 bản", "Để file có bản quyền"], correct: 0, explanation: "Dấu cách đôi khi gây lỗi hoặc bất tiện trong một số hệ thống/công cụ." },
+  { category: "Quản lý dữ liệu", q: "Microsoft OneNote được mô tả gần nhất như thế nào?", options: ["Công cụ ghi chú miễn phí, tích hợp Microsoft 365, cấu trúc giống sổ tay", "Công cụ kiểm chứng tin giả", "Dịch vụ lưu trữ 2GB của Dropbox", "Máy tìm kiếm học thuật AI"], correct: 0, explanation: "OneNote tổ chức ghi chú theo sổ tay, mục và trang, khá trực quan." },
+  { category: "Quản lý dữ liệu", q: "Notion nổi bật ở điểm nào?", options: ["Không gian làm việc tất cả trong một, linh hoạt cho ghi chú, quản lý việc, cơ sở dữ liệu cá nhân", "Chỉ dùng để nén tệp", "Chỉ là công cụ chống virus", "Chỉ dùng để đổi tên file"], correct: 0, explanation: "Notion có thể dùng cho ghi chú, quản lý công việc, database cá nhân và cộng tác nhóm." },
+  { category: "Quản lý dữ liệu", q: "Evernote mạnh ở khả năng nào?", options: ["Lưu trữ, tìm kiếm mẩu thông tin web và nhận dạng văn bản trong hình ảnh", "Tạo mạng WAN", "Chấm điểm bài thi", "Phân tích rủi ro tín dụng"], correct: 0, explanation: "Evernote nổi bật với web clipping và tìm kiếm thông tin đã lưu." },
+  { category: "Quản lý dữ liệu", q: "Zotero và Mendeley hỗ trợ sinh viên chủ yếu trong việc gì?", options: ["Quản lý tài liệu tham khảo, trích dẫn và danh mục tài liệu", "Lưu trữ video .mp4", "Tăng tốc Wi-Fi", "Phát hiện virus máy tính"], correct: 0, explanation: "Các phần mềm này thu thập, tổ chức và tự động trích dẫn tài liệu theo nhiều chuẩn." },
+  { category: "Quản lý dữ liệu", q: "Lưu trữ đám mây là gì?", options: ["Lưu dữ liệu trên máy chủ từ xa qua Internet để truy cập, đồng bộ, chia sẻ", "Lưu dữ liệu chỉ trên USB cá nhân", "Nén tệp thành .zip", "Một phương pháp kiểm tra tác giả"], correct: 0, explanation: "Cloud storage giúp dữ liệu có thể truy cập từ nhiều thiết bị có Internet." },
+  { category: "Quản lý dữ liệu", q: "Google Drive trong tài liệu có đặc điểm nào?", options: ["15GB miễn phí, tích hợp Google Workspace và mạnh về cộng tác thời gian thực", "Chỉ có 2GB miễn phí", "Chỉ chạy với Microsoft 365", "Không thể chia sẻ tệp"], correct: 0, explanation: "Google Drive gắn với Docs, Sheets, Slides, Meet và cộng tác trực tuyến." },
+  { category: "Quản lý dữ liệu", q: "OneDrive có lợi thế gì với sinh viên trong tài liệu?", options: ["Tích hợp Windows/Microsoft 365, tài khoản sinh viên có thể lên tới 1TB", "Chỉ hỗ trợ ảnh GIF", "Không đồng bộ được", "Chỉ dùng để tạo trích dẫn"], correct: 0, explanation: "OneDrive tích hợp tốt với Word, Excel, PowerPoint và Windows." },
+  { category: "Quản lý dữ liệu", q: "Dropbox được mô tả có điểm nào?", options: ["Giao diện đơn giản, đồng bộ nhanh, gói miễn phí 2GB", "15GB miễn phí", "Chỉ dùng cho trích dẫn Harvard", "Chỉ là cơ sở dữ liệu ngoại văn"], correct: 0, explanation: "Dropbox thuận tiện nhưng dung lượng miễn phí thấp hơn Google Drive." },
+  { category: "Quản lý dữ liệu", q: "Quy tắc sao lưu 3-2-1 nghĩa là gì?", options: ["3 bản sao, 2 loại phương tiện, 1 bản ở địa điểm khác", "3 mật khẩu, 2 trình duyệt, 1 tệp PDF", "3 nguồn tin, 2 tác giả, 1 tiêu đề", "3 câu hỏi, 2 đáp án, 1 kết luận"], correct: 0, explanation: "3-2-1 là quy tắc vàng giúp giảm rủi ro mất dữ liệu." },
+  { category: "Quản lý dữ liệu", q: "Version History trên dịch vụ đám mây hữu ích khi nào?", options: ["Khi cần quay lại phiên bản cũ sau khi xóa nhầm hoặc lưu đè", "Khi cần tạo tên miền .edu", "Khi cần nén video", "Khi cần kiểm tra quảng cáo"], correct: 0, explanation: "Lịch sử phiên bản là chức năng phục hồi dữ liệu quan trọng." },
+  { category: "Quản lý dữ liệu", q: "Mật khẩu mạnh theo tài liệu nên có đặc điểm nào?", options: ["Dài trên 12 ký tự, kết hợp chữ hoa, chữ thường, số và ký tự đặc biệt", "Chỉ dùng ngày sinh", "Dùng chung cho mọi tài khoản", "Chỉ gồm 4 chữ số"], correct: 0, explanation: "Mật khẩu mạnh và không tái sử dụng mật khẩu giúp bảo vệ tài khoản tốt hơn." },
+
+  { category: "Tìm kiếm thông tin", q: "Trước khi tìm kiếm thông tin, việc đầu tiên nên làm là gì?", options: ["Xác định rõ nhu cầu thông tin", "Gõ từ khóa bất kỳ", "Chỉ xem tiêu đề", "Tải mọi tệp tìm được"], correct: 0, explanation: "Cần biết mình cần thông tin tổng quan hay chi tiết, dữ liệu, khái niệm hay hướng dẫn thực hành." },
+  { category: "Tìm kiếm thông tin", q: "Khi chọn từ khóa tìm kiếm, cách làm nào hiệu quả?", options: ["Dùng từ khóa cụ thể, thuật ngữ chuyên ngành, thử từ đồng nghĩa", "Chỉ dùng một chữ cái", "Không cần thay đổi cách diễn đạt", "Chỉ tìm bằng tiếng lóng"], correct: 0, explanation: "Từ khóa tốt giúp tiết kiệm thời gian và tăng độ chính xác của kết quả." },
+  { category: "Tìm kiếm thông tin", q: "Toán tử dấu ngoặc kép \"...\" trong Google dùng để làm gì?", options: ["Tìm chính xác cụm từ", "Loại trừ từ khóa", "Tìm trong một trang web", "Tìm một loại tệp"], correct: 0, explanation: "Đặt cụm từ trong ngoặc kép giúp tìm đúng chuỗi từ đó." },
+  { category: "Tìm kiếm thông tin", q: "Toán tử dấu trừ (-) có tác dụng gì?", options: ["Loại trừ một từ khóa khỏi kết quả", "Tìm một trong hai từ khóa", "Tìm trang tương tự", "Tìm trong thư viện của tôi"], correct: 0, explanation: "Ví dụ AI -trí tuệ nhân tạo tìm kết quả có AI nhưng không có cụm bị loại trừ." },
+  { category: "Tìm kiếm thông tin", q: "Toán tử OR cần lưu ý điều gì?", options: ["Phải viết hoa để tìm một trong các từ khóa", "Chỉ dùng cho ảnh", "Chỉ dùng trong VNU-LIC", "Luôn loại trừ từ khóa"], correct: 0, explanation: "OR giúp mở rộng kết quả bằng cách chấp nhận một trong các lựa chọn." },
+  { category: "Tìm kiếm thông tin", q: "Toán tử site: dùng để làm gì?", options: ["Tìm kiếm trong một trang web hoặc tên miền cụ thể", "Tìm tệp theo định dạng", "Tìm trang tương tự", "Tìm từ cách nhau n từ"], correct: 0, explanation: "Ví dụ tuyển sinh site:vnu.edu.vn giới hạn kết quả trong tên miền vnu.edu.vn." },
+  { category: "Tìm kiếm thông tin", q: "Toán tử filetype: giúp gì?", options: ["Tìm một loại tệp cụ thể", "Tìm trang có nội dung tương tự", "Tìm từ khóa bị thiếu", "Lưu bài vào My library"], correct: 0, explanation: "Ví dụ biến đổi khí hậu filetype:pdf giúp tìm tài liệu PDF." },
+  { category: "Tìm kiếm thông tin", q: "Toán tử related: có chức năng nào?", options: ["Tìm các trang web có nội dung tương tự một trang đã biết", "Loại trừ từ khóa", "Tìm chính xác cụm từ", "Chỉ tìm trang .gov"], correct: 0, explanation: "related:coursera.org là ví dụ tìm các trang tương tự Coursera." },
+  { category: "Tìm kiếm thông tin", q: "Ký tự * trong tìm kiếm nâng cao đóng vai trò gì?", options: ["Ký tự đại diện thay thế cho một hoặc nhiều từ", "Tìm tài liệu học thuật đã bình duyệt", "Kiểm tra tác giả", "Tạo danh mục tham khảo"], correct: 0, explanation: "Ví dụ 'cách học * hiệu quả' cho phép Google điền các từ khác nhau vào vị trí dấu *." },
+  { category: "Tìm kiếm thông tin", q: "AROUND(n) dùng để làm gì?", options: ["Tìm các từ khóa cách nhau không quá n từ", "Tìm chỉ trong một tên miền", "Tìm một loại tệp", "Lưu vào thư viện cá nhân"], correct: 0, explanation: "AROUND(n) hữu ích khi muốn các từ khóa xuất hiện gần nhau trong văn bản." },
+  { category: "Tìm kiếm thông tin", q: "Bộ lọc thời gian của công cụ tìm kiếm có ích khi nào?", options: ["Khi cần thông tin cập nhật trong năm qua hoặc tháng qua", "Khi cần nén tệp", "Khi cần bỏ qua tác giả", "Khi cần tạo mật khẩu"], correct: 0, explanation: "Thông tin trong lĩnh vực thay đổi nhanh cần giới hạn thời gian để giảm lỗi thời." },
+  { category: "Tìm kiếm học thuật", q: "Google Scholar tập trung vào loại tài liệu nào?", options: ["Bài báo khoa học, luận văn, sách, báo cáo hội nghị", "Tin giật gân mạng xã hội", "Tệp nhạc MP3", "Ảnh GIF"], correct: 0, explanation: "Google Scholar là công cụ tìm kiếm học thuật của Google." },
+  { category: "Tìm kiếm học thuật", q: "Chỉ số 'Cited by' trên Google Scholar giúp đánh giá điều gì?", options: ["Mức độ ảnh hưởng của một bài báo", "Dung lượng tệp PDF", "Tốc độ đồng bộ cloud", "Độ dài mật khẩu"], correct: 0, explanation: "Bài được trích dẫn nhiều thường có ảnh hưởng lớn hơn, dù vẫn cần đánh giá chất lượng nội dung." },
+  { category: "Tìm kiếm học thuật", q: "Tính năng 'Related articles' trong Google Scholar dùng để làm gì?", options: ["Khám phá các nghiên cứu tương tự", "Nén bài báo thành ZIP", "Kiểm tra Wi-Fi công cộng", "Tạo mật khẩu 2FA"], correct: 0, explanation: "Related articles giúp mở rộng lược khảo tài liệu theo hướng liên quan." },
+  { category: "Tìm kiếm học thuật", q: "Biểu tượng dấu ngoặc kép trong Google Scholar hỗ trợ gì?", options: ["Lấy trích dẫn nhanh theo các chuẩn phổ biến", "Tải video .mov", "Tạo tài khoản sinh viên", "Ẩn mọi quảng cáo"], correct: 0, explanation: "Google Scholar có thể tạo trích dẫn nhanh theo APA, Harvard, MLA..." },
+  { category: "Tìm kiếm học thuật", q: "VNU-LIC là gì?", options: ["Trung tâm Thông tin - Thư viện ĐHQGHN, cung cấp tài nguyên học thuật cho sinh viên", "Một định dạng tệp nén", "Một công cụ chống phishing", "Một toán tử Google"], correct: 0, explanation: "VNU-LIC cung cấp quyền truy cập tài liệu trong nước, quốc tế và các cơ sở dữ liệu học thuật." },
+  { category: "Tìm kiếm học thuật", q: "repository.vnu.edu.vn chứa loại tài nguyên nào?", options: ["Luận án, luận văn, đề tài nghiên cứu khoa học của ĐHQGHN", "Chỉ video giải trí", "Chỉ ảnh PNG", "Chỉ tệp nén RAR"], correct: 0, explanation: "Đây là thư viện số tài liệu nội sinh của ĐHQGHN." },
+  { category: "Tìm kiếm học thuật", q: "VNU-LIC cung cấp quyền truy cập cơ sở dữ liệu ngoại văn nào?", options: ["ScienceDirect, SpringerLink, IEEE Xplore", "Snopes, PolitiFact, VAFC", "Dropbox, OneDrive, Google Drive", "MP3, WAV, MOV"], correct: 0, explanation: "Các cơ sở dữ liệu này là nguồn học thuật quốc tế quan trọng." },
+
+  { category: "AI hỗ trợ thông tin", q: "Elicit hỗ trợ sinh viên trong việc gì?", options: ["Đặt câu hỏi nghiên cứu, tìm bài báo liên quan và tóm tắt kết luận thành bảng", "Nén nhiều tệp thành .rar", "Tạo mật khẩu 2FA", "Kiểm tra ảnh đảo ngược"], correct: 0, explanation: "Elicit mạnh trong giai đoạn lược khảo và xác định hướng nghiên cứu." },
+  { category: "AI hỗ trợ thông tin", q: "Semantic Scholar được mô tả là gì?", options: ["Công cụ tìm kiếm học thuật hỗ trợ bởi AI, có TLDR và nhận diện bài có ảnh hưởng", "Dịch vụ cloud 2GB", "Ứng dụng ghi chú dạng sổ tay", "Công cụ tạo file CSV"], correct: 0, explanation: "Semantic Scholar dùng AI để hỗ trợ tìm và hiểu nhanh tài liệu học thuật." },
+  { category: "AI hỗ trợ thông tin", q: "SciSpace có tính năng nổi bật nào?", options: ["Tải lên PDF và trò chuyện với bài báo để hỏi, giải thích, tóm tắt", "Tự động tạo ổ cứng ngoài", "Chặn mọi tin giả", "Tạo tên tệp theo ngày"], correct: 0, explanation: "SciSpace giúp người đọc tương tác với nội dung bài báo khoa học." },
+  { category: "AI hỗ trợ thông tin", q: "ChatGPT, Gemini, Microsoft Copilot có thể hỗ trợ giai đoạn đầu nghiên cứu bằng cách nào?", options: ["Brainstorming, tóm tắt, diễn giải ý tưởng", "Thay người học nộp bài nguyên văn", "Xác nhận mọi thông tin luôn đúng", "Tự động cấp tài khoản VNU-LIC"], correct: 0, explanation: "Các mô hình ngôn ngữ lớn có thể hỗ trợ ý tưởng, tóm tắt và diễn đạt lại, nhưng cần kiểm chứng." },
+  { category: "AI hỗ trợ thông tin", q: "QuillBot được nhắc đến mạnh về tính năng nào?", options: ["Diễn giải (paraphrasing)", "Tìm tên miền .gov", "Lưu trữ 15GB miễn phí", "Tạo lịch sử phiên bản"], correct: 0, explanation: "QuillBot hỗ trợ diễn đạt lại ý tưởng bằng ngôn từ khác." },
+  { category: "AI hỗ trợ thông tin", q: "Lưu ý quan trọng nhất khi dùng AI để tổng hợp thông tin là gì?", options: ["Luôn kiểm tra lại thông tin AI cung cấp", "Sao chép nguyên văn vào bài viết", "Không cần trích dẫn", "Tin mọi câu trả lời của AI"], correct: 0, explanation: "AI có thể sai hoặc thiếu nguồn; người dùng phải kiểm chứng, chỉnh sửa và ghi nhận đúng cách." },
+  { category: "AI hỗ trợ thông tin", q: "Theo tài liệu, nên coi AI là gì trong học tập?", options: ["Một trợ lý, không phải người làm thay công việc", "Nguồn tin tuyệt đối đúng", "Tác giả chính của bài tập", "Công cụ để bỏ qua liêm chính học thuật"], correct: 0, explanation: "AI hỗ trợ quá trình học, nhưng người học vẫn chịu trách nhiệm về nội dung và đạo đức sử dụng." },
+  { category: "AI hỗ trợ thông tin", q: "Hành vi nào không phù hợp khi dùng AI?", options: ["Sao chép nguyên văn nội dung AI tạo ra mà không chỉnh sửa, kiểm chứng, ghi nhận", "Dùng AI gợi ý từ khóa", "Yêu cầu AI tóm tắt để đọc hiểu nhanh", "Kiểm chứng lại câu trả lời AI bằng nguồn độc lập"], correct: 0, explanation: "Sao chép nguyên văn dễ dẫn tới sai sót và vi phạm liêm chính học thuật." },
+
+  { category: "Đánh giá thông tin", q: "CRAAP Test dùng để làm gì?", options: ["Đánh giá độ tin cậy và chất lượng nguồn thông tin có hệ thống", "Nén file âm thanh", "Tạo mật khẩu", "Phân loại định dạng video"], correct: 0, explanation: "CRAAP là bộ tiêu chí giúp người đọc kiểm tra nguồn trước khi sử dụng." },
+  { category: "Đánh giá thông tin", q: "CRAAP là viết tắt của những tiêu chí nào?", options: ["Currency, Relevance, Authority, Accuracy, Purpose", "Cloud, Recovery, AI, Archive, PDF", "Citation, Rule, Author, Article, Page", "Copy, Rename, Access, Apply, Print"], correct: 0, explanation: "Năm tiêu chí là tính cập nhật, liên quan, tác giả/nguồn gốc, chính xác và mục đích." },
+  { category: "Đánh giá thông tin", q: "Currency trong CRAAP hỏi về điều gì?", options: ["Thông tin được xuất bản/cập nhật khi nào và còn phù hợp không", "Tác giả có bán hàng không", "Bài viết có bao nhiêu ảnh", "Tệp có nén hay không"], correct: 0, explanation: "Tính cập nhật đặc biệt quan trọng trong lĩnh vực thay đổi nhanh như công nghệ, y học, luật." },
+  { category: "Đánh giá thông tin", q: "Relevance đánh giá điều gì?", options: ["Mức độ phù hợp của thông tin với nhu cầu và trình độ của người đọc", "Độ dài mật khẩu", "Dung lượng tệp", "Tốc độ tạo dữ liệu"], correct: 0, explanation: "Một nguồn có thể tốt nhưng không hữu ích nếu không trả lời đúng câu hỏi nghiên cứu." },
+  { category: "Đánh giá thông tin", q: "Authority tập trung vào yếu tố nào?", options: ["Tác giả, nhà xuất bản, tổ chức bảo trợ và uy tín chuyên môn", "Ngày sao lưu dữ liệu", "Đuôi tệp", "Số lượng thư mục"], correct: 0, explanation: "Nguồn đáng tin cần minh bạch về tác giả/tổ chức và chuyên môn liên quan." },
+  { category: "Đánh giá thông tin", q: "Accuracy yêu cầu người đọc kiểm tra điều gì?", options: ["Bằng chứng, số liệu, trích dẫn, kiểm chứng chéo và tính khách quan", "Chỉ màu sắc trang web", "Chỉ số lượt thích", "Chỉ tên miền .com"], correct: 0, explanation: "Thông tin chính xác cần dựa trên bằng chứng và có thể kiểm chứng bằng nguồn độc lập." },
+  { category: "Đánh giá thông tin", q: "Purpose trong CRAAP giúp nhận diện điều gì?", options: ["Mục đích tạo thông tin và khả năng thiên vị, quảng cáo, thuyết phục", "Tốc độ Wi-Fi", "Định dạng âm thanh", "Cấu trúc thư mục"], correct: 0, explanation: "Hiểu mục đích giúp đọc thông tin với cảnh giác trước thành kiến hoặc lợi ích thương mại." },
+  { category: "Đánh giá thông tin", q: "Tên miền .vn tự nó có bảo đảm một nguồn đáng tin không?", options: ["Không, chỉ cho biết website đăng ký tại Việt Nam, vẫn phải kiểm tra tác giả/tổ chức", "Có, mọi .vn đều là nguồn học thuật", "Có, mọi .vn đều được bình duyệt", "Không, vì .vn không bao giờ dùng được"], correct: 0, explanation: "Tình huống TechFuture.vn cho thấy tên miền không đủ để bảo đảm uy tín." },
+  { category: "Đánh giá thông tin", q: "Bài viết '90% việc làm tại Việt Nam sẽ bị AI thay thế trong 5 năm' bị đánh giá thấp chủ yếu vì sao?", options: ["Thiếu tác giả/tổ chức uy tín, thiếu bằng chứng, có dấu hiệu quảng cáo và gây sốc", "Vì có liên quan đến AI", "Vì xuất bản năm 2025", "Vì dùng tiếng Việt"], correct: 0, explanation: "Bài viết đáp ứng một phần Currency/Relevance nhưng thất bại ở Authority, Accuracy và Purpose." },
+  { category: "Đánh giá thông tin", q: "Dấu hiệu nào gợi ý một bài viết có mục đích thương mại/thao túng hơn là cung cấp kiến thức khách quan?", options: ["Ngôn ngữ gây sốc và quảng cáo khóa học/sản phẩm", "Có nguồn trích dẫn rõ ràng", "Có dữ liệu từ ILO", "Có nhiều quan điểm cân bằng"], correct: 0, explanation: "Ngôn ngữ kích động cảm xúc và lời kêu gọi mua hàng là dấu hiệu cần cảnh giác." },
+  { category: "Đánh giá thông tin", q: "Khi gặp tin có tiêu đề giật gân, việc nên làm là gì?", options: ["Đọc toàn bộ bài, kiểm tra nguồn, tác giả, bằng chứng và ngày tháng", "Chia sẻ ngay", "Chỉ tin tiêu đề", "Bỏ qua mọi nguồn dẫn"], correct: 0, explanation: "Tin giả thường dùng tiêu đề sốc nhưng nội dung thiếu cơ sở hoặc không liên quan." },
+  { category: "Đánh giá thông tin", q: "Công cụ tìm kiếm hình ảnh ngược giúp gì khi kiểm tra tin giả?", options: ["Xem hình ảnh có bị lấy từ bối cảnh khác không", "Tạo mật khẩu 2FA", "Tìm file CSV", "Nén ảnh thành RAR"], correct: 0, explanation: "Ảnh có thể bị tái sử dụng sai bối cảnh; tìm kiếm ngược giúp phát hiện điều này." },
+
+  { category: "Bản quyền và trích dẫn", q: "Quyền tác giả theo tài liệu được bảo hộ khi nào?", options: ["Ngay từ khi tác phẩm được sáng tạo và thể hiện dưới hình thức vật chất nhất định", "Chỉ khi tác giả đăng ký xong", "Chỉ khi tác phẩm là PDF", "Chỉ khi có trên mạng xã hội"], correct: 0, explanation: "Theo tài liệu, tác phẩm khoa học, văn học, nghệ thuật được bảo hộ quyền tác giả ngay khi được sáng tạo và thể hiện." },
+  { category: "Bản quyền và trích dẫn", q: "Đạo văn (Plagiarism) là gì?", options: ["Ăn cắp ý tưởng hoặc sản phẩm của người khác và nhận là của mình", "Trích dẫn đúng nguồn", "Tóm tắt có ghi nhận tác giả", "Dùng Zotero tạo danh mục"], correct: 0, explanation: "Đạo văn là hành vi thiếu liêm chính học thuật và có thể vi phạm pháp luật." },
+  { category: "Bản quyền và trích dẫn", q: "Hành vi nào là đạo văn?", options: ["Diễn giải ý tưởng của người khác bằng lời mình nhưng không ghi nguồn", "Trích dẫn trong ngoặc kép và ghi nguồn", "Dùng tài liệu tham khảo có danh mục cuối bài", "Tự tạo biểu đồ từ dữ liệu của mình"], correct: 0, explanation: "Paraphrase vẫn cần ghi nhận nguồn nếu ý tưởng, lý thuyết hoặc số liệu là của người khác." },
+  { category: "Bản quyền và trích dẫn", q: "Khi dùng nguyên văn lời của người khác, cần làm gì?", options: ["Đặt trong ngoặc kép và trích dẫn nguồn", "Chỉ đổi phông chữ", "Không cần ghi gì nếu đoạn ngắn", "Chỉ đưa vào phụ lục"], correct: 0, explanation: "Nguyên văn cần ngoặc kép và citation để tránh đạo văn." },
+  { category: "Bản quyền và trích dẫn", q: "Trích dẫn nguồn có tác dụng nào?", options: ["Tôn trọng tác giả gốc, tăng độ tin cậy và giúp người đọc tìm tài liệu gốc", "Làm bài viết mất giá trị", "Thay thế hoàn toàn việc kiểm chứng", "Chỉ dùng cho hình ảnh"], correct: 0, explanation: "Citation là cách duy nhất để tránh đạo văn khi sử dụng ý tưởng, số liệu hoặc tác phẩm của người khác." },
+  { category: "Bản quyền và trích dẫn", q: "Chuẩn Harvard yêu cầu hai thành phần nào?", options: ["Trích dẫn trong bài và danh mục tài liệu tham khảo cuối văn bản", "Tệp PDF và tệp ZIP", "Mật khẩu và 2FA", "Volume và Velocity"], correct: 0, explanation: "Harvard gồm in-text citation và reference list." },
+  { category: "Bản quyền và trích dẫn", q: "Trích dẫn trong bài theo Harvard thường có dạng nào?", options: ["(Họ tác giả, Năm xuất bản)", "[Tên file]_[Phiên bản]", "site:tên miền", "Cited by số lần"], correct: 0, explanation: "Ví dụ: (Hùng và cộng sự, 2022) đặt ngay sau câu trích dẫn hoặc diễn giải." },
+  { category: "Bản quyền và trích dẫn", q: "Công cụ nào giúp tự động hóa trích dẫn và tạo danh mục tài liệu tham khảo?", options: ["Zotero hoặc Mendeley", "Dropbox hoặc Wi-Fi", "Snopes hoặc VAFC", "MP3 hoặc WAV"], correct: 0, explanation: "Zotero và Mendeley giúp quản lý nguồn, chèn trích dẫn và tạo reference list nhanh, chính xác." }
+];
+
+quizQuestionsChapter2 = quizQuestionsChapter2.filter((_, index) => !new Set([65, 71]).has(index + 1));
+
+const quizQuestionsFileFormats = [
+  { category: "Định dạng tệp", q: "Đuôi tệp nào biểu thị văn bản thuần túy, không định dạng?", options: [".txt", ".docx", ".pptx", ".zip"], correct: 0, explanation: ".txt là văn bản thuần túy, ít định dạng và mở được trên hầu hết thiết bị." },
+  { category: "Định dạng tệp", q: "Nếu cần soạn thảo văn bản có định dạng phong phú bằng Microsoft Word, nên dùng định dạng nào?", options: [".doc/.docx", ".csv", ".mp3", ".gif"], correct: 0, explanation: ".doc và .docx là định dạng tài liệu Word, hỗ trợ định dạng, bảng, hình ảnh và nhiều thành phần văn bản." },
+  { category: "Định dạng tệp", q: "Định dạng nào phù hợp nhất khi muốn chia sẻ tài liệu mà vẫn giữ nguyên bố cục trên nhiều thiết bị?", options: [".pdf", ".txt", ".wav", ".rar"], correct: 0, explanation: ".pdf giữ định dạng ổn định, phù hợp để chia sẻ, đọc và in ấn." },
+  { category: "Định dạng tệp", q: "Định dạng nào là bảng tính Microsoft Excel?", options: [".xls/.xlsx", ".ppt/.pptx", ".jpg/.jpeg", ".mov"], correct: 0, explanation: ".xls và .xlsx là định dạng bảng tính Excel, dùng cho số liệu, công thức và biểu đồ." },
+  { category: "Định dạng tệp", q: "CSV là định dạng nào?", options: ["Dữ liệu phân tách bằng dấu phẩy", "Ảnh nén không mất dữ liệu", "Video chất lượng cao của Apple", "Âm thanh không nén"], correct: 0, explanation: ".csv là Comma-Separated Values, thường dùng để trao đổi dữ liệu dạng bảng giữa các phần mềm." },
+  { category: "Định dạng tệp", q: "Định dạng nào dùng cho bài trình chiếu Microsoft PowerPoint?", options: [".ppt/.pptx", ".pdf/.txt", ".mp4/.mov", ".zip/.rar"], correct: 0, explanation: ".ppt và .pptx là tệp trình chiếu PowerPoint." },
+  { category: "Định dạng tệp", q: "Nhóm đuôi tệp nào thuộc hình ảnh?", options: [".jpg/.jpeg, .png, .gif", ".mp3, .wav, .mov", ".csv, .xlsx, .rar", ".docx, .pptx, .zip"], correct: 0, explanation: ".jpg/.jpeg, .png và .gif là các định dạng hình ảnh phổ biến." },
+  { category: "Định dạng tệp", q: "Định dạng ảnh nào thường phù hợp cho ảnh chụp và web vì nén dung lượng tốt?", options: [".jpg/.jpeg", ".wav", ".csv", ".pptx"], correct: 0, explanation: "JPEG/JPG phổ biến cho ảnh chụp và web vì giảm dung lượng tốt." },
+  { category: "Định dạng tệp", q: "Định dạng ảnh nào hỗ trợ nền trong suốt?", options: [".png", ".txt", ".mp3", ".xlsx"], correct: 0, explanation: ".png hỗ trợ nền trong suốt và nén không mất dữ liệu, thường dùng cho logo/icon." },
+  { category: "Định dạng tệp", q: "Định dạng nào có thể là ảnh động với bảng màu hạn chế?", options: [".gif", ".docx", ".csv", ".wav"], correct: 0, explanation: ".gif có thể dùng cho ảnh động hoặc ảnh tĩnh bảng màu hạn chế." },
+  { category: "Định dạng tệp", q: "Nhóm đuôi tệp nào thuộc âm thanh?", options: [".mp3, .wav", ".jpg, .png", ".pdf, .docx", ".zip, .rar"], correct: 0, explanation: ".mp3 và .wav là định dạng âm thanh." },
+  { category: "Định dạng tệp", q: "Định dạng âm thanh nào phổ biến nhất cho nghe nhạc vì đã được nén?", options: [".mp3", ".wav", ".mov", ".pptx"], correct: 0, explanation: ".mp3 là âm thanh nén, phổ biến cho nghe nhạc và chia sẻ." },
+  { category: "Định dạng tệp", q: "Định dạng âm thanh nào thường không nén, chất lượng cao nhưng dung lượng lớn?", options: [".wav", ".mp3", ".gif", ".csv"], correct: 0, explanation: ".wav thường lưu âm thanh không nén, chất lượng cao, dùng trong sản xuất âm nhạc." },
+  { category: "Định dạng tệp", q: "Nhóm đuôi tệp nào thuộc video?", options: [".mp4, .mov", ".txt, .docx", ".xls, .csv", ".zip, .rar"], correct: 0, explanation: ".mp4 và .mov là các định dạng video phổ biến." },
+  { category: "Định dạng tệp", q: "Định dạng video nào phổ biến nhất cho web và thiết bị di động?", options: [".mp4", ".wav", ".png", ".xlsx"], correct: 0, explanation: ".mp4 là video nén phổ biến cho web và thiết bị di động." },
+  { category: "Định dạng tệp", q: ".mov thường gắn với hệ sinh thái nào?", options: ["Apple QuickTime", "Microsoft Excel", "Google Scholar", "WinRAR only"], correct: 0, explanation: ".mov là định dạng video của Apple QuickTime, thường cho chất lượng cao." },
+  { category: "Định dạng tệp", q: "Nhóm đuôi tệp nào là tệp nén?", options: [".zip, .rar", ".mp3, .wav", ".jpg, .gif", ".ppt, .docx"], correct: 0, explanation: ".zip và .rar dùng để nén nhiều tệp/thư mục thành một tệp duy nhất." },
+  { category: "Định dạng tệp", q: "Mục đích chính của tệp .zip hoặc .rar là gì?", options: ["Giảm dung lượng và gửi nhiều tệp dễ hơn", "Giữ nguyên bố cục tài liệu để in", "Soạn văn bản có định dạng", "Lưu âm thanh chất lượng cao"], correct: 0, explanation: "Tệp nén gom nhiều tệp/thư mục, giảm dung lượng và thuận tiện khi gửi." },
+  { category: "Định dạng tệp", q: "Bạn nhận một file bảng điểm dạng dữ liệu thô, dễ mở bằng Excel hoặc phần mềm phân tích. Đuôi nào hợp lý nhất?", options: [".csv", ".mp3", ".png", ".mov"], correct: 0, explanation: ".csv rất phù hợp để trao đổi dữ liệu dạng bảng giữa các công cụ như Excel, Google Sheets hoặc phần mềm phân tích." },
+  { category: "Định dạng tệp", q: "Bạn cần gửi bài báo cáo cho người khác đọc và in, không muốn bố cục bị lệch. Nên xuất file nào?", options: [".pdf", ".txt", ".gif", ".wav"], correct: 0, explanation: ".pdf giữ nguyên bố cục và định dạng trên nhiều thiết bị, phù hợp để nộp/chia sẻ báo cáo." },
+  { category: "Định dạng tệp", q: "Bạn cần làm slide thuyết trình nhóm. Định dạng nào đúng nhất?", options: [".pptx", ".xlsx", ".mp4", ".rar"], correct: 0, explanation: ".pptx là định dạng bài trình chiếu PowerPoint." },
+  { category: "Định dạng tệp", q: "Bạn cần lưu logo có nền trong suốt để chèn lên poster. Định dạng nào phù hợp hơn?", options: [".png", ".jpg", ".mp3", ".csv"], correct: 0, explanation: ".png hỗ trợ nền trong suốt nên phù hợp cho logo và icon." },
+  { category: "Định dạng tệp", q: "Bạn cần gửi cả thư mục bài tập gồm nhiều file cho bạn học. Nên dùng định dạng nào?", options: [".zip", ".txt", ".wav", ".jpeg"], correct: 0, explanation: ".zip có thể nén nhiều file/thư mục thành một file để gửi dễ hơn." },
+  { category: "Định dạng tệp", q: "Định dạng nào KHÔNG thuộc nhóm hình ảnh?", options: [".mp3", ".jpg", ".png", ".gif"], correct: 0, explanation: ".mp3 là âm thanh nén, không phải định dạng hình ảnh." },
+  { category: "Định dạng tệp", q: "Định dạng nào KHÔNG thuộc nhóm âm thanh?", options: [".mp4", ".mp3", ".wav", ".mp3 và .wav đều là âm thanh"], correct: 0, explanation: ".mp4 là video, còn .mp3 và .wav là âm thanh." },
+  { category: "Định dạng tệp", q: "Định dạng nào KHÔNG thuộc nhóm văn bản/tài liệu trong danh sách?", options: [".mov", ".txt", ".docx", ".pdf"], correct: 0, explanation: ".mov là video Apple QuickTime, không phải văn bản/tài liệu." },
+  { category: "Định dạng tệp", q: "Định dạng nào thường khó chỉnh sửa trực tiếp hơn Word nhưng tốt cho chia sẻ/in ấn?", options: [".pdf", ".docx", ".txt", ".csv"], correct: 0, explanation: "PDF giữ bố cục tốt nhưng thường khó chỉnh sửa trực tiếp hơn tài liệu Word." },
+  { category: "Định dạng tệp", q: "Nếu muốn lưu dữ liệu bảng nhưng không cần công thức Excel, chỉ cần trao đổi dữ liệu đơn giản, định dạng nào hay dùng?", options: [".csv", ".xlsx", ".pptx", ".gif"], correct: 0, explanation: ".csv lưu dữ liệu phân tách bằng dấu phẩy, đơn giản và dễ trao đổi." },
+  { category: "Định dạng tệp", q: "Cặp định dạng nào dễ nhầm nhưng khác loại: một là bảng tính, một là bài trình chiếu?", options: [".xlsx và .pptx", ".mp3 và .wav", ".jpg và .png", ".zip và .rar"], correct: 0, explanation: ".xlsx là Excel/bảng tính, còn .pptx là PowerPoint/trình chiếu." },
+  { category: "Định dạng tệp", q: "Cặp định dạng nào dễ nhầm nhưng khác loại: một là âm thanh, một là video?", options: [".mp3 và .mp4", ".zip và .rar", ".docx và .pdf", ".jpg và .jpeg"], correct: 0, explanation: ".mp3 là âm thanh, .mp4 là video." }
+];
+
+const quizQuestionsChapter3 = [
+  {category:"Tổng quan AI",q:"Chương 3 tập trung vào chủ đề chính nào?",options:["Tổng quan về trí tuệ nhân tạo, AI tạo sinh, prompt và công cụ AI","Kỹ thuật lắp ráp máy tính","Thiết kế cơ sở dữ liệu quan hệ","Quản trị mạng nâng cao"],correct:0,explanation:"Chương 3 giới thiệu lịch sử AI, khái niệm AI/ML/DL/GenAI, năng lực số, prompt engineering và các công cụ AI phổ biến."},
+  {category:"Tổng quan AI",q:"Một mục tiêu học tập của Chương 3 là gì?",options:["Sử dụng và so sánh các công cụ AI tạo sinh phổ biến","Cài đặt hệ điều hành Linux từ đầu","Thiết kế router vật lý","Viết driver phần cứng"],correct:0,explanation:"Chương yêu cầu sinh viên biết dùng và so sánh ChatGPT, Gemini, Copilot và các công cụ khác cho nhiệm vụ học tập."},
+  {category:"Tổng quan AI",q:"AI trong chương này cần được sử dụng với thái độ nào?",options:["Phản biện, có trách nhiệm và nhận thức về đạo đức","Tin tuyệt đối mọi kết quả","Dùng để thay hoàn toàn tư duy cá nhân","Chỉ dùng để giải trí"],correct:0,explanation:"Chương nhấn mạnh tư duy phản biện, trách nhiệm, liêm chính học thuật và đạo đức khi dùng AI."},
+  {category:"Lịch sử AI",q:"Năm 1950, Alan Turing đặt ra câu hỏi nền tảng nào?",options:["Máy móc có thể suy nghĩ không?","Internet có thể lưu trữ dữ liệu không?","AI có thể tạo file ZIP không?","Máy tính có cần RAM không?"],correct:0,explanation:"Bài báo của Alan Turing đặt nền móng triết học cho AI bằng câu hỏi liệu máy móc có thể suy nghĩ."},
+  {category:"Lịch sử AI",q:"Phép thử Turing dùng để đánh giá điều gì?",options:["Máy có thể thể hiện hành vi thông minh khó phân biệt với con người không","Máy có thể nén file nhanh không","Máy có đủ dung lượng lưu trữ không","Máy có chạy được PowerPoint không"],correct:0,explanation:"Turing Test kiểm tra liệu hành vi của máy có giống con người đến mức người đối thoại khó phân biệt."},
+  {category:"Lịch sử AI",q:"Thuật ngữ Artificial Intelligence chính thức ra đời khi nào?",options:["Năm 1956 tại Hội nghị Dartmouth","Năm 2012 tại ImageNet","Năm 2022 khi ChatGPT ra mắt","Năm 1990 trong Mùa đông AI"],correct:0,explanation:"John McCarthy tổ chức Hội nghị Dartmouth năm 1956, đánh dấu AI thành lĩnh vực nghiên cứu chính thức."},
+  {category:"Lịch sử AI",q:"John McCarthy gắn với sự kiện nào?",options:["Tổ chức Hội nghị Dartmouth khai sinh thuật ngữ AI","Tạo ra AlphaGo","Phát triển ChatGPT","Tạo Midjourney"],correct:0,explanation:"John McCarthy là người tổ chức Hội nghị Dartmouth năm 1956."},
+  {category:"Lịch sử AI",q:"ELIZA năm 1966 là ví dụ về gì?",options:["Chatbot đầu tiên có khả năng đối thoại đơn giản","Mạng nơ-ron sâu đầu tiên","Công cụ tạo ảnh","Cỗ máy trả lời có trích dẫn"],correct:0,explanation:"ELIZA là một chatbot sơ khai có khả năng đối thoại đơn giản."},
+  {category:"Lịch sử AI",q:"STUDENT năm 1964 được nhắc đến như chương trình gì?",options:["Chương trình giải toán","Chương trình tạo ảnh","Công cụ email AI","Mô hình tạo video"],correct:0,explanation:"STUDENT là chương trình giải toán sơ khai trong lịch sử AI."},
+  {category:"Lịch sử AI",q:"Arthur Samuel năm 1959 gắn với chương trình nào?",options:["Chương trình chơi cờ","Chatbot ELIZA","DALL-E","Google Gemini"],correct:0,explanation:"Arthur Samuel phát triển chương trình chơi cờ, một mốc AI sơ khai."},
+  {category:"Lịch sử AI",q:"Mùa đông AI lần thứ nhất xuất hiện chủ yếu vì nguyên nhân nào?",options:["Kỳ vọng quá cao nhưng năng lực tính toán và dữ liệu còn hạn chế","AI tạo sinh quá phát triển","Có quá nhiều công cụ miễn phí","Không còn nhu cầu nghiên cứu"],correct:0,explanation:"Hứa hẹn ban đầu không thành hiện thực do giới hạn tính toán, thiếu dữ liệu và vấn đề phức tạp hơn tưởng tượng."},
+  {category:"Lịch sử AI",q:"Hệ chuyên gia trong thập niên 1980 dựa chủ yếu trên cách tiếp cận nào?",options:["Mã hóa quy tắc logic và kiến thức chuyên gia","Dự đoán token tiếp theo","Tạo ảnh bằng prompt","Tìm kiếm web có trích dẫn"],correct:0,explanation:"Expert Systems là hệ thống dựa trên luật, dùng tri thức chuyên gia được mã hóa tường minh."},
+  {category:"Lịch sử AI",q:"Hạn chế lớn của hệ chuyên gia là gì?",options:["Khó xây dựng, khó cập nhật, khó mở rộng và dễ bó tay trước tình huống mới","Không thể đưa ra quyết định trong lĩnh vực hẹp","Không cần kiến thức chuyên gia","Luôn tự học từ dữ liệu lớn"],correct:0,explanation:"Hệ chuyên gia tốn công cập nhật tri thức và không linh hoạt với tình huống chưa được lập trình."},
+  {category:"Lịch sử AI",q:"Cuộc cách mạng học máy thay đổi cách xây dựng AI như thế nào?",options:["Từ lập trình quy tắc sang để máy tự học mẫu từ dữ liệu","Từ dùng dữ liệu sang bỏ dữ liệu","Từ AI sang chỉ dùng phần cứng","Từ ngôn ngữ tự nhiên sang mã máy"],correct:0,explanation:"Machine Learning cho phép máy học quy luật từ dữ liệu thay vì cần lập trình mọi luật nếu-thì."},
+  {category:"Lịch sử AI",q:"Ba yếu tố thúc đẩy học máy/học sâu gồm gì?",options:["Big Data, GPU/sức mạnh tính toán, thuật toán mạng nơ-ron/học sâu","PDF, CSV, ZIP","Email, trình duyệt, Wi-Fi","CRAAP, Harvard, Citation"],correct:0,explanation:"Dữ liệu lớn, phần cứng mạnh và thuật toán đột phá giúp AI bước vào kỷ nguyên học máy/học sâu."},
+  {category:"Lịch sử AI",q:"AlexNet năm 2012 nổi bật vì điều gì?",options:["Chiến thắng ImageNet và chứng minh sức mạnh của học sâu","Đánh bại Lee Sedol ở cờ vây","Khai sinh thuật ngữ AI","Ra mắt chatbot đầu tiên"],correct:0,explanation:"AlexNet là mốc quan trọng của Deep Learning trong nhận dạng hình ảnh."},
+  {category:"Lịch sử AI",q:"AlphaGo năm 2016 nổi bật vì điều gì?",options:["Đánh bại kỳ thủ cờ vây Lee Sedol","Tạo ra văn bản bằng GPT","Tạo slide PowerPoint","Là chatbot đầu tiên"],correct:0,explanation:"AlphaGo của DeepMind đánh bại Lee Sedol, một thành tựu lớn vì cờ vây rất phức tạp."},
+  {category:"Lịch sử AI",q:"Kiến trúc Transformer năm 2017 mở đường cho công nghệ nào?",options:["Mô hình ngôn ngữ lớn LLMs","Ổ cứng SSD NVMe","Tệp CSV","Mạng LAN"],correct:0,explanation:"Transformer là nền tảng cho sự phát triển mạnh của các LLM như GPT, LLaMA, Gemini."},
+  {category:"Lịch sử AI",q:"ChatGPT ra mắt cuối năm 2022 có ý nghĩa gì?",options:["Đưa AI tạo sinh đến với hàng trăm triệu người dùng","Kết thúc hoàn toàn mọi vấn đề đạo đức AI","Khai sinh thuật ngữ AI","Tạo ra hệ chuyên gia đầu tiên"],correct:0,explanation:"ChatGPT tạo hiện tượng toàn cầu và mở ra giai đoạn phổ cập AI tạo sinh."},
+  {category:"Khái niệm AI",q:"AI là thuật ngữ bao trùm chỉ mục tiêu nào?",options:["Tạo hệ thống mô phỏng nhận thức con người như học hỏi, lập luận, giải quyết vấn đề","Chỉ tạo ảnh minh họa","Chỉ lưu trữ dữ liệu","Chỉ nén file"],correct:0,explanation:"AI là lĩnh vực rộng nhằm tạo máy móc/hệ thống có năng lực trí tuệ giống con người ở một mức độ nào đó."},
+  {category:"Khái niệm AI",q:"AI hẹp (Narrow AI) là gì?",options:["AI được huấn luyện cho một hoặc vài nhiệm vụ cụ thể","AI có trí tuệ tổng quát như con người","AI không cần dữ liệu","AI luôn có ý thức"],correct:0,explanation:"Tất cả AI hiện nay trong tài liệu được xem là AI hẹp, giỏi một số nhiệm vụ chuyên biệt."},
+  {category:"Khái niệm AI",q:"AGI là gì?",options:["AI giả định có trí thông minh tổng quát tương đương hoặc vượt con người","Một chatbot tạo ảnh","Một định dạng dữ liệu","Một công cụ lưu trữ đám mây"],correct:0,explanation:"AGI vẫn là mục tiêu xa vời, có khả năng hiểu, học và áp dụng kiến thức rộng như con người."},
+  {category:"Khái niệm AI",q:"Học máy (ML) là gì?",options:["Nhánh của AI cho phép máy học mẫu và quy luật từ dữ liệu","Phần mềm trình chiếu","Công cụ nén dữ liệu","Một loại tệp ảnh"],correct:0,explanation:"ML không lập trình mọi quy tắc tường minh mà học từ dữ liệu huấn luyện."},
+  {category:"Khái niệm AI",q:"Ví dụ nào là ứng dụng học máy?",options:["Gợi ý sản phẩm, lọc thư rác, dự báo thời tiết","Nén file ZIP","Đổi tên thư mục","Tạo mục lục thủ công"],correct:0,explanation:"Các hệ thống gợi ý, spam filter và dự báo là ứng dụng học mẫu từ dữ liệu."},
+  {category:"Khái niệm AI",q:"Mạng nơ-ron nhân tạo (ANN) lấy cảm hứng từ đâu?",options:["Cấu trúc và hoạt động của não bộ con người","Cấu trúc file PDF","Cáp mạng Ethernet","Quy tắc trích dẫn Harvard"],correct:0,explanation:"ANN gồm các nút tính toán kết nối qua trọng số, mô phỏng ý tưởng từ neuron sinh học."},
+  {category:"Khái niệm AI",q:"Trong ANN, mô hình học bằng cách nào?",options:["Điều chỉnh trọng số để giảm sai sót giữa dự đoán và kết quả thực tế","Ghi nhớ tên file","Tăng dung lượng RAM","Nén dữ liệu thành ZIP"],correct:0,explanation:"Quá trình huấn luyện điều chỉnh weights để dự đoán ngày càng gần dữ liệu thực."},
+  {category:"Khái niệm AI",q:"Học sâu (DL) là gì?",options:["Nhánh chuyên biệt của ML dùng mạng nơ-ron nhiều lớp ẩn","AI không dùng dữ liệu","Một loại chatbot xã hội","Một kỹ thuật đặt tên file"],correct:0,explanation:"Deep Learning dùng mạng nơ-ron sâu để học đặc trưng phức tạp."},
+  {category:"Khái niệm AI",q:"DL đặc biệt thành công với loại dữ liệu nào?",options:["Dữ liệu phi cấu trúc như hình ảnh, âm thanh, ngôn ngữ tự nhiên","Chỉ bảng tính đơn giản","Chỉ file ZIP","Chỉ mật khẩu"],correct:0,explanation:"DL mạnh trong xử lý ảnh, âm thanh và NLP nhờ tự học đặc trưng nhiều tầng."},
+  {category:"Khái niệm AI",q:"Quan hệ phân cấp đúng là gì?",options:["DL là một loại ML, ML là nhánh của AI","AI là nhánh của DL","ML và DL không liên quan","DL chỉ là phần mềm văn phòng"],correct:0,explanation:"AI bao trùm ML, và DL là một nhánh chuyên sâu của ML."},
+  {category:"Khái niệm AI",q:"Theo bảng 3.1, AI có thể bao gồm cách tiếp cận nào?",options:["Dựa trên luật và dựa trên dữ liệu","Chỉ ảnh PNG","Chỉ trích dẫn Harvard","Chỉ lưu trữ cloud"],correct:0,explanation:"AI bao gồm cả hệ chuyên gia dựa trên luật và ML/DL dựa trên dữ liệu."},
+  {category:"GenAI và LLM",q:"AI tạo sinh (GenAI) tập trung vào việc gì?",options:["Tạo nội dung mới như văn bản, hình ảnh, âm thanh, code","Chỉ phân loại ảnh mèo/chó","Chỉ lưu file PDF","Chỉ lọc spam"],correct:0,explanation:"GenAI tạo sản phẩm mới dựa trên mẫu và cấu trúc học được từ dữ liệu huấn luyện."},
+  {category:"GenAI và LLM",q:"AI phân biệt (Discriminative AI) chủ yếu làm gì?",options:["Phân loại hoặc dự đoán nhãn cho đầu vào","Tạo hình ảnh hoàn toàn mới","Viết thơ theo phong cách Nguyễn Du","Soạn email tự động"],correct:0,explanation:"Discriminative AI học ranh giới giữa các loại dữ liệu để phân loại/dự đoán."},
+  {category:"GenAI và LLM",q:"So sánh ví von đúng trong tài liệu là gì?",options:["AI phân biệt như người giám định, AI tạo sinh như người nghệ sĩ","AI phân biệt như họa sĩ, AI tạo sinh như kế toán","AI tạo sinh chỉ là máy nén file","AI phân biệt không dùng dữ liệu"],correct:0,explanation:"AI tạo sinh không chỉ nhận dạng mà còn tạo nội dung mới."},
+  {category:"GenAI và LLM",q:"LLM là viết tắt của gì?",options:["Large Language Model","Local Learning Memory","Linked Logic Machine","Language License Manager"],correct:0,explanation:"LLM là Mô hình Ngôn ngữ Lớn."},
+  {category:"GenAI và LLM",q:"ChatGPT, Gemini, Copilot dựa nhiều trên nền tảng nào?",options:["Mô hình ngôn ngữ lớn LLMs","Tệp nén RAR","Bảng tính CSV","Mạng LAN"],correct:0,explanation:"Các công cụ GenAI văn bản phổ biến vận hành trên LLMs."},
+  {category:"GenAI và LLM",q:"Nguyên lý đơn giản của LLM là gì?",options:["Dự đoán từ/token tiếp theo dựa trên ngữ cảnh","Tìm kiếm file trong ổ cứng","Nén câu trả lời","Luôn truy cập Internet"],correct:0,explanation:"LLM tạo văn bản bằng chuỗi bước dự đoán token tiếp theo."},
+  {category:"GenAI và LLM",q:"Training của LLM nghĩa là gì?",options:["Mô hình đọc lượng văn bản lớn để học quan hệ thống kê giữa từ/cụm từ","Người dùng nhập câu hỏi","Mô hình chọn font chữ","Mô hình gửi email"],correct:0,explanation:"Trong huấn luyện, LLM học xác suất và quan hệ ngôn ngữ từ dữ liệu lớn."},
+  {category:"GenAI và LLM",q:"Prompt trong LLM là gì?",options:["Câu lệnh/yêu cầu đầu vào của người dùng","Kết quả cuối cùng","Trọng số mạng nơ-ron","File đính kèm nén"],correct:0,explanation:"Prompt cung cấp ngữ cảnh để mô hình tạo phản hồi."},
+  {category:"GenAI và LLM",q:"Hallucination trong AI là gì?",options:["AI tạo thông tin sai hoặc không có thật nhưng nghe có vẻ hợp lý","AI tạo ảnh đẹp","AI tìm đúng nguồn","AI giảm dung lượng file"],correct:0,explanation:"LLM không biết sự thật theo nghĩa con người, nên có thể bịa thông tin dựa trên xác suất."},
+  {category:"GenAI và LLM",q:"Đặc điểm nổi bật nào của GenAI giúp người không chuyên dễ dùng?",options:["Tương tác bằng ngôn ngữ tự nhiên và giao diện dễ tiếp cận","Bắt buộc lập trình phức tạp","Chỉ chạy trên máy chủ riêng","Không dùng được trong giáo dục"],correct:0,explanation:"Công cụ như ChatGPT cho phép nhập yêu cầu bằng ngôn ngữ tự nhiên."},
+  {category:"GenAI và LLM",q:"GenAI có thể hỗ trợ giáo dục bằng cách nào?",options:["Gia sư ảo, tóm tắt tài liệu, tạo câu hỏi ôn tập, hỗ trợ slide","Chỉ thay thế mọi bài giảng","Chỉ khóa tài khoản sinh viên","Chỉ tạo file nén"],correct:0,explanation:"GenAI có nhiều ứng dụng trong học tập, sáng tạo nội dung, nghiên cứu và lập trình."},
+  {category:"GenAI và LLM",q:"DALL-E, Midjourney, Stable Diffusion thuộc nhóm công cụ nào?",options:["Mô hình/công cụ tạo ảnh bằng AI","Công cụ trích dẫn Harvard","Dịch vụ email","Công cụ nén file"],correct:0,explanation:"Các công cụ này tạo hình ảnh từ mô tả/prompt."},
+  {category:"AI và năng lực số",q:"Năng lực số được hiểu rộng hơn điều gì?",options:["Không chỉ dùng máy tính, mà gồm kiến thức, kỹ năng, thái độ sống và làm việc có trách nhiệm trong môi trường số","Chỉ biết bật máy tính","Chỉ biết tải ứng dụng","Chỉ biết dùng mạng xã hội"],correct:0,explanation:"Năng lực số bao gồm vận hành, khai thác thông tin, giao tiếp, an toàn, sáng tạo và trách nhiệm."},
+  {category:"AI và năng lực số",q:"Trong vận hành thiết bị/phần mềm, AI xuất hiện qua ví dụ nào?",options:["Siri, Google Assistant, Copilot trong Microsoft 365, Gemini trong Google Workspace","Chỉ file .txt","Chỉ dây Ethernet","Chỉ tệp ZIP"],correct:0,explanation:"AI được tích hợp sâu vào thiết bị, hệ điều hành và phần mềm văn phòng."},
+  {category:"AI và năng lực số",q:"Perplexity là ví dụ của loại công cụ nào trong khai thác thông tin?",options:["Cỗ máy trả lời dựa trên AI có tổng hợp nguồn và trích dẫn","Trình nén file","Ứng dụng chỉnh âm thanh","Công cụ tạo bảng tính"],correct:0,explanation:"Perplexity hỗ trợ tìm thông tin và trả lời trực tiếp kèm nguồn."},
+  {category:"AI và năng lực số",q:"AI hỗ trợ giao tiếp và hợp tác bằng cách nào?",options:["Dịch thời gian thực, phụ đề tự động, soạn email, gợi ý văn phong","Tăng dung lượng ổ cứng","Tạo cáp mạng","Đổi định dạng ZIP"],correct:0,explanation:"AI giúp giảm rào cản ngôn ngữ và nâng hiệu quả giao tiếp."},
+  {category:"AI và năng lực số",q:"Trong an toàn số, AI có vai trò kép như thế nào?",options:["Vừa giúp phát hiện phishing/mã độc, vừa tạo thách thức như deepfake","Chỉ luôn gây hại","Chỉ luôn bảo vệ tuyệt đối","Không liên quan an toàn số"],correct:0,explanation:"AI là công cụ bảo vệ nhưng GenAI cũng tạo nguy cơ giả mạo tinh vi."},
+  {category:"AI và năng lực số",q:"Deepfake thuộc thách thức nào của AI?",options:["Hình ảnh/video giả mạo tinh vi gây rủi ro thông tin sai lệch","Tăng tốc độ mạng","Cải thiện trích dẫn","Tạo mật khẩu mạnh"],correct:0,explanation:"Deepfake là sản phẩm giả mạo do AI tạo, đòi hỏi tư duy phản biện để nhận diện."},
+  {category:"AI và năng lực số",q:"AI tạo sinh làm thay đổi sáng tạo nội dung số vì sao?",options:["Người dùng có thể biến ý tưởng thành sản phẩm số bằng mô tả ngôn ngữ tự nhiên","Chỉ chuyên gia mới tạo được ảnh/video","Không thể tạo nội dung","Chỉ dùng để đọc email"],correct:0,explanation:"GenAI hạ rào cản kỹ thuật trong tạo hình ảnh, video, nhạc, văn bản."},
+  {category:"AI hỗ trợ học tập",q:"Khanmigo trong tài liệu là ví dụ về vai trò nào của AI?",options:["Gia sư cá nhân hóa 24/7","Công cụ nén file","Công cụ tạo ảnh xã hội","Trình duyệt web"],correct:0,explanation:"Khan Academy với Khanmigo minh họa gia sư ảo sẵn sàng hỗ trợ học tập."},
+  {category:"AI hỗ trợ học tập",q:"AI làm gia sư cá nhân hóa bằng cách nào?",options:["Phân tích điểm mạnh/yếu, đề xuất lộ trình, giải thích nhiều cách, tạo câu hỏi ôn tập","Luôn đưa một đáp án duy nhất cho mọi người","Chỉ chấm điểm cuối kỳ","Chỉ tạo slide"],correct:0,explanation:"AI có thể điều chỉnh hỗ trợ theo người học và độ khó theo thời gian thực."},
+  {category:"AI hỗ trợ học tập",q:"AI như trợ lý nghiên cứu giúp sinh viên làm gì?",options:["Tìm, tóm tắt nhiều bài báo, rút luận điểm, phương pháp và kết quả chính","Bỏ qua việc kiểm chứng nguồn","Tự động nộp luận văn","Thay thế mọi tài liệu gốc"],correct:0,explanation:"AI có thể tăng tốc lược khảo tài liệu nhưng vẫn cần kiểm chứng."},
+  {category:"AI hỗ trợ học tập",q:"AI như đối tác sáng tạo hỗ trợ gì?",options:["Brainstorm, xây dàn ý, đề xuất cấu trúc thuyết trình, tạo hình ảnh/nhạc nền","Chỉ lưu mật khẩu","Chỉ xóa dữ liệu","Chỉ kiểm tra virus"],correct:0,explanation:"GenAI giúp khơi nguồn và hiện thực hóa ý tưởng sáng tạo."},
+  {category:"AI hỗ trợ học tập",q:"AI tạo môi trường thực hành an toàn cho kỹ năng nào?",options:["Thuyết trình, tranh biện, phỏng vấn xin việc","Chỉ nén ảnh","Chỉ tạo folder","Chỉ định dạng ngày"],correct:0,explanation:"AI có thể mô phỏng tình huống và phản hồi để người học luyện tập mà ít áp lực."},
+  {category:"AI hỗ trợ học tập",q:"AI tự động hóa tác vụ lặp lại giúp sinh viên tập trung vào gì?",options:["Phân tích, tư duy phản biện và giải quyết vấn đề","Sao chép đáp án","Bỏ qua học tập","Chỉ chỉnh màu slide"],correct:0,explanation:"Tự động hóa việc định dạng, lên lịch, chép nội dung giúp tiết kiệm thời gian."},
+  {category:"Cơ hội và thách thức",q:"Một cơ hội lớn của AI với người học là gì?",options:["Dân chủ hóa tiếp cận tri thức và cá nhân hóa học tập","Làm mất mọi nhu cầu tư duy","Bảo đảm mọi câu trả lời luôn đúng","Xóa bỏ mọi khoảng cách số"],correct:0,explanation:"AI giúp truy cập tri thức đa dạng, học mọi lúc và phù hợp nhịp độ cá nhân."},
+  {category:"Cơ hội và thách thức",q:"Tương tác với AI giúp phát triển kỹ năng thế kỷ 21 nào?",options:["Đặt câu hỏi sắc bén, đánh giá phản biện, phân biệt thật/sai, giải quyết vấn đề","Chỉ ghi nhớ phím tắt","Chỉ tải file","Chỉ đổi tên tệp"],correct:0,explanation:"Prompt engineering và kiểm chứng kết quả rèn nhiều kỹ năng tư duy quan trọng."},
+  {category:"Cơ hội và thách thức",q:"Hallucination nguy hiểm vì sao?",options:["AI có thể bịa số liệu/trích dẫn nhưng trình bày tự tin thuyết phục","AI luôn từ chối trả lời","AI chỉ tạo ảnh","AI chỉ xử lý bảng tính"],correct:0,explanation:"Người học dễ bị dẫn sai nếu không kiểm chứng chéo với nguồn đáng tin."},
+  {category:"Cơ hội và thách thức",q:"Bias trong AI là gì?",options:["Thiên vị kế thừa hoặc khuếch đại từ dữ liệu do con người tạo ra","Nhiệt độ mô hình quá thấp","Dung lượng prompt quá dài","Một loại tệp ảnh"],correct:0,explanation:"Dữ liệu xã hội có định kiến nên mô hình có thể tạo kết quả không công bằng hoặc phiến diện."},
+  {category:"Cơ hội và thách thức",q:"Phụ thuộc quá mức vào AI có thể gây hậu quả gì?",options:["Xói mòn kỹ năng viết, nghiên cứu, phân tích và giải quyết vấn đề","Tự động tăng tư duy phản biện","Không còn cần học gì","Bảo đảm điểm cao"],correct:0,explanation:"Sao chép câu trả lời AI mà không tự tư duy làm kỹ năng nền tảng bị thui chột."},
+  {category:"Cơ hội và thách thức",q:"Vì sao không nên nhập thông tin cá nhân nhạy cảm vào AI?",options:["Dữ liệu prompt có thể bị dùng huấn luyện hoặc rò rỉ, nhất là công cụ miễn phí","AI không đọc được tiếng Việt","AI chỉ nhận số","AI luôn xóa ngay mọi dữ liệu"],correct:0,explanation:"Quyền riêng tư và bảo mật dữ liệu là thách thức quan trọng khi dùng AI."},
+  {category:"Cơ hội và thách thức",q:"Nộp bài luận do AI viết hoàn toàn được xem là gì?",options:["Gian lận/đạo văn học thuật","Cách học bắt buộc","Minh chứng tư duy phản biện","Trích dẫn đúng chuẩn"],correct:0,explanation:"Ranh giới hỗ trợ học tập và gian lận rất mỏng; cần minh bạch và tuân thủ quy định."},
+  {category:"Cơ hội và thách thức",q:"Digital Divide trong bối cảnh AI là gì?",options:["Bất bình đẳng tiếp cận công cụ AI mạnh và kiến thức để khai thác hiệu quả","Khả năng tạo ảnh nhanh","Mô hình chọn token","Một kỹ thuật prompt"],correct:0,explanation:"Không phải sinh viên nào cũng có điều kiện dùng công cụ trả phí hoặc có nền tảng khai thác AI."},
+  {category:"Cơ hội và thách thức",q:"Thái độ đúng khi dùng AI là gì?",options:["Xem AI là trợ lý thông minh, mình vẫn là người cầm lái","Để AI suy nghĩ thay hoàn toàn","Tin AI như nguồn tuyệt đối","Không cần kiểm chứng"],correct:0,explanation:"Người học cần chủ động dùng AI để mở rộng năng lực, không đánh mất vai trò tư duy của mình."},
+  {category:"LLM hoạt động",q:"Tokenization là gì?",options:["Chia prompt thành các token như từ, phần từ hoặc dấu câu","Chọn công cụ AI","Tạo slide","Kiểm chứng nguồn"],correct:0,explanation:"LLM không xử lý chuỗi ký tự thô mà chia thành token."},
+  {category:"LLM hoạt động",q:"Embedding là gì?",options:["Chuyển token thành vector số biểu diễn ý nghĩa trong không gian toán học","Nén file thành ZIP","Tạo hình ảnh","Đặt tên thư mục"],correct:0,explanation:"Máy tính xử lý số; embedding mã hóa ngữ nghĩa của token thành vector."},
+  {category:"LLM hoạt động",q:"Cơ chế Attention trong Transformer giúp gì?",options:["Mô hình nhìn lại chuỗi đầu vào và xác định token quan trọng khi dự đoán","Tự động đăng nhập tài khoản","Xóa dữ liệu sai","Tạo mật khẩu"],correct:0,explanation:"Attention đặt trọng số vào phần ngữ cảnh liên quan nhất."},
+  {category:"LLM hoạt động",q:"Probabilistic Generation nghĩa là gì?",options:["Mô hình tính phân phối xác suất cho token tiếp theo","Mô hình luôn chọn ngẫu nhiên hoàn toàn","Mô hình chỉ copy dữ liệu","Mô hình không dùng xác suất"],correct:0,explanation:"LLM chọn token dựa trên xác suất, chịu ảnh hưởng bởi tham số như temperature."},
+  {category:"LLM hoạt động",q:"Iteration trong quá trình tạo sinh là gì?",options:["Token vừa tạo được nối vào chuỗi để dự đoán token kế tiếp lặp lại","Người dùng mở tab mới","Mô hình lưu vào ZIP","Mô hình đổi tên file"],correct:0,explanation:"Văn bản được tạo từng token cho đến khi kết thúc hoặc đạt giới hạn độ dài."},
+  {category:"Yếu tố đầu ra AI",q:"Yếu tố quan trọng nhất người dùng kiểm soát được để cải thiện đầu ra AI là gì?",options:["Chất lượng prompt","Năm sinh của người dùng","Màu giao diện","Tên file PDF"],correct:0,explanation:"Prompt rõ, cụ thể, nhiều ngữ cảnh thường cho kết quả tốt hơn prompt mơ hồ."},
+  {category:"Yếu tố đầu ra AI",q:"Vì sao mô hình AI được sử dụng ảnh hưởng đến kết quả?",options:["Mỗi mô hình có năng lực, điểm mạnh/yếu và kho kiến thức khác nhau","Mọi mô hình giống hệt nhau","Mô hình chỉ ảnh hưởng màu chữ","Mô hình không liên quan"],correct:0,explanation:"GPT-4, GPT-3.5, Gemini, Claude, Llama có năng lực và giới hạn khác nhau."},
+  {category:"Yếu tố đầu ra AI",q:"Knowledge cutoff nghĩa là gì?",options:["Giới hạn dữ liệu huấn luyện khiến AI có thể không biết sự kiện mới sau ngày cắt","Giới hạn số file tải về","Giới hạn dung lượng ổ cứng","Giới hạn số slide"],correct:0,explanation:"AI có thể không biết thông tin mới nếu chưa được huấn luyện/cập nhật."},
+  {category:"Yếu tố đầu ra AI",q:"Temperature thấp phù hợp với tác vụ nào?",options:["Tóm tắt thực tế, trích xuất thông tin, cần chính xác và ổn định","Brainstorm ý tưởng thật bất ngờ","Viết truyện sáng tạo tối đa","Tạo phong cách ngẫu nhiên"],correct:0,explanation:"Temperature thấp làm đầu ra an toàn, dễ đoán và ít ngẫu nhiên."},
+  {category:"Yếu tố đầu ra AI",q:"Temperature cao phù hợp với tác vụ nào?",options:["Brainstorming, viết truyện, tạo ý tưởng mới","Trích xuất số liệu chính xác","Tóm tắt văn bản pháp luật nguyên văn","Kiểm tra dữ liệu nhạy cảm"],correct:0,explanation:"Temperature cao tăng tính đa dạng, sáng tạo, bất ngờ của đầu ra."},
+  {category:"Yếu tố đầu ra AI",q:"Top-K làm gì?",options:["Giới hạn lựa chọn trong K token có xác suất cao nhất","Chọn mọi token ngẫu nhiên","Tăng dung lượng prompt","Tạo câu trả lời có trích dẫn"],correct:0,explanation:"Top-K giới hạn không gian lựa chọn token ở mỗi bước."},
+  {category:"Yếu tố đầu ra AI",q:"Top-P/Nucleus Sampling làm gì?",options:["Chọn nhóm token có tổng xác suất tích lũy đạt ngưỡng P","Chỉ chọn đúng K token","Xóa context window","Tạo tài khoản AI"],correct:0,explanation:"Top-P linh hoạt hơn Top-K bằng cách lấy nhóm token theo tổng xác suất."},
+  {category:"Yếu tố đầu ra AI",q:"Context window là gì trong giới hạn mô hình?",options:["Giới hạn độ dài prompt và câu trả lời mà mô hình xử lý được","Cửa sổ trình duyệt","Thư mục lưu file","Số lần trích dẫn"],correct:0,explanation:"Mô hình có giới hạn ngữ cảnh; prompt/quá trình quá dài có thể vượt khả năng xử lý."},
+  {category:"Prompt Engineering",q:"Prompt Engineering là gì?",options:["Kỹ năng giao tiếp, dẫn dắt và điều khiển AI bằng prompt hiệu quả","Kỹ thuật lắp CPU","Cách nén file","Cách tạo mạng LAN"],correct:0,explanation:"Prompt engineering là kỹ năng số thiết yếu trong kỷ nguyên AI."},
+  {category:"Prompt Engineering",q:"Nguyên tắc 'rõ ràng và cụ thể' yêu cầu điều gì?",options:["Nói chính xác muốn gì, số lượng/định dạng/mục tiêu cụ thể","Viết prompt càng mơ hồ càng tốt","Không nêu yêu cầu","Chỉ nhập một từ"],correct:0,explanation:"Prompt cụ thể như 'liệt kê 3 lợi ích...' tốt hơn 'viết về...' chung chung."},
+  {category:"Prompt Engineering",q:"Cung cấp ngữ cảnh trong prompt có tác dụng gì?",options:["Giúp AI hiểu bạn là ai, cần gì và bối cảnh nhiệm vụ","Làm AI quên yêu cầu","Bắt AI không trả lời","Chỉ tăng độ dài vô ích"],correct:0,explanation:"Ngữ cảnh giúp mô hình tạo câu trả lời phù hợp trình độ và mục tiêu."},
+  {category:"Prompt Engineering",q:"Xác định vai trò và đối tượng trong prompt giúp gì?",options:["Định hình văn phong và mức độ chuyên sâu của câu trả lời","Giảm mọi lỗi chính tả tự động","Thay thế kiểm chứng nguồn","Bỏ qua đạo đức"],correct:0,explanation:"Ví dụ yêu cầu AI đóng vai chuyên gia và viết cho sinh viên năm nhất sẽ định hướng cách trả lời."},
+  {category:"Prompt Engineering",q:"Mô hình CLEAR gồm những thành phần nào?",options:["Context, Role, Explicit Instruction, Audience, Refine","Copy, Link, Export, Archive, Rename","Code, Logic, Email, AI, Report","Chat, Learn, Explain, Answer, Repeat"],correct:0,explanation:"CLEAR là khung ghi nhớ để viết prompt rõ ràng và dễ cải thiện."},
+  {category:"Prompt Engineering",q:"C trong CLEAR là gì?",options:["Context - bối cảnh","Citation - trích dẫn","Copy - sao chép","Cloud - đám mây"],correct:0,explanation:"Context cung cấp thông tin nền để AI hiểu đúng vấn đề."},
+  {category:"Prompt Engineering",q:"L trong CLEAR là gì?",options:["Role - vai trò","Length - độ dài duy nhất","License - giấy phép","Link - liên kết"],correct:0,explanation:"Role giao cho AI một vai trò cụ thể như chuyên gia môi trường, giáo viên, cố vấn."},
+  {category:"Prompt Engineering",q:"E trong CLEAR là gì?",options:["Explicit Instruction - chỉ dẫn rõ ràng","Embedding","Export","Email"],correct:0,explanation:"Explicit Instruction nêu rõ làm gì, định dạng nào, số lượng bao nhiêu."},
+  {category:"Prompt Engineering",q:"A trong CLEAR là gì?",options:["Audience - đối tượng người đọc/nghe","Accuracy","Archive","AGI"],correct:0,explanation:"Audience giúp AI điều chỉnh ngôn ngữ và mức độ chuyên sâu."},
+  {category:"Prompt Engineering",q:"R trong CLEAR là gì?",options:["Refine - tinh chỉnh kết quả","Router","Read-only","Random"],correct:0,explanation:"Refine là yêu cầu AI sửa đổi, cải thiện dựa trên kết quả đã có."},
+  {category:"Kỹ thuật prompt",q:"Zero-shot prompting là gì?",options:["Đưa yêu cầu trực tiếp không kèm ví dụ","Cung cấp nhiều ví dụ mẫu","Yêu cầu suy nghĩ từng bước","Yêu cầu trả lời bằng JSON"],correct:0,explanation:"Hầu hết prompt hằng ngày như 'Thủ đô Nhật Bản là gì?' là zero-shot."},
+  {category:"Kỹ thuật prompt",q:"Few-shot prompting hiệu quả khi nào?",options:["Muốn AI tuân theo định dạng, phong cách hoặc mẫu logic cụ thể","Muốn AI không có ví dụ nào","Muốn tăng temperature","Muốn bỏ ngữ cảnh"],correct:0,explanation:"Cung cấp một/vài cặp đầu vào-đầu ra giúp AI bắt chước mẫu."},
+  {category:"Kỹ thuật prompt",q:"Chain-of-Thought prompting yêu cầu AI làm gì?",options:["Suy nghĩ/giải từng bước trước khi kết luận","Trả lời một từ duy nhất","Không giải thích","Chỉ tạo hình ảnh"],correct:0,explanation:"CoT hữu ích cho bài toán logic, suy luận hoặc yêu cầu phức tạp."},
+  {category:"Kỹ thuật prompt",q:"Trong ví dụ 17 con cừu, CoT giúp tránh sai lầm nào?",options:["Nhầm 'tất cả trừ 9 con' thành còn 8 thay vì 9 con","Nhầm cừu với bò","Không biết cộng trừ","Không trả lời tiếng Việt"],correct:0,explanation:"Yêu cầu giải từng bước giúp AI hiểu cụm 'tất cả trừ 9' nghĩa là còn 9 con sống."},
+  {category:"Kỹ thuật prompt",q:"Prompt theo định dạng yêu cầu có thể yêu cầu đầu ra dạng nào?",options:["Bảng, gạch đầu dòng, JSON, Markdown","Chỉ một đoạn văn ngẫu nhiên","Chỉ ảnh JPG","Chỉ file ZIP"],correct:0,explanation:"Chỉ định format giúp kết quả dễ dùng hơn."},
+  {category:"Kỹ thuật prompt",q:"Iterative prompting là gì?",options:["Đối thoại nhiều lượt, tinh chỉnh/mở rộng/sửa đổi cho đến khi đạt kết quả","Chỉ hỏi một lần rồi chấp nhận","Không được phản hồi tiếp","Chỉ dùng cho hình ảnh"],correct:0,explanation:"Xem làm việc với AI là quá trình cộng tác nhiều bước."},
+  {category:"Lỗi prompt",q:"Lỗi prompt quá chung chung là ví dụ nào?",options:["'Viết về marketing.'","'Viết 5 chiến lược digital marketing cho cửa hàng thời trang nhỏ.'","'Tóm tắt thành 3 gạch đầu dòng.'","'Đóng vai chuyên gia...'"],correct:0,explanation:"Prompt quá rộng không nêu mục tiêu, đối tượng, định dạng hoặc phạm vi."},
+  {category:"Lỗi prompt",q:"Cách xử lý yêu cầu quá phức tạp trong một prompt là gì?",options:["Chia nhỏ thành các prompt: lập dàn ý, viết từng phần, tạo danh mục...","Nhồi thêm mọi yêu cầu vào một câu","Không cần ngữ cảnh","Tăng độ mơ hồ"],correct:0,explanation:"Chia nhỏ giúp AI xử lý chính xác hơn và người dùng kiểm soát chất lượng từng phần."},
+  {category:"Lỗi prompt",q:"Prompt 'Tóm tắt bài báo' thiếu gì?",options:["Ngữ cảnh, định dạng, trọng tâm và đối tượng đọc","Dấu chấm than","Tên file ZIP","Mã màu"],correct:0,explanation:"Prompt tốt hơn cần nêu tóm tắt thành bao nhiêu ý, tập trung vào gì, cho ai."},
+  {category:"Công cụ AI",q:"ChatGPT do tổ chức nào phát triển?",options:["OpenAI","Google","Microsoft","Meta"],correct:0,explanation:"ChatGPT là chatbot AI của OpenAI."},
+  {category:"Công cụ AI",q:"Trang truy cập ChatGPT trong tài liệu là gì?",options:["chat.openai.com","scholar.google.com","lic.vnu.edu.vn","perplexity.ai/docs"],correct:0,explanation:"Tài liệu hướng dẫn sinh viên truy cập chat.openai.com để tạo tài khoản ChatGPT."},
+  {category:"Công cụ AI",q:"Tính năng đối thoại nhiều lượt của ChatGPT nghĩa là gì?",options:["Ghi nhớ ngữ cảnh trong cùng cuộc trò chuyện để hỏi nối tiếp và tinh chỉnh","Không nhớ bất kỳ câu nào","Chỉ trả lời một lần","Chỉ tạo ảnh"],correct:0,explanation:"ChatGPT cho phép tiếp tục hội thoại và yêu cầu sửa kết quả dựa trên ngữ cảnh trước đó."},
+  {category:"Công cụ AI",q:"ChatGPT mạnh với tác vụ nào theo tài liệu?",options:["Brainstorm, lập dàn ý, giải thích khái niệm, soạn email, viết mã","Chỉ nén file","Chỉ đăng mạng xã hội","Chỉ tạo bảng Excel"],correct:0,explanation:"ChatGPT linh hoạt trong tác vụ ngôn ngữ và sáng tạo."},
+  {category:"Công cụ AI",q:"Prompt 'Tôi là sinh viên PR... gợi ý 5 đề tài...' thuộc tác vụ nào?",options:["Brainstorm ý tưởng","Tóm tắt cuộc họp Teams","Tạo slide từ Word","Tìm trend trên X"],correct:0,explanation:"Đây là ví dụ dùng ChatGPT để gợi ý đề tài tiểu luận."},
+  {category:"Công cụ AI",q:"Prompt lập dàn ý bài luận 2500 từ thể hiện ChatGPT hỗ trợ gì?",options:["Lập dàn ý chi tiết cho bài viết học thuật","Tạo ảnh nền trong suốt","Kiểm tra virus","Nén thư mục"],correct:0,explanation:"ChatGPT có thể giúp chia cấu trúc bài luận thành mở đầu, luận điểm thân bài, kết luận."},
+  {category:"Công cụ AI",q:"Gemini trước đây có tên là gì?",options:["Bard","ELIZA","STUDENT","AlexNet"],correct:0,explanation:"Google Gemini trước đây là Bard."},
+  {category:"Công cụ AI",q:"Gemini tích hợp sâu với hệ sinh thái nào?",options:["Google Workspace như Docs, Sheets, Gmail","Microsoft Teams duy nhất","Meta Instagram duy nhất","X/Twitter duy nhất"],correct:0,explanation:"Gemini hỗ trợ trong Docs, Sheets, Gmail và có thể tham chiếu dữ liệu Google Drive."},
+  {category:"Công cụ AI",q:"Trong Google Docs, Gemini có thể làm gì?",options:["Tóm tắt tài liệu, viết tiếp nội dung, tham chiếu tệp khác từ Drive","Chỉ gửi file ZIP","Chỉ tạo tài khoản email","Chỉ chặn quảng cáo"],correct:0,explanation:"Gemini hỗ trợ trực tiếp bên trong Google Docs với tài liệu người dùng."},
+  {category:"Công cụ AI",q:"Prompt dùng @Bảng tính Báo cáo Chi phí trong Gemini thể hiện tính năng gì?",options:["Tham chiếu tệp khác trong Google Drive","Tạo video .mov","Nén file RAR","Kiểm tra deepfake"],correct:0,explanation:"Gemini có thể dùng thông tin từ tệp Drive để hỗ trợ báo cáo."},
+  {category:"Công cụ AI",q:"Microsoft Copilot tích hợp với bộ công cụ nào?",options:["Word, Excel, PowerPoint, Outlook, Teams","Facebook, Instagram, WhatsApp","Google Docs duy nhất","X/Twitter duy nhất"],correct:0,explanation:"Copilot hoạt động trong Microsoft 365."},
+  {category:"Công cụ AI",q:"Copilot trong PowerPoint có thể làm gì?",options:["Tạo bài thuyết trình từ tài liệu Word có sẵn","Tạo tài khoản Google","Chấm điểm tín dụng","Tìm kiếm hình ảnh ngược"],correct:0,explanation:"Copilot có thể tạo slide, hình minh họa và ghi chú người nói dựa trên tài liệu."},
+  {category:"Công cụ AI",q:"Copilot trong Outlook hỗ trợ gì?",options:["Tóm tắt chuỗi email dài và liệt kê action items","Tạo mô hình DL","Nén video","Đổi tên tệp"],correct:0,explanation:"Copilot giúp rút ý chính và mục hành động trong email."},
+  {category:"Công cụ AI",q:"Copilot trong Teams có thể làm gì sau cuộc họp được ghi lại?",options:["Tạo bản tóm tắt, liệt kê quyết định và người chịu trách nhiệm","Xóa mọi cuộc họp","Tạo ảnh GIF","Chạy mô hình AlexNet"],correct:0,explanation:"Copilot có thể tổng hợp nội dung họp Teams."},
+  {category:"Công cụ AI",q:"Perplexity AI định vị mình là gì?",options:["Cỗ máy trả lời cho nhà nghiên cứu, kèm citations","Chatbot hài hước từ X","Trợ lý mạng xã hội Meta","Công cụ tạo slide từ Word"],correct:0,explanation:"Perplexity tập trung vào câu trả lời chính xác từ Internet có trích dẫn nguồn."},
+  {category:"Công cụ AI",q:"Điểm mạnh nhất của Perplexity là gì?",options:["Câu trả lời tổng hợp có trích dẫn, dễ kiểm chứng","Tạo ảnh xã hội miễn phí","Cá tính nổi loạn","Tích hợp PowerPoint"],correct:0,explanation:"Perplexity hữu ích cho nghiên cứu học thuật và kiểm chứng thông tin."},
+  {category:"Công cụ AI",q:"Grok được phát triển bởi công ty nào?",options:["xAI của Elon Musk","OpenAI","Google DeepMind","Meta"],correct:0,explanation:"Grok là chatbot của xAI."},
+  {category:"Công cụ AI",q:"Điểm mạnh đặc trưng của Grok là gì?",options:["Tích hợp dữ liệu thời gian thực từ X/Twitter và có cá tính hài hước/nổi loạn","Tích hợp Google Docs","Tạo slide từ Word","Luôn có trích dẫn học thuật"],correct:0,explanation:"Grok phù hợp nắm bắt xu hướng, thông tin mới và phân tích dư luận trên X."},
+  {category:"Công cụ AI",q:"Meta AI dựa trên mô hình nào trong bảng?",options:["Llama 3","GPT-4","Gemini Advanced","Grok-2"],correct:0,explanation:"Meta AI trong bảng gắn với Llama 3."},
+  {category:"Công cụ AI",q:"Meta AI tích hợp sâu vào hệ sinh thái nào?",options:["Facebook, Instagram, WhatsApp, Messenger","Google Workspace","Microsoft 365","VNU-LIC"],correct:0,explanation:"Meta AI mạnh ở tác vụ sáng tạo và tương tác xã hội trong ứng dụng Meta."},
+  {category:"Công cụ AI",q:"Meta AI phù hợp với trường hợp sử dụng nào?",options:["Tạo nội dung mạng xã hội, brainstorm ý tưởng sáng tạo nhanh","Tóm tắt cuộc họp Teams","Tạo bài trình chiếu từ Word","Tra cứu học thuật có citations"],correct:0,explanation:"Meta AI hướng nhiều tới sáng tạo nội dung xã hội và tương tác."},
+  {category:"So sánh công cụ",q:"Theo bảng, ChatGPT phù hợp nhất với sinh viên khi làm gì?",options:["Brainstorm, viết dàn ý, soạn văn bản, giải thích khái niệm, học lập trình","Chỉ tóm tắt Teams","Chỉ dùng mạng xã hội","Chỉ tạo báo cáo chi phí trong Sheets"],correct:0,explanation:"ChatGPT linh hoạt, mạnh về văn bản đa dạng và lập luận."},
+  {category:"So sánh công cụ",q:"Hạn chế của ChatGPT bản miễn phí theo bảng là gì?",options:["Kiến thức bị giới hạn bởi ngày cắt dữ liệu và có thể ảo giác","Không thể viết văn bản","Không thể đối thoại","Không có hệ sinh thái plugin"],correct:0,explanation:"Bản miễn phí có knowledge cutoff và rủi ro hallucination."},
+  {category:"So sánh công cụ",q:"Gemini phù hợp với sinh viên khi làm gì?",options:["Tóm tắt tài liệu trong Docs, soạn email Gmail, phân tích dữ liệu trong Sheets, nghiên cứu nhanh","Tạo nội dung mạng xã hội Meta","Nắm bắt xu hướng X","Chỉ viết code offline"],correct:0,explanation:"Gemini mạnh nhờ tích hợp Google Workspace và truy cập Google Search."},
+  {category:"So sánh công cụ",q:"Copilot phù hợp với sinh viên khi làm gì?",options:["Tạo slide từ Word, tóm tắt Teams, soạn Word, quản lý email Outlook","Chỉ phân tích dư luận X","Chỉ tạo bài đăng Facebook","Chỉ lưu file PDF"],correct:0,explanation:"Copilot có lợi thế tích hợp sâu Microsoft 365."},
+  {category:"So sánh công cụ",q:"Perplexity ít mạnh hơn ở điểm nào so với chatbot sáng tạo?",options:["Ít sáng tạo hơn, tập trung trả lời câu hỏi hơn đối thoại mở","Không có trích dẫn","Không tìm tài liệu","Không dùng cho học thuật"],correct:0,explanation:"Perplexity ưu tiên answer engine và citations hơn sáng tạo mở."},
+  {category:"So sánh công cụ",q:"Grok không phù hợp lắm với tác vụ nào?",options:["Văn phong học thuật trang trọng","Nắm bắt xu hướng mới","Tìm hiểu sự kiện mới","Phân tích dư luận mạng xã hội"],correct:0,explanation:"Bảng nêu Grok có cá tính và có thể không phù hợp văn phong học thuật trang trọng."},
+  {category:"So sánh công cụ",q:"Meta AI có hạn chế nào theo bảng?",options:["Lập luận sâu và viết văn bản dài/phức tạp còn hạn chế so với GPT-4, có thể ảo giác","Không tạo được nội dung mạng xã hội","Không tích hợp Meta","Bắt buộc trả phí"],correct:0,explanation:"Meta AI mạnh về xã hội/sáng tạo nhưng hạn chế ở lập luận sâu và văn bản dài."},
+  {category:"So sánh công cụ",q:"Nếu cần nghiên cứu học thuật có nguồn để kiểm chứng nhanh, nên ưu tiên công cụ nào?",options:["Perplexity AI","Meta AI","Grok để viết văn học thuật","Công cụ nén ZIP"],correct:0,explanation:"Perplexity luôn kèm trích dẫn nguồn, phù hợp kiểm chứng thông tin."},
+  {category:"So sánh công cụ",q:"Nếu cần tạo slide từ tài liệu Word trong hệ Microsoft, nên dùng gì?",options:["Microsoft Copilot","Google Scholar","Grok","ELIZA"],correct:0,explanation:"Copilot trong PowerPoint có thể tạo bài thuyết trình dựa trên tài liệu Word."},
+  {category:"So sánh công cụ",q:"Nếu đang làm việc trong Google Docs và cần tóm tắt tài liệu, công cụ phù hợp là gì?",options:["Google Gemini","Microsoft Copilot trong Teams","Grok","Meta AI"],correct:0,explanation:"Gemini tích hợp với Google Docs và Google Workspace."},
+  {category:"So sánh công cụ",q:"Nếu cần bắt xu hướng đang diễn ra trên X/Twitter, công cụ nào có lợi thế?",options:["Grok","Copilot","Gemini Docs","Zotero"],correct:0,explanation:"Grok có truy cập dữ liệu thời gian thực từ X."},
+  {category:"So sánh công cụ",q:"Nếu cần tạo nội dung nhanh cho mạng xã hội Facebook/Instagram, công cụ nào được nêu phù hợp?",options:["Meta AI","VNU-LIC","AlexNet","STUDENT"],correct:0,explanation:"Meta AI tích hợp với Facebook, Instagram và hỗ trợ nội dung xã hội."},
+  {category:"Đạo đức AI",q:"Vấn đề đạo đức nào nổi bật khi dùng AI trong học thuật?",options:["Liêm chính học thuật, minh bạch việc dùng AI, tránh nộp bài AI viết hoàn toàn","Chỉ chọn font chữ","Chỉ tạo thư mục","Chỉ đổi định dạng ảnh"],correct:0,explanation:"Người học cần tuân thủ quy định nhà trường và dùng AI trung thực."},
+  {category:"Đạo đức AI",q:"Khi AI đưa số liệu hoặc trích dẫn, người học nên làm gì?",options:["Kiểm chứng chéo bằng nguồn đáng tin cậy","Dùng ngay vì AI luôn đúng","Xóa nguồn gốc","Biến thành ý kiến cá nhân"],correct:0,explanation:"Hallucination có thể tạo số liệu/trích dẫn giả."},
+  {category:"Đạo đức AI",q:"Khi dùng AI để viết email có thông tin cá nhân, cần chú ý gì?",options:["Không đưa dữ liệu nhạy cảm nếu không cần, cân nhắc quyền riêng tư","Luôn nhập mọi thông tin cá nhân","Đăng mật khẩu vào prompt","Bỏ qua điều khoản sử dụng"],correct:0,explanation:"Prompt có thể chứa dữ liệu được lưu hoặc dùng cải thiện mô hình tùy công cụ."},
+  {category:"Đạo đức AI",q:"Tại sao phải kiểm tra bias trong câu trả lời AI?",options:["AI học từ dữ liệu con người nên có thể kế thừa thiên vị xã hội","AI luôn khách quan tuyệt đối","Bias chỉ xuất hiện trong file ảnh","Bias là tham số Top-K"],correct:0,explanation:"Thiên vị có thể dẫn đến kết quả phiến diện, không công bằng."},
+  {category:"Đạo đức AI",q:"Cách dùng AI đúng trong bài tập là gì?",options:["Dùng để hỗ trợ ý tưởng, dàn ý, phản hồi; tự phân tích, kiểm chứng và ghi nhận nếu cần","Nộp nguyên văn mọi nội dung AI tạo","Giấu hoàn toàn việc dùng AI nếu quy định yêu cầu khai báo","Để AI quyết định mọi kết luận"],correct:0,explanation:"AI nên hỗ trợ quá trình học, không thay thế trách nhiệm học thuật của người học."},
+  {category:"Tổng kết",q:"Chương 3 làm rõ mối quan hệ giữa các khái niệm nào?",options:["AI, ML, DL, ANN và GenAI","LAN, WAN, NFC","PDF, CSV, ZIP","Copyright, Harvard, APA"],correct:0,explanation:"Chương xây nền tảng phân cấp AI/ML/DL/ANN và giới thiệu AI tạo sinh."},
+  {category:"Tổng kết",q:"Kỹ năng thực hành cốt lõi được nhấn mạnh trong Chương 3 là gì?",options:["Prompt Engineering","Lắp ráp máy tính","Thiết kế bo mạch","Nén file"],correct:0,explanation:"Prompt Engineering giúp sinh viên chủ động dẫn dắt AI thay vì dùng bị động."},
+  {category:"Tổng kết",q:"CLEAR và CoT thuộc nhóm nội dung nào?",options:["Kỹ thuật/nguyên tắc viết prompt hiệu quả","Định dạng tệp","Công nghệ lưu trữ","Chuẩn trích dẫn"],correct:0,explanation:"CLEAR là mô hình viết prompt; CoT là kỹ thuật yêu cầu suy luận từng bước."},
+  {category:"Tổng kết",q:"Chương 3 khuyến nghị lựa chọn công cụ AI theo nguyên tắc nào?",options:["Đúng công cụ cho đúng nhiệm vụ và bối cảnh học tập/nghiên cứu","Luôn dùng một công cụ duy nhất","Chỉ chọn công cụ có giao diện đẹp","Chỉ chọn công cụ trả phí"],correct:0,explanation:"Phần 3.4 so sánh công cụ để hình thành tư duy lựa chọn chiến lược."},
+  {category:"Tổng kết",q:"Điều gì phân biệt người dùng AI chủ động với bị động?",options:["Hiểu nguyên lý, viết prompt tốt, kiểm chứng và chịu trách nhiệm với kết quả","Sao chép mọi câu trả lời","Không cần biết công cụ nào","Không quan tâm đạo đức"],correct:0,explanation:"Người dùng chủ động biết dẫn dắt, đánh giá và chịu trách nhiệm khi dùng AI."}
+];
+
+const quizQuestionsChapter4 = [
+  {category:"Tổng quan",q:"Chương 4 tập trung vào chủ đề chính nào?",options:["Giao tiếp và hợp tác trong môi trường số","Lịch sử trí tuệ nhân tạo","Sáng tạo nội dung số","Lắp ráp thiết bị ngoại vi"],correct:0,explanation:"Chương 4 trang bị kiến thức và kỹ năng giao tiếp, hợp tác, làm việc nhóm, netiquette và AI hỗ trợ trong môi trường số."},
+  {category:"Tổng quan",q:"Một mục tiêu học tập của Chương 4 là gì?",options:["Vận dụng công cụ giao tiếp số như email, họp trực tuyến, mạng xã hội chuyên nghiệp","Thiết kế CPU tích hợp NPU","Huấn luyện mô hình ngôn ngữ lớn","Lập trình hệ điều hành"],correct:0,explanation:"Mục tiêu chương gồm sử dụng công cụ giao tiếp số và nền tảng hợp tác trực tuyến hiệu quả."},
+  {category:"Tổng quan",q:"Chương 4 nhấn mạnh nguyên tắc ứng xử văn minh nào trên môi trường mạng?",options:["Netiquette","Overclocking","Tokenization","Benchmarking"],correct:0,explanation:"Netiquette là quy tắc ứng xử văn minh khi giao tiếp trực tuyến."},
+  {category:"Giao tiếp số",q:"Giao tiếp số (Digital Communication) là gì?",options:["Quá trình trao đổi thông tin qua nền tảng và công nghệ kỹ thuật số","Chỉ là gọi điện truyền thống","Chỉ là lưu file trên USB","Chỉ là tạo bảng tính"],correct:0,explanation:"Giao tiếp số diễn ra qua email, mạng xã hội, nền tảng trực tuyến và công nghệ kỹ thuật số."},
+  {category:"Giao tiếp số",q:"Đặc điểm nào của giao tiếp số vượt trội so với giao tiếp truyền thống?",options:["Vượt qua giới hạn không gian và thời gian","Luôn yêu cầu gặp mặt trực tiếp","Không thể lưu lại","Chỉ truyền được văn bản"],correct:0,explanation:"Giao tiếp số cho phép kết nối mọi lúc, mọi nơi."},
+  {category:"Giao tiếp số",q:"Khả năng lưu trữ và truy vết trong giao tiếp số nghĩa là gì?",options:["Trao đổi có thể được lưu, tìm kiếm và xem lại","Tin nhắn tự biến mất ngay","Không có bằng chứng giao tiếp","Không thể tìm kiếm"],correct:0,explanation:"Email, chat và bình luận tài liệu thường để lại lịch sử giúp xem lại và quản lý."},
+  {category:"Giao tiếp số",q:"Giao tiếp số có thể truyền tải thông tin dưới dạng nào?",options:["Văn bản, âm thanh, hình ảnh, video và đa phương tiện","Chỉ âm thanh","Chỉ văn bản thuần túy","Chỉ file nén"],correct:0,explanation:"Giao tiếp số hỗ trợ nhiều định dạng truyền tải khác nhau."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Giao tiếp đồng bộ là gì?",options:["Tương tác thời gian thực, các bên có mặt cùng lúc","Người nhận phản hồi khi thuận tiện","Chỉ dùng email","Chỉ dùng bình luận tài liệu"],correct:0,explanation:"Zoom, Google Meet, gọi thoại và chat trực tiếp là ví dụ đồng bộ."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Ví dụ nào là giao tiếp đồng bộ?",options:["Họp video Zoom hoặc Google Meet","Email xin nghỉ học","Bình luận trên Google Docs","Diễn đàn thảo luận"],correct:0,explanation:"Họp video diễn ra trong thời gian thực và yêu cầu người tham gia có mặt cùng lúc."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Ưu điểm chính của giao tiếp đồng bộ là gì?",options:["Phản hồi tức thì và truyền tải được giọng điệu, biểu cảm","Không bao giờ gây gián đoạn","Không cần sắp xếp thời gian","Luôn có bản ghi văn bản rõ ràng"],correct:0,explanation:"Đồng bộ giúp trao đổi nhanh, có yếu tố phi ngôn ngữ giúp giảm hiểu lầm."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Nhược điểm của giao tiếp đồng bộ là gì?",options:["Cần mọi người có mặt cùng lúc và có thể gây gián đoạn nếu không lên lịch","Phản hồi quá chậm","Không thể dùng video","Không thể thảo luận sâu"],correct:0,explanation:"Gọi/họp đột xuất có thể làm phiền người khác nếu không được sắp xếp trước."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Giao tiếp bất đồng bộ là gì?",options:["Không cần các bên có mặt cùng lúc; người nhận phản hồi khi thuận tiện","Luôn là gọi video","Luôn yêu cầu phản hồi tức thì","Chỉ diễn ra trong lớp học trực tiếp"],correct:0,explanation:"Email, bình luận Google Docs và diễn đàn là giao tiếp bất đồng bộ."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Ví dụ nào là giao tiếp bất đồng bộ?",options:["Email và bình luận trên Google Docs","Zoom call khẩn cấp","Gọi thoại trực tiếp","Chat trực tiếp đang online"],correct:0,explanation:"Người nhận có thể đọc và phản hồi email/bình luận tài liệu khi thuận tiện."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Ưu điểm của giao tiếp bất đồng bộ là gì?",options:["Linh hoạt, có thời gian suy nghĩ, tạo bản ghi rõ ràng","Phản hồi tức thì hơn mọi công cụ","Luôn truyền tải nét mặt","Không bao giờ hiểu lầm"],correct:0,explanation:"Bất đồng bộ tôn trọng thời gian người nhận và lưu lại trao đổi bằng văn bản."},
+  {category:"Đồng bộ/bất đồng bộ",q:"Nhược điểm của giao tiếp bất đồng bộ là gì?",options:["Có độ trễ, không phù hợp việc khẩn cấp, dễ hiểu lầm nếu diễn đạt kém","Bắt buộc mọi người online cùng lúc","Không thể lưu lại","Không thể dùng văn bản"],correct:0,explanation:"Thiếu yếu tố phi ngôn ngữ và phản hồi chậm là hạn chế của bất đồng bộ."},
+  {category:"Chọn công cụ",q:"Gửi thông báo chính thức cho giảng viên về xin nghỉ học nên dùng phương thức nào?",options:["Email","Messenger/Zalo chat","Gọi điện đột xuất","Bình luận Trello"],correct:0,explanation:"Email trang trọng, có bằng chứng lưu lại và cho phép giảng viên xử lý khi có thời gian."},
+  {category:"Chọn công cụ",q:"Vì sao không nên dùng Messenger/Zalo để gửi thông báo chính thức cho giảng viên?",options:["Không đủ trang trọng","Quá chậm và quá trang trọng","Không thể gửi chữ","Không thể lưu tin nhắn"],correct:0,explanation:"Bảng 4.1 nêu chat Messenger/Zalo không đủ trang trọng cho thông báo chính thức."},
+  {category:"Chọn công cụ",q:"Trao đổi nhanh về ý tưởng bài tập với nhóm nên dùng gì?",options:["Chat nhóm Messenger, Zalo hoặc Teams Chat","Email trang trọng","Gửi file Word qua chat","Họp video dài 2 giờ"],correct:0,explanation:"Chat nhóm nhanh, tiện cho trao đổi ngắn và không quá chính thức."},
+  {category:"Chọn công cụ",q:"Vì sao email không phù hợp để trao đổi nhanh ý tưởng ngắn trong nhóm?",options:["Quá trang trọng và chậm cho thảo luận nhanh","Không có bằng chứng lưu lại","Không gửi được văn bản","Không ai đọc được"],correct:0,explanation:"Email phù hợp thông báo chính thức hơn là trao đổi qua lại nhanh."},
+  {category:"Chọn công cụ",q:"Họp nhóm để phân công nhiệm vụ và thảo luận chi tiết dự án nên dùng gì?",options:["Họp video Zoom, Meet hoặc Teams","Chat văn bản đơn thuần","Gửi file Word qua chat","Tin nhắn một chiều"],correct:0,explanation:"Họp video giúp tương tác trực tiếp, chia sẻ màn hình và thấy biểu cảm để đạt đồng thuận."},
+  {category:"Chọn công cụ",q:"Vì sao chat văn bản không phù hợp cho thảo luận dự án phức tạp?",options:["Khó diễn đạt ý phức tạp và dễ hiểu lầm","Quá trang trọng","Không thể gửi tin ngắn","Luôn yêu cầu camera"],correct:0,explanation:"Vấn đề quan trọng cần trao đổi sâu thường nên dùng họp video."},
+  {category:"Chọn công cụ",q:"Xin góp ý chi tiết cho bản nháp báo cáo nên dùng gì?",options:["Google Docs với chế độ bình luận","Gửi nhiều file Word qua chat","Gọi điện từng người","Đăng lên mạng xã hội"],correct:0,explanation:"Google Docs cho phép góp ý trực tiếp, lưu lịch sử chỉnh sửa và tránh nhiều phiên bản rối."},
+  {category:"Chọn công cụ",q:"Vì sao gửi file Word qua chat để góp ý bản nháp dễ gây vấn đề?",options:["Dễ tạo nhiều phiên bản khác nhau, khó quản lý và tổng hợp góp ý","Không thể tải file Word","Không ai mở được văn bản","Không có nội dung góp ý"],correct:0,explanation:"Cộng tác trực tiếp trên tài liệu chung giúp tránh loạn phiên bản."},
+  {category:"Email chuyên nghiệp",q:"Email trong môi trường học thuật là kênh giao tiếp như thế nào?",options:["Chính thức và quan trọng bậc nhất","Không chính thức như chat bạn bè","Chỉ dùng để giải trí","Không cần trang trọng"],correct:0,explanation:"Email chuyên nghiệp thể hiện sự tôn trọng và xây dựng hình ảnh cá nhân."},
+  {category:"Email chuyên nghiệp",q:"Khi gửi email học thuật nên ưu tiên địa chỉ nào?",options:["Email do trường cấp hoặc email cá nhân nghiêm túc theo họ tên","Nickname vui nhộn","Email không rõ danh tính","Tài khoản game"],correct:0,explanation:"Email trường cấp như vnu.edu.vn hoặc địa chỉ họ tên nghiêm túc tạo tính chuyên nghiệp."},
+  {category:"Email chuyên nghiệp",q:"Dòng tiêu đề email chuyên nghiệp cần có đặc điểm gì?",options:["Ngắn gọn, rõ ràng, nêu bật nội dung chính","Càng dài càng tốt","Không cần tiêu đề","Dùng nhiều emoji"],correct:0,explanation:"Subject rõ giúp người nhận lọc và quản lý email hiệu quả."},
+  {category:"Email chuyên nghiệp",q:"Cấu trúc tiêu đề email gợi ý trong chương là gì?",options:["[Mã môn học] - [Nội dung chính] - [Họ tên] - [MSSV]","[Emoji] - [Nickname] - [Tin nhắn]","Không cần cấu trúc","Chỉ ghi 'Help'"],correct:0,explanation:"Cấu trúc chuẩn giúp giảng viên nhận biết nhanh mục đích và người gửi."},
+  {category:"Email chuyên nghiệp",q:"Ví dụ tiêu đề email nào chuyên nghiệp nhất?",options:["[VNU1001] - Thắc mắc về Bài tập cuối chương 4 - Nguyễn Văn A - 2501xxxx","Cô ơi cứu em với!!!","Bài tập","Hi"],correct:0,explanation:"Tiêu đề này rõ môn học, nội dung, họ tên và mã số sinh viên."},
+  {category:"Email chuyên nghiệp",q:"Lời chào phù hợp khi gửi email cho giảng viên là gì?",options:["Kính gửi Thầy/Cô hoặc Dear Professor [Họ]","Ê thầy/cô","Hello bro","Không cần lời chào"],correct:0,explanation:"Lời chào cần phù hợp mức độ trang trọng và quan hệ với người nhận."},
+  {category:"Email chuyên nghiệp",q:"Trong phần nội dung chính của email, nên làm gì?",options:["Giới thiệu ngắn gọn bản thân và trình bày mục đích rõ ràng","Viết vòng vo nhiều đoạn không liên quan","Chỉ gửi file không giải thích","Dùng tiếng lóng"],correct:0,explanation:"Body cần rõ ràng, đi thẳng vào vấn đề và dễ theo dõi."},
+  {category:"Email chuyên nghiệp",q:"Vì sao nên chia đoạn hợp lý trong email?",options:["Mỗi đoạn tập trung một ý, giúp người đọc dễ theo dõi","Để email dài hơn","Để ẩn mục đích chính","Để tránh lời chào"],correct:0,explanation:"Cấu trúc đoạn rõ giúp email chuyên nghiệp và dễ đọc."},
+  {category:"Email chuyên nghiệp",q:"Điều gì cần tránh trong email học thuật?",options:["Tiếng lóng và từ viết tắt kiểu tin nhắn","Ngôn ngữ lịch sự","Lời kết trang trọng","Kiểm tra chính tả"],correct:0,explanation:"Email học thuật cần văn phong lịch sự, trang trọng."},
+  {category:"Email chuyên nghiệp",q:"Trước khi nhấn gửi email, cần làm gì?",options:["Đọc lại kiểm tra lỗi chính tả, ngữ pháp và tệp đính kèm","Xóa lời chào","Xóa tiêu đề","Chuyển sang viết tắt"],correct:0,explanation:"Kiểm tra giúp tránh lỗi thiếu chuyên nghiệp như quên đính kèm file."},
+  {category:"Email chuyên nghiệp",q:"Lời kết email nào phù hợp?",options:["Trân trọng hoặc Em xin chân thành cảm ơn","Bye nha","Ok vậy đó","Không cần kết"],correct:0,explanation:"Closing lịch sự thể hiện sự tôn trọng người nhận."},
+  {category:"Email chuyên nghiệp",q:"Chữ ký email chuyên nghiệp nên gồm gì?",options:["Họ tên, MSSV, lớp, khoa/trường, số điện thoại tùy chọn","Nickname và quote hài","Mật khẩu tài khoản","Chỉ emoji"],correct:0,explanation:"Signature giúp người nhận biết rõ danh tính và thông tin liên hệ."},
+  {category:"Email chuyên nghiệp",q:"Tệp đính kèm nên được đặt tên như thế nào?",options:["Rõ ràng, có cấu trúc, ví dụ NguyenVanA_2501xxxx_BaiTapChuong4.pdf","filecuatoi.pdf","abcxyz.zip","Không cần tên rõ"],correct:0,explanation:"Tên file rõ giúp giảng viên/người nhận quản lý và nhận biết nội dung."},
+  {category:"Email chuyên nghiệp",q:"Khi gửi tệp đính kèm, cần nhắc gì trong nội dung email?",options:["Nêu rõ có tệp đính kèm và kiểm tra đã đính kèm trước khi gửi","Không cần nói gì","Chỉ gửi file trống","Gửi file rồi gọi điện ngay"],correct:0,explanation:"Nhắc về attachment giúp người nhận biết và tránh lỗi quên file."},
+  {category:"Họp trực tuyến",q:"Các công cụ họp trực tuyến được nhắc trong Chương 4 gồm gì?",options:["Zoom, Google Meet, Microsoft Teams","Trello, Notion, Asana","DeepL, Scholarcy, Resoomer","LinkedIn, TikTok, Instagram"],correct:0,explanation:"Zoom, Meet và Teams là nền tảng họp video phổ biến."},
+  {category:"Họp trực tuyến",q:"Trước cuộc họp, người tổ chức cần làm gì đầu tiên?",options:["Xác định mục tiêu rõ ràng của cuộc họp","Bật micro liên tục","Gửi tin nhắn nhỏ lẻ","Kết thúc họp ngay"],correct:0,explanation:"Cần biết họp để thông báo, thảo luận hay ra quyết định; nếu có thể giải quyết qua email thì không cần họp."},
+  {category:"Họp trực tuyến",q:"Agenda trong họp trực tuyến là gì?",options:["Chương trình nghị sự gồm chủ đề và thời gian dự kiến","Tệp đính kèm email","Nền ảo","Tin nhắn chat"],correct:0,explanation:"Agenda giúp cuộc họp bám mục tiêu và tiết kiệm thời gian."},
+  {category:"Họp trực tuyến",q:"Người tổ chức nên gửi gì trước cuộc họp?",options:["Lời mời họp kèm link, agenda và tài liệu cần đọc trước","Chỉ gửi emoji","Không gửi gì","Chỉ gửi sau khi họp xong"],correct:0,explanation:"Chuẩn bị trước giúp người tham gia đóng góp hiệu quả."},
+  {category:"Họp trực tuyến",q:"Người tham gia cần làm gì trước cuộc họp?",options:["Đọc agenda/tài liệu, kiểm tra camera/mic/Internet và chuẩn bị không gian","Vào trễ để tránh chờ","Không đọc tài liệu","Bật nhạc nền"],correct:0,explanation:"Chuẩn bị kỹ thuật và nội dung là yêu cầu tối thiểu để họp hiệu quả."},
+  {category:"Họp trực tuyến",q:"Nên kiểm tra camera, microphone và Internet khi nào?",options:["Ít nhất 5 phút trước giờ họp","Sau khi họp kết thúc","Khi đang phát biểu","Không cần kiểm tra"],correct:0,explanation:"Kiểm tra trước giúp tránh sự cố kỹ thuật làm gián đoạn."},
+  {category:"Họp trực tuyến",q:"Quy tắc vàng trong cuộc họp trực tuyến để tránh tạp âm là gì?",options:["Tắt micro khi không nói","Luôn bật micro","Nói chen liên tục","Bật loa ngoài lớn"],correct:0,explanation:"Mute khi không phát biểu giúp giảm tiếng ồn cho cả cuộc họp."},
+  {category:"Họp trực tuyến",q:"Nhìn vào camera khi nói có tác dụng gì?",options:["Tạo cảm giác giao tiếp bằng mắt và tăng kết nối","Làm mạng nhanh hơn","Tự động ghi biên bản","Ẩn nền"],correct:0,explanation:"Camera gaze giúp giao tiếp tự nhiên hơn trong họp video."},
+  {category:"Họp trực tuyến",q:"Tính năng Raise Hand nên dùng khi nào?",options:["Khi muốn phát biểu mà không ngắt lời người khác","Khi muốn rời cuộc họp","Khi muốn tắt camera","Khi gửi file"],correct:0,explanation:"Raise Hand giúp báo hiệu có ý kiến một cách lịch sự."},
+  {category:"Họp trực tuyến",q:"Lắng nghe tích cực trong họp nghĩa là gì?",options:["Tập trung vào người nói, tránh làm việc riêng","Vừa họp vừa xem mạng xã hội","Tắt âm thanh cuộc họp","Chỉ đọc chat"],correct:0,explanation:"Lắng nghe tích cực giúp hiểu và phản hồi tốt hơn."},
+  {category:"Họp trực tuyến",q:"Trưởng nhóm trong cuộc họp cần làm gì?",options:["Bắt đầu/kết thúc đúng giờ, bám agenda, khuyến khích tham gia, tóm tắt quyết định","Để họp kéo dài vô hạn","Không cho ai phát biểu","Không ghi quyết định"],correct:0,explanation:"Điều phối tốt giúp cuộc họp hiệu quả và có kết quả rõ ràng."},
+  {category:"Họp trực tuyến",q:"Sau cuộc họp nên gửi gì?",options:["Meeting minutes gồm quyết định, action items, người phụ trách và hạn chót","Tin nhắn trống","Ảnh nền ảo","Không cần gì"],correct:0,explanation:"Biên bản/tóm tắt sau họp giúp nhóm theo dõi công việc tiếp theo."},
+  {category:"Mạng xã hội và chat",q:"Mạng xã hội được định nghĩa là gì?",options:["Nền tảng trực tuyến cho phép tạo hồ sơ, kết nối, chia sẻ và tương tác","Chỉ là email học thuật","Chỉ là công cụ họp video","Chỉ là phần mềm quản lý dự án"],correct:0,explanation:"Mạng xã hội hỗ trợ nội dung văn bản, hình ảnh, video và tương tác."},
+  {category:"Mạng xã hội và chat",q:"LinkedIn phù hợp nhất với mục đích nào?",options:["Xây dựng hồ sơ chuyên nghiệp, kết nối chuyên gia, tìm thực tập/việc làm","Chat giải trí với bạn bè","Đăng video ngắn giải trí","Gửi thông báo xin nghỉ học"],correct:0,explanation:"LinkedIn là nền tảng mạng xã hội chuyên nghiệp quan trọng."},
+  {category:"Mạng xã hội và chat",q:"Sinh viên nên xây dựng hồ sơ LinkedIn từ khi nào theo tài liệu?",options:["Ngay từ năm nhất","Chỉ sau khi tốt nghiệp","Không cần xây dựng","Chỉ khi đã có việc làm"],correct:0,explanation:"Xây dựng LinkedIn sớm hỗ trợ kết nối và cơ hội nghề nghiệp."},
+  {category:"Mạng xã hội và chat",q:"Facebook Groups/Zalo Groups chuyên ngành phù hợp để làm gì?",options:["Học hỏi, trao đổi tài liệu, cập nhật thông tin lĩnh vực","Nộp email chính thức","Tạo meeting minutes","Tự động xếp lịch AI"],correct:0,explanation:"Nhóm chuyên ngành có thể là nguồn học hỏi và trao đổi cộng đồng."},
+  {category:"Mạng xã hội và chat",q:"Facebook, Instagram, TikTok trong mục cá nhân/giải trí cần lưu ý gì?",options:["Cẩn trọng với thông tin cá nhân và hình ảnh chia sẻ","Càng đăng riêng tư càng tốt","Không bao giờ nhà tuyển dụng xem","Không cần kiểm chứng tin"],correct:0,explanation:"Hoạt động mạng xã hội ảnh hưởng danh tính chuyên nghiệp và quyền riêng tư."},
+  {category:"Mạng xã hội và chat",q:"Professional identity trên mạng xã hội nghĩa là gì?",options:["Danh tính chuyên nghiệp có thể được nhà tuyển dụng/đối tác đánh giá qua hồ sơ số","Nickname trong game","Mật khẩu tài khoản","Tệp đính kèm email"],correct:0,explanation:"Mạng xã hội trở thành một phần của thương hiệu cá nhân."},
+  {category:"Mạng xã hội và chat",q:"Personal branding trên mạng xã hội là gì?",options:["Xây dựng thương hiệu cá nhân có chủ đích","Ẩn mọi thông tin học tập","Đăng bất cứ điều gì tùy thích","Chỉ dùng meme"],correct:0,explanation:"Quản lý mạng xã hội giúp biến nó thành tài sản nghề nghiệp."},
+  {category:"Netiquette",q:"Trong chat, nguyên tắc tốt là gì?",options:["Ngắn gọn, rõ ràng, đi thẳng vào vấn đề","Gửi thật nhiều tin nhỏ liên tục","Nhắn ngoài giờ nếu không khẩn cấp","Dùng từ ngữ mơ hồ"],correct:0,explanation:"Chat nên rõ ý, tôn trọng thời gian người nhận."},
+  {category:"Netiquette",q:"Vì sao nên tránh nhắn nhiều tin nhỏ liên tục?",options:["Dễ làm phiền; nên gộp ý vào một tin nhắn rõ ràng hơn","Vì chat không lưu được","Vì người nhận không đọc được","Vì phải dùng email"],correct:0,explanation:"Gộp ý thể hiện tôn trọng thời gian và sự tập trung của người khác."},
+  {category:"Netiquette",q:"Quy tắc vàng trước khi đăng mạng xã hội là gì?",options:["Không đăng điều bạn không muốn ông bà hoặc nhà tuyển dụng tương lai nhìn thấy","Đăng càng nhanh càng tốt","Không cần suy nghĩ","Chỉ cần nhiều tương tác"],correct:0,explanation:"Nội dung online có thể ảnh hưởng danh tiếng cá nhân lâu dài."},
+  {category:"Netiquette",q:"Khi thấy thông tin chưa kiểm chứng trên mạng xã hội, nên làm gì?",options:["Không chia sẻ vội; kiểm chứng trước","Chia sẻ ngay để nhiều người biết","Thêm bình luận giật gân","Gửi vào mọi nhóm"],correct:0,explanation:"Netiquette yêu cầu không lan truyền tin giả/fake news."},
+  {category:"Netiquette",q:"Tranh luận văn minh trên mạng nên tập trung vào gì?",options:["Lập luận, không công kích cá nhân","Mỉa mai đối phương","Công kích ngoại hình","Kích động cảm xúc"],correct:0,explanation:"Tôn trọng khác biệt là nguyên tắc quan trọng của ứng xử số."},
+  {category:"Cộng tác số",q:"Cộng tác số khác giao tiếp đơn thuần ở điểm nào?",options:["Nhấn mạnh cùng nhau tạo ra kết quả chung","Chỉ gửi thông điệp một chiều","Chỉ chat giải trí","Chỉ gọi video"],correct:0,explanation:"Digital collaboration là làm việc chung để chia sẻ, đồng tạo, giải quyết vấn đề hoặc ra quyết định."},
+  {category:"Cộng tác số",q:"Google Workspace nổi bật trong môi trường giáo dục nhờ gì?",options:["Cộng tác thời gian thực trên Docs, Sheets, Slides và tích hợp Gmail, Drive, Meet","Chỉ dùng cho doanh nghiệp lớn","Không hỗ trợ tài liệu chung","Chỉ là ứng dụng chat"],correct:0,explanation:"Google Workspace phổ biến trong giáo dục vì cộng tác real-time thuận tiện."},
+  {category:"Cộng tác số",q:"Microsoft 365 có thế mạnh nào?",options:["Tích hợp Office với Teams cho giao tiếp và hợp tác doanh nghiệp","Chỉ dùng mạng xã hội","Không có Word/Excel/PowerPoint","Chỉ dành cho ảnh"],correct:0,explanation:"Microsoft 365 mạnh ở Word, Excel, PowerPoint và Microsoft Teams."},
+  {category:"Cộng tác số",q:"Ba yếu tố văn hóa nền tảng của hợp tác số hiệu quả là gì?",options:["Tin tưởng, rõ ràng, tôn trọng","Nhanh, rẻ, bí mật","Nhiều tin nhắn, nhiều họp, nhiều file","Ẩn danh, im lặng, độc lập"],correct:0,explanation:"Công cụ không đủ; nhóm cần trust, clarity và respect."},
+  {category:"Cộng tác số",q:"Tin tưởng (Trust) trong hợp tác số nghĩa là gì?",options:["Tin thành viên hoàn thành phần việc đúng hạn và chất lượng","Không cần phân công","Không cần cập nhật tiến độ","Tin mọi tin nhắn trên mạng"],correct:0,explanation:"Trust giúp nhóm làm việc từ xa hiệu quả."},
+  {category:"Cộng tác số",q:"Rõ ràng (Clarity) trong hợp tác số yêu cầu gì?",options:["Nhiệm vụ, vai trò và kỳ vọng được truyền đạt minh bạch","Mọi người tự đoán việc","Không cần deadline","Không cần kênh giao tiếp"],correct:0,explanation:"Clarity giảm hiểu lầm và trùng lặp công việc."},
+  {category:"Cộng tác số",q:"Tôn trọng (Respect) trong hợp tác số là gì?",options:["Tôn trọng thời gian, ý kiến và phong cách làm việc của nhau","Luôn nhắn ngoài giờ","Bỏ qua ý kiến khác","Giao việc mơ hồ"],correct:0,explanation:"Respect giúp duy trì văn hóa nhóm lành mạnh."},
+  {category:"Làm việc nhóm",q:"Team Charter nên được thiết lập khi nào?",options:["Ngay từ đầu dự án","Sau khi dự án kết thúc","Khi đã xảy ra xung đột nghiêm trọng","Không cần thiết lập"],correct:0,explanation:"Team Charter giúp thống nhất quy tắc nhóm ngay từ đầu."},
+  {category:"Làm việc nhóm",q:"Team Charter nên thống nhất nội dung nào?",options:["Kênh giao tiếp, tần suất họp, cách cập nhật tiến độ, cách ra quyết định","Màu avatar nhóm","Tên bài hát nhóm","Mật khẩu cá nhân"],correct:0,explanation:"Quy tắc nhóm rõ ràng giúp phối hợp từ xa hiệu quả."},
+  {category:"Làm việc nhóm",q:"Ví dụ kênh giao tiếp chính trong Team Charter là gì?",options:["Thông báo chính thức ở Zalo, trao đổi công việc chi tiết trên Trello","Mỗi người dùng một kênh tùy thích","Chỉ gọi điện cá nhân","Không có kênh chung"],correct:0,explanation:"Phân kênh rõ giúp tránh thất lạc thông tin."},
+  {category:"Làm việc nhóm",q:"Giao tiếp chủ động và minh bạch nghĩa là gì?",options:["Báo sớm khi gặp khó khăn hoặc có nguy cơ trễ hạn","Im lặng đến sát hạn","Chỉ nói khi bị hỏi","Đổ lỗi cho công cụ"],correct:0,explanation:"Trong môi trường ảo, người khác không biết bạn gặp khó nếu bạn không chủ động nói."},
+  {category:"Làm việc nhóm",q:"Cách xây dựng quan hệ trong nhóm online là gì?",options:["Kênh chat ngoài lề, hỏi thăm đầu cuộc họp, công khai cảm ơn đóng góp","Chỉ nói chuyện khi có lỗi","Không ghi nhận ai","Tắt mọi giao tiếp không chính thức"],correct:0,explanation:"Sự gắn kết cần được chủ động tạo ra trong môi trường số."},
+  {category:"Làm việc nhóm",q:"Nguyên tắc xử lý xung đột là gì?",options:["Tập trung vào vấn đề, không công kích cá nhân","Thắng bằng mọi giá","Công kích người bất đồng","Im lặng kéo dài"],correct:0,explanation:"Xung đột nên được giải quyết xây dựng để nhóm mạnh hơn."},
+  {category:"Làm việc nhóm",q:"Nếu bất đồng qua tin nhắn, cách xử lý tốt là gì?",options:["Đề nghị gọi video ngắn để làm rõ ý định","Tiếp tục nhắn căng thẳng","Đăng công khai lên mạng xã hội","Rời nhóm ngay"],correct:0,explanation:"Video giúp có giọng điệu, nét mặt, giảm hiểu lầm."},
+  {category:"Quản lý dự án",q:"Công cụ quản lý dự án giúp gì cho nhóm?",options:["Trực quan hóa công việc và theo dõi tiến độ","Thay thế hoàn toàn giao tiếp","Ẩn deadline","Xóa mọi phân công"],correct:0,explanation:"Công cụ số giúp nhóm đi đúng hướng và đạt mục tiêu."},
+  {category:"Quản lý dự án",q:"Trello phù hợp nhất với nhóm nào?",options:["Nhóm nhỏ, dự án đơn giản, người mới bắt đầu","Dự án cực phức tạp cần phụ thuộc nhiệm vụ sâu","Nhóm cần wiki phức tạp","Chỉ dùng để dịch thuật"],correct:0,explanation:"Trello cực dễ dùng với giao diện Kanban kéo-thả."},
+  {category:"Quản lý dự án",q:"Trello sử dụng phương pháp nào?",options:["Kanban với Board, List, Card kéo-thả","Transformer","CRAAP Test","Harvard Citation"],correct:0,explanation:"Board, List, Card là cấu trúc làm việc quen thuộc của Trello."},
+  {category:"Quản lý dự án",q:"Nhược điểm của Trello theo bảng là gì?",options:["Ít chế độ xem và hạn chế khi quản lý công việc phức tạp","Quá khó cho người mới","Không kéo-thả được","Không dùng được cho nhóm nhỏ"],correct:0,explanation:"Trello đơn giản nên ít tính năng báo cáo/phụ thuộc nâng cao."},
+  {category:"Quản lý dự án",q:"Asana phù hợp với trường hợp nào?",options:["Nhóm cần quản lý dự án nhiều bước, nhiệm vụ phụ và deadline cụ thể","Nhóm chỉ cần bảng đơn giản nhất","Chỉ tạo ghi chú cá nhân","Chỉ dùng để họp video"],correct:0,explanation:"Asana có nhiều chế độ xem và theo dõi phụ thuộc/tiến độ tốt."},
+  {category:"Quản lý dự án",q:"Ưu điểm của Asana là gì?",options:["Quản lý công việc chi tiết, nhiều chế độ xem như danh sách, bảng, lịch","Chỉ có một chế độ xem","Không theo dõi deadline","Không quản lý nhiệm vụ phụ"],correct:0,explanation:"Asana toàn diện hơn Trello cho dự án nhiều bước."},
+  {category:"Quản lý dự án",q:"Nhược điểm của Asana với người mới là gì?",options:["Giao diện có thể hơi phức tạp và choáng ngợp so với Trello","Không có chế độ xem lịch","Không có deadline","Không quản lý nhóm"],correct:0,explanation:"Asana mạnh nhưng có đường cong học tập cao hơn."},
+  {category:"Quản lý dự án",q:"Notion phù hợp nhất với nhu cầu nào?",options:["Không gian tất cả trong một: quản lý công việc, tài liệu, wiki, cơ sở dữ liệu","Chỉ chat trực tiếp","Chỉ họp video","Chỉ dịch thuật"],correct:0,explanation:"Notion linh hoạt và tùy biến cao cho nhóm muốn vừa quản lý việc vừa lưu trữ kiến thức."},
+  {category:"Quản lý dự án",q:"Nhược điểm của Notion là gì?",options:["Cần thời gian học và tự xây dựng cấu trúc; tính năng quản lý dự án sâu không sẵn như Asana","Không thể ghi chú","Không thể lưu tài liệu","Không tùy biến"],correct:0,explanation:"Notion mạnh ở linh hoạt nhưng đòi hỏi thiết kế hệ thống."},
+  {category:"AI hỗ trợ lịch",q:"AI trong Chương 4 thay đổi vai trò con người theo hướng nào?",options:["Từ người thực thi sang người giám sát và chiến lược gia","Từ người học sang máy móc hoàn toàn","Từ giao tiếp sang im lặng","Từ cộng tác sang cô lập"],correct:0,explanation:"Giá trị con người nằm ở chỉ đạo, đánh giá, tinh chỉnh sản phẩm AI."},
+  {category:"AI hỗ trợ lịch",q:"Vấn đề AI lên lịch giải quyết là gì?",options:["Tìm khung thời gian họp phù hợp cho nhóm bận rộn","Soạn file PDF","Tạo avatar mạng xã hội","Chặn mọi email"],correct:0,explanation:"Sắp xếp lịch nhóm thường tốn thời gian và dễ nhầm lẫn."},
+  {category:"AI hỗ trợ lịch",q:"Calendly là loại công cụ gì?",options:["Công cụ lên lịch dựa trên liên kết","Công cụ dịch máy","Công cụ tóm tắt bài báo khoa học","Nền tảng chat nhóm"],correct:0,explanation:"Calendly cho phép kết nối lịch, thiết lập thời gian rảnh và gửi link cho người khác tự chọn."},
+  {category:"AI hỗ trợ lịch",q:"Calendly kết nối với loại lịch nào?",options:["Google Calendar hoặc Outlook Calendar","Chỉ Trello Board","Chỉ LinkedIn profile","Chỉ file Word"],correct:0,explanation:"Calendly đồng bộ với lịch cá nhân để hiển thị khung giờ trống."},
+  {category:"AI hỗ trợ lịch",q:"Lợi ích chính của link Calendly là gì?",options:["Người khác tự chọn khung giờ trống và cuộc hẹn tự thêm vào lịch","Phải nhắn qua lại nhiều lần","Không cần lịch cá nhân","Chỉ gửi email trống"],correct:0,explanation:"Scheduling link giảm trao đổi qua lại khi hẹn lịch."},
+  {category:"AI hỗ trợ lịch",q:"Reclaim.ai khác Calendly ở điểm nào?",options:["Tự động sắp xếp và bảo vệ thời gian cho habits/tasks, linh hoạt dời khi có việc quan trọng","Chỉ tạo link hẹn đơn giản","Chỉ dịch văn bản","Chỉ tạo bản tóm tắt PDF"],correct:0,explanation:"Reclaim.ai là trợ lý lịch AI nâng cao hơn, tối ưu lịch làm việc và thói quen."},
+  {category:"AI hỗ trợ lịch",q:"Reclaim.ai có thể bảo vệ loại thời gian nào?",options:["Thói quen như ăn trưa, tập thể dục và công việc cần làm","Chỉ thời gian họp bắt buộc","Chỉ giờ ngủ của máy tính","Chỉ deadline Trello"],correct:0,explanation:"Công cụ tự tìm khoảng trống để xếp habits/tasks và điều chỉnh khi lịch thay đổi."},
+  {category:"AI hỗ trợ lịch",q:"AI lên lịch hữu ích với sinh viên trong tình huống nào?",options:["Lịch học nhóm, phỏng vấn thực tập, hẹn gặp giảng viên","Chỉ tạo ảnh mạng xã hội","Chỉ kiểm tra chính tả","Chỉ nén video"],correct:0,explanation:"Scheduling AI giúp hẹn lịch chuyên nghiệp và tiết kiệm thời gian."},
+  {category:"AI viết email",q:"AI hỗ trợ biên soạn email giải quyết vấn đề nào?",options:["Writer's block, văn phong chưa chuyên nghiệp, email trang trọng khó bắt đầu","Không có Internet","Không có file nén","Không có camera"],correct:0,explanation:"Trợ lý viết lách giúp tạo bản nháp và cải thiện văn phong."},
+  {category:"AI viết email",q:"Công cụ AI nào được nhắc trong Outlook và Gmail?",options:["Microsoft Copilot trong Outlook và Google Gemini trong Gmail","Trello trong Outlook và Asana trong Gmail","DeepL trong Outlook và Scholarcy trong Gmail","Calendly trong Gmail và Reclaim trong Outlook"],correct:0,explanation:"Copilot/Gemini hỗ trợ soạn thảo và tóm tắt nội dung giao tiếp."},
+  {category:"AI viết email",q:"Copilot/Gemini có thể làm gì với email?",options:["Soạn email từ prompt, tóm tắt chuỗi email dài, điều chỉnh giọng văn","Chỉ tạo board Kanban","Chỉ họp video","Chỉ tạo file ZIP"],correct:0,explanation:"Các công cụ này hỗ trợ viết, tóm tắt và chỉnh tone."},
+  {category:"AI viết email",q:"Tone Adjustment trong email AI nghĩa là gì?",options:["Điều chỉnh giọng văn như trang trọng hơn, ngắn gọn hơn, thân thiện hơn","Thay màu nền email","Nén email","Tạo lịch họp"],correct:0,explanation:"AI có thể formalize, shorten hoặc make it more friendly."},
+  {category:"AI viết email",q:"Nguyên tắc trách nhiệm khi dùng AI viết email là gì?",options:["Luôn đọc lại, chỉnh sửa và cá nhân hóa nội dung AI tạo","Sao chép-dán nguyên văn mọi lúc","Không cần kiểm tra ngữ cảnh","Để AI thay hoàn toàn giọng văn của mình"],correct:0,explanation:"Cần đảm bảo chính xác, phù hợp ngữ cảnh và thể hiện suy nghĩ của chính bạn."},
+  {category:"AI viết email",q:"Vì sao không nên sao chép-dán email AI tạo mà không suy nghĩ?",options:["Có thể gây sai lầm ngớ ngẩn và thiếu chuyên nghiệp","Vì AI không viết được email","Vì email không lưu được","Vì Gmail cấm mọi AI"],correct:0,explanation:"AI là trợ lý, không thay thế trách nhiệm kiểm tra của người gửi."},
+  {category:"Dịch thuật AI",q:"Hai công cụ dịch máy hàng đầu được so sánh trong Chương 4 là gì?",options:["Google Translate và DeepL","Calendly và Reclaim.ai","Trello và Notion","Zoom và Teams"],correct:0,explanation:"Bảng 4.3 so sánh Google Translate và DeepL cho mục đích học thuật."},
+  {category:"Dịch thuật AI",q:"Google Translate phù hợp khi nào?",options:["Dịch nhanh để nắm ý chính và hỗ trợ nhiều ngôn ngữ, gồm tiếng Việt","Dịch văn bản cực quan trọng cần sắc thái sâu nhất trong mọi trường hợp","Quản lý deadline dự án","Tạo board Kanban"],correct:0,explanation:"Google Translate có phạm vi ngôn ngữ rất rộng và phù hợp lướt nhanh tài liệu."},
+  {category:"Dịch thuật AI",q:"DeepL thường được đánh giá cao ở điểm nào?",options:["Dịch theo ngữ cảnh tự nhiên, nắm sắc thái tốt, nhất là các ngôn ngữ châu Âu","Hỗ trợ nhiều ngôn ngữ nhất tuyệt đối","Tạo link lịch họp","Tạo bản ghi meeting minutes"],correct:0,explanation:"DeepL thường cho văn bản tự nhiên hơn ở nhiều cặp ngôn ngữ phổ biến."},
+  {category:"Dịch thuật AI",q:"Lời khuyên khi dịch đoạn văn bản học thuật quan trọng là gì?",options:["Ưu tiên DeepL nếu hỗ trợ cặp ngôn ngữ và cần hiểu sâu sắc thái","Luôn dùng bản dịch đầu tiên không kiểm tra","Chỉ dùng chat nhóm","Không cần đối chiếu thuật ngữ"],correct:0,explanation:"DeepL phù hợp đoạn quan trọng, nhưng vẫn cần kiểm tra thuật ngữ."},
+  {category:"Dịch thuật AI",q:"Lời khuyên khi cần lướt nhanh và nắm ý chính tài liệu là gì?",options:["Dùng Google Translate","Dùng Trello","Dùng Calendly","Dùng Notion database"],correct:0,explanation:"Google Translate phù hợp dịch nhanh và hỗ trợ nhiều ngôn ngữ."},
+  {category:"Dịch thuật AI",q:"Quy tắc vàng khi dùng công cụ dịch cho bài làm là gì?",options:["Không sao chép-dán bản dịch vào bài làm mà không kiểm tra lại","Tin tuyệt đối bản dịch máy","Không cần đối chiếu thuật ngữ chuyên ngành","Chỉ dịch tiêu đề"],correct:0,explanation:"Cần đối chiếu thuật ngữ với từ điển hoặc nguồn đáng tin để tránh sai."},
+  {category:"Tóm tắt AI",q:"Vấn đề mà công cụ tóm tắt AI giải quyết là gì?",options:["Khối lượng tài liệu/bài báo lớn cần nắm nhanh ý chính","Không có camera họp","Không có email trường","Không có mạng xã hội"],correct:0,explanation:"Tóm tắt AI giúp tiết kiệm thời gian đọc và nghiên cứu."},
+  {category:"Tóm tắt AI",q:"Scholarcy và SciSpace thuộc nhóm công cụ nào?",options:["Công cụ chuyên dụng cho tài liệu khoa học/PDF","Công cụ lên lịch","Công cụ chat nhóm","Mạng xã hội nghề nghiệp"],correct:0,explanation:"Scholarcy và SciSpace được thiết kế để đọc/tóm tắt bài báo khoa học."},
+  {category:"Tóm tắt AI",q:"Scholarcy/SciSpace có thể trích xuất phần nào từ bài báo khoa học?",options:["Giả thuyết, phương pháp, kết quả, kết luận","Lịch rảnh Google Calendar","Danh sách bạn bè Facebook","Card Trello"],correct:0,explanation:"Các công cụ này giúp đánh giá nhanh bài báo có phù hợp nghiên cứu không."},
+  {category:"Tóm tắt AI",q:"QuillBot và Resoomer thuộc nhóm công cụ nào trong Chương 4?",options:["Công cụ tóm tắt văn bản đa năng","Công cụ họp video","Công cụ quản lý dự án","Công cụ lên lịch AI"],correct:0,explanation:"Chúng cho phép dán văn bản/link và tạo bản tóm tắt, thường điều chỉnh được độ dài."},
+  {category:"Tóm tắt AI",q:"ChatGPT, Google Gemini, Perplexity có thể dùng để tóm tắt như thế nào?",options:["Dán nội dung hoặc tải PDF rồi yêu cầu tóm tắt bằng prompt cụ thể","Chỉ tạo lịch họp","Chỉ quản lý file Drive","Chỉ gửi email"],correct:0,explanation:"Prompt cụ thể như 'tóm tắt thành 5 gạch đầu dòng' giúp có kết quả hữu ích."},
+  {category:"Tóm tắt AI",q:"Cảnh báo đạo đức khi dùng AI tóm tắt tài liệu là gì?",options:["Không nộp bản tóm tắt AI tạo ra như sản phẩm của chính mình","Luôn nộp nguyên văn để tiết kiệm thời gian","Không cần đọc tài liệu gốc","Không cần ghi nhận gì"],correct:0,explanation:"Nộp tóm tắt AI như sản phẩm cá nhân là đạo văn và vi phạm liêm chính học thuật."},
+  {category:"Tổng kết Chương 4",q:"Thông điệp cốt lõi của Chương 4 là gì?",options:["Chọn đúng công cụ cho đúng mục đích, xây dựng tin tưởng và dùng công nghệ có trách nhiệm","Dùng càng nhiều công cụ càng tốt","Luôn chọn công cụ mới nhất","Tránh mọi giao tiếp trực tuyến"],correct:0,explanation:"Chương nhấn mạnh lựa chọn chiến lược, quan hệ tin cậy và chỉ đạo công nghệ có trách nhiệm."},
+  {category:"Tổng kết Chương 4",q:"Trong kỷ nguyên số và AI, năng lực giao tiếp/hợp tác không chỉ là gì?",options:["Không chỉ là thao tác kỹ thuật mà còn là tư duy chiến lược và trách nhiệm","Chỉ là biết bật Zoom","Chỉ là biết gửi tin nhắn","Chỉ là biết tạo tài khoản"],correct:0,explanation:"Sinh viên cần biết chọn công cụ, phối hợp, xây dựng tin tưởng và giám sát AI."},
+  {category:"Tổng kết Chương 4",q:"Nhóm công cụ giao tiếp cơ bản của Chương 4 gồm gì?",options:["Email, họp trực tuyến, mạng xã hội/ứng dụng nhắn tin","CPU, RAM, SSD","PDF, CSV, ZIP","HTML, CSS, JS"],correct:0,explanation:"Chương bắt đầu từ email, Zoom/Meet/Teams, mạng xã hội và chat."},
+  {category:"Tổng kết Chương 4",q:"Nhóm nền tảng hợp tác và quản lý dự án trong Chương 4 gồm gì?",options:["Google Workspace, Microsoft 365, Trello, Asana, Notion","DALL-E, Midjourney, Stable Diffusion","HDD, SSD, NVMe","DeepL, Google Translate duy nhất"],correct:0,explanation:"Các nền tảng này hỗ trợ cộng tác tài liệu, giao tiếp nhóm và quản lý công việc."},
+  {category:"Tổng kết Chương 4",q:"Nhóm công cụ AI hỗ trợ giao tiếp/hợp tác trong Chương 4 gồm gì?",options:["Calendly, Reclaim.ai, Copilot, Gemini, Google Translate, DeepL, Scholarcy, SciSpace, QuillBot, Resoomer","ELIZA, STUDENT, AlexNet","Windows, macOS, Linux","ROM, RAM, CPU"],correct:0,explanation:"Chương giới thiệu AI cho lịch, viết email, dịch thuật và tóm tắt tài liệu."}
+];
+
+const quizQuestionsChapter5 = [
+  {category:"Tổng quan",q:"Chương 5 tập trung vào chủ đề chính nào?",options:["Sáng tạo nội dung số","Giao tiếp email chuyên nghiệp","Lịch sử trí tuệ nhân tạo","Quản lý thiết bị ngoại vi"],correct:0,explanation:"Chương 5 trang bị kiến thức và kỹ năng sáng tạo nội dung số hiệu quả, sáng tạo và có trách nhiệm."},
+  {category:"Tổng quan",q:"Mục tiêu nào thuộc Chương 5?",options:["Trình bày các loại nội dung số và quy trình sáng tạo nội dung","Phân biệt RAM và ROM","Thiết lập mạng LAN","So sánh Windows và macOS"],correct:0,explanation:"Chương yêu cầu người học hiểu loại hình nội dung số và quy trình sáng tạo có hệ thống."},
+  {category:"Tổng quan",q:"Chương 5 nhấn mạnh trách nhiệm nào khi sáng tạo nội dung?",options:["Bản quyền, sở hữu trí tuệ, đạo đức và liêm chính khi dùng AI","Chỉ cần nội dung nhiều lượt xem","Không cần ghi nguồn","Sao chép nội dung nhanh nhất"],correct:0,explanation:"Sáng tạo nội dung số phải đi kèm tôn trọng bản quyền và sử dụng AI có trách nhiệm."},
+  {category:"Nội dung số",q:"Nội dung số (Digital Content) là gì?",options:["Nội dung tồn tại dưới dạng dữ liệu số, máy tính có thể đọc, tạo, xem, phân phối, sửa đổi và lưu trữ","Chỉ là video trên YouTube","Chỉ là bài viết giấy","Chỉ là email có tệp đính kèm"],correct:0,explanation:"Nội dung số bao gồm bài blog, ảnh mạng xã hội, video LMS và nhiều dạng dữ liệu số khác."},
+  {category:"Nội dung số",q:"Có bao nhiêu loại hình nội dung số phổ biến được nêu trong Chương 5?",options:["Năm loại","Hai loại","Ba loại","Mười loại bắt buộc"],correct:0,explanation:"Năm loại gồm văn bản, hình ảnh, âm thanh, video và đa phương tiện/tương tác."},
+  {category:"Nội dung số",q:"Nội dung văn bản gồm ví dụ nào?",options:["Bài luận, báo cáo, email, blog, bài đăng mạng xã hội, kịch bản, ghi chú","Podcast và audiobook","Infographic và meme","Livestream và vlog"],correct:0,explanation:"Văn bản là dạng nội dung cơ bản và phổ biến nhất."},
+  {category:"Nội dung số",q:"Ưu điểm của nội dung văn bản là gì?",options:["Dễ sản xuất, dễ được công cụ tìm kiếm lập chỉ mục, truyền tải thông tin chi tiết","Luôn hấp dẫn hơn video","Không bao giờ dài dòng","Không cần biên tập"],correct:0,explanation:"Văn bản chi phí thấp, dễ tạo và phù hợp thông tin phức tạp."},
+  {category:"Nội dung số",q:"Nhược điểm của văn bản quá dài và thiếu trực quan là gì?",options:["Kém hấp dẫn và khó hình dung","Không thể tìm kiếm","Không thể chỉnh sửa","Không dùng được trong học tập"],correct:0,explanation:"Văn bản dài thiếu hình ảnh có thể làm người đọc khó tiếp nhận."},
+  {category:"Nội dung số",q:"Nội dung hình ảnh bao gồm gì?",options:["Ảnh chụp, infographic, biểu đồ, sơ đồ, meme","Podcast, audiobook","Livestream, vlog","Email, báo cáo"],correct:0,explanation:"Hình ảnh truyền tải trực quan và thu hút chú ý nhanh."},
+  {category:"Nội dung số",q:"Ưu điểm nổi bật của hình ảnh là gì?",options:["Thu hút nhanh, trực quan, dễ ghi nhớ","Dễ tìm kiếm một đoạn cụ thể như văn bản","Không cần kỹ năng thiết kế","Luôn diễn đạt tốt ý tưởng trừu tượng"],correct:0,explanation:"Hình ảnh mạnh trong truyền tải dữ liệu trực quan và tạo ấn tượng."},
+  {category:"Nội dung số",q:"Nhược điểm của nội dung hình ảnh là gì?",options:["Cần kỹ năng thiết kế/chụp ảnh và khó diễn đạt ý tưởng trừu tượng phức tạp","Không thu hút sự chú ý","Không dùng được trong học tập","Không thể chia sẻ"],correct:0,explanation:"Ảnh tốt đòi hỏi kỹ năng thị giác và không phải ý tưởng nào cũng thể hiện dễ bằng hình."},
+  {category:"Nội dung số",q:"Nội dung âm thanh gồm ví dụ nào?",options:["Podcast, audiobook, bản ghi bài giảng, nhạc nền","Infographic và biểu đồ","Bài luận và báo cáo","Website portfolio"],correct:0,explanation:"Audio tạo cảm giác gần gũi và có thể nghe khi làm việc khác."},
+  {category:"Nội dung số",q:"Ưu điểm của nội dung âm thanh là gì?",options:["Gần gũi, linh hoạt, có thể nghe khi làm việc khác, chi phí tương đối thấp","Luôn dễ tìm một thông tin cụ thể","Không cần thiết bị nghe","Luôn hấp dẫn hơn video"],correct:0,explanation:"Podcast hoặc ghi âm bài giảng có thể nghe lại thuận tiện."},
+  {category:"Nội dung số",q:"Nhược điểm của nội dung âm thanh là gì?",options:["Khó tìm thông tin cụ thể trong file dài và cần thiết bị nghe","Không tạo cảm giác gần gũi","Không dùng được cho học tập","Không thể sản xuất bằng điện thoại"],correct:0,explanation:"Audio dài khó scan nhanh như văn bản."},
+  {category:"Nội dung số",q:"Nội dung video là gì?",options:["Kết hợp hình ảnh chuyển động và âm thanh như bài giảng, tutorial, vlog, livestream","Chỉ là tệp văn bản","Chỉ là ảnh tĩnh","Chỉ là podcast"],correct:0,explanation:"Video tác động đa giác quan, phù hợp thể hiện quy trình."},
+  {category:"Nội dung số",q:"Ưu điểm của video là gì?",options:["Hấp dẫn, dễ lan truyền, thể hiện quy trình tốt","Sản xuất luôn nhanh nhất","Không cần kỹ năng quay dựng","Không cần âm thanh"],correct:0,explanation:"Video có sức mạnh truyền tải nhờ kết hợp hình ảnh động và âm thanh."},
+  {category:"Nội dung số",q:"Thách thức lớn nhất của video là gì?",options:["Tốn thời gian, công sức và yêu cầu kỹ năng quay/dựng/biên tập","Không hấp dẫn","Không thể lan truyền","Không dùng được trong học tập"],correct:0,explanation:"Video thường phức tạp và tốn nguồn lực hơn văn bản/hình ảnh."},
+  {category:"Nội dung số",q:"Nội dung đa phương tiện/tương tác là gì?",options:["Tích hợp nhiều loại hình nội dung để tạo trải nghiệm phong phú, tương tác cao","Chỉ văn bản thuần túy","Chỉ âm thanh","Chỉ ảnh chụp"],correct:0,explanation:"Ví dụ gồm website portfolio, bài thuyết trình tương tác và MOOCs."},
+  {category:"Nội dung số",q:"Nhược điểm của nội dung đa phương tiện là gì?",options:["Sản xuất phức tạp, đòi hỏi nhiều kỹ năng và công cụ","Không giữ chân người dùng","Không tương tác","Không thể dùng online"],correct:0,explanation:"Multimedia cần kết hợp thiết kế, biên tập, có thể cả lập trình."},
+  {category:"Loại nội dung - công cụ",q:"Công cụ đề xuất cho văn bản trong bảng 5.1 gồm gì?",options:["Google Docs, Microsoft Word, Notion","Canva, Figma, Designer","Audacity, Adobe Podcast Enhance","CapCut, OpenShot"],correct:0,explanation:"Văn bản phù hợp Docs/Word/Notion."},
+  {category:"Loại nội dung - công cụ",q:"Công cụ đề xuất cho hình ảnh trong bảng 5.1 gồm gì?",options:["Canva, Microsoft Designer, Figma","Audacity, CapCut","Gamma, Tome, Google Sites","Word, Notion"],correct:0,explanation:"Các công cụ này hỗ trợ thiết kế đồ họa, infographic, biểu đồ."},
+  {category:"Loại nội dung - công cụ",q:"Công cụ đề xuất cho âm thanh gồm gì?",options:["Audacity, Adobe Podcast Enhance, CapCut","Figma, Designer","Word, Google Docs","Gamma, Tome"],correct:0,explanation:"Audacity và Adobe Podcast Enhance hỗ trợ ghi/chỉnh âm thanh; CapCut cũng hỗ trợ audio/video."},
+  {category:"Loại nội dung - công cụ",q:"Công cụ đề xuất cho video gồm gì?",options:["CapCut, Canva Video Editor, OpenShot","Microsoft Word, Notion","Audacity duy nhất","Google Docs, Figma"],correct:0,explanation:"Video cần công cụ dựng/chỉnh như CapCut, Canva Video Editor hoặc OpenShot."},
+  {category:"Loại nội dung - công cụ",q:"Công cụ đề xuất cho nội dung đa phương tiện gồm gì?",options:["Gamma, Tome, Google Sites","Audacity, Descript","Remove.bg, Fotor","Grammarly, Editor"],correct:0,explanation:"Gamma/Tome/Google Sites hỗ trợ bài trình bày tương tác hoặc website."},
+  {category:"Quy trình sáng tạo",q:"Quy trình sáng tạo nội dung số trong Chương 5 có bao nhiêu bước cốt lõi?",options:["6 bước","3 bước","10 bước","2 bước"],correct:0,explanation:"Quy trình gồm lên ý tưởng/nghiên cứu, lập kế hoạch, sản xuất, biên tập, xuất bản, đo lường/tối ưu."},
+  {category:"Quy trình sáng tạo",q:"Bước 1 của quy trình sáng tạo nội dung số là gì?",options:["Lên ý tưởng và nghiên cứu","Xuất bản ngay","Đo lường lượt xem","Chỉnh sửa màu"],correct:0,explanation:"Bước đầu cần xác định mục tiêu, đối tượng, nghiên cứu chủ đề và tìm góc nhìn riêng."},
+  {category:"Quy trình sáng tạo",q:"Trong bước lên ý tưởng và nghiên cứu, cần xác định gì?",options:["Mục tiêu nội dung, đối tượng hướng đến, kiến thức nền và mối quan tâm của họ","Chỉ chọn màu nền","Chỉ chọn nhạc","Chỉ đăng lên YouTube"],correct:0,explanation:"Hiểu mục tiêu và người xem giúp chọn định dạng và thông điệp phù hợp."},
+  {category:"Quy trình sáng tạo",q:"Bước lập kế hoạch gồm hoạt động nào?",options:["Xây dựng dàn ý/kịch bản, chọn định dạng, xác định nguồn lực, SMART, CTA","Chỉ đăng bài ngay","Chỉ đo KPI","Chỉ tải ảnh"],correct:0,explanation:"Planning biến ý tưởng thành kế hoạch cụ thể và khả thi."},
+  {category:"Quy trình sáng tạo",q:"SMART là viết tắt của gì?",options:["Specific, Measurable, Achievable, Relevant, Time-bound","Simple, Modern, Accurate, Random, Technical","Search, Make, Add, Review, Tag","Script, Media, Audio, Render, Test"],correct:0,explanation:"SMART giúp mục tiêu cụ thể, đo được, khả thi, liên quan và có thời hạn."},
+  {category:"Quy trình sáng tạo",q:"Ví dụ nào là mục tiêu SMART trong PDF?",options:["Tạo video 5 phút hướng dẫn Zotero cho sinh viên năm nhất, đạt 500 lượt xem trong 2 tuần","Làm video thật hay","Viết cái gì đó về học tập","Đăng bài khi nào rảnh"],correct:0,explanation:"Ví dụ có nội dung cụ thể, đo được, đối tượng rõ và thời hạn."},
+  {category:"Quy trình sáng tạo",q:"CTA là gì?",options:["Call to Action - lời kêu gọi người xem/đọc làm gì sau khi tiếp nhận nội dung","Creative Text Archive","Content Timing Algorithm","Copyright Tool Access"],correct:0,explanation:"CTA ví dụ: bình luận, tải checklist, đăng ký, chia sẻ..." },
+  {category:"Quy trình sáng tạo",q:"Bước sản xuất (Production/Creation) là gì?",options:["Thực thi kế hoạch: viết, thiết kế, quay phim hoặc ghi âm theo kịch bản","Kiểm tra KPI sau đăng","Chỉ chọn kênh phân phối","Chỉ xin giấy phép"],correct:0,explanation:"Production là giai đoạn tạo sản phẩm dựa trên dàn ý/kịch bản."},
+  {category:"Quy trình sáng tạo",q:"Vì sao bước biên tập và tinh chỉnh quan trọng?",options:["Bản nháp đầu tiên không hoàn hảo; cần sửa lỗi, logic, hình ảnh, âm thanh","Vì chỉ cần sửa cho dài hơn","Vì bỏ qua góp ý","Vì không cần kiểm tra"],correct:0,explanation:"Editing nâng chất lượng sản phẩm trước khi xuất bản."},
+  {category:"Quy trình sáng tạo",q:"Bước xuất bản và phân phối cần làm gì?",options:["Chọn kênh phù hợp và tối ưu tiêu đề, mô tả, tags","Chỉ lưu file trong máy","Không cần tiêu đề","Không cần chọn kênh"],correct:0,explanation:"Kênh có thể là blog, YouTube, nhóm Facebook, VNU-LMS..." },
+  {category:"Quy trình sáng tạo",q:"Đo lường và tối ưu sau xuất bản dựa trên chỉ số nào?",options:["Lượt xem, lượt thích, bình luận, chia sẻ","Số lần đổi font","Số file trong máy","Số màu trong ảnh"],correct:0,explanation:"KPIs và phản hồi giúp rút kinh nghiệm cho sản phẩm sau."},
+  {category:"Bản quyền",q:"Quyền sở hữu trí tuệ (IP) là gì?",options:["Quyền đối với sản phẩm do trí tuệ con người tạo ra","Chỉ là quyền dùng email","Chỉ là quyền xem video","Chỉ là giấy phép phần mềm"],correct:0,explanation:"IP gồm quyền tác giả, sáng chế, nhãn hiệu, kiểu dáng công nghiệp..." },
+  {category:"Bản quyền",q:"Bản quyền (Copyright) là gì?",options:["Quyền hợp pháp để sao chép, xuất bản, bán hoặc phân phối nội dung/hình thức tác phẩm","Quyền sao chép mọi thứ trên Google","Quyền dùng ảnh không ghi nguồn","Quyền nộp bài người khác"],correct:0,explanation:"Bản quyền áp dụng cho bài viết, sách, ảnh, video, nhạc, phần mềm..." },
+  {category:"Bản quyền",q:"Bản quyền phát sinh khi nào theo Chương 5?",options:["Tự động khi tác phẩm được định hình dưới dạng vật chất nhất định","Chỉ khi đăng ký xong","Chỉ khi đăng lên mạng xã hội","Chỉ khi bán được tiền"],correct:0,explanation:"Ví dụ khi viết xong bài thơ và lưu vào máy tính, quyền tác giả đã phát sinh."},
+  {category:"Bản quyền",q:"Quyền nhân thân của tác giả là gì?",options:["Được đứng tên trên tác phẩm","Được dùng mọi ảnh Google","Được xóa nguồn","Được bán tác phẩm của người khác"],correct:0,explanation:"Quyền nhân thân liên quan danh tính tác giả trên tác phẩm."},
+  {category:"Bản quyền",q:"Quyền tài sản của tác giả là gì?",options:["Cho phép hoặc không cho phép người khác sử dụng tác phẩm","Luôn cho mọi người dùng tự do","Không liên quan kinh tế","Chỉ áp dụng cho email"],correct:0,explanation:"Quyền tài sản kiểm soát việc khai thác tác phẩm."},
+  {category:"Bản quyền",q:"Đạo văn (Plagiarism) là gì?",options:["Lấy ý tưởng/lời nói của người khác như của mình mà không ghi nguồn","Trích dẫn đúng nguồn","Dùng Creative Commons đúng quy định","Viết nội dung tự tạo"],correct:0,explanation:"Đạo văn vi phạm liêm chính học thuật."},
+  {category:"Bản quyền",q:"Khi paraphrase ý tưởng của người khác, cần làm gì?",options:["Vẫn phải trích dẫn nguồn","Không cần ghi nguồn vì đã đổi lời","Chỉ cần đổi vài từ","Không cần quan tâm"],correct:0,explanation:"Diễn đạt lại không biến ý tưởng của người khác thành của mình."},
+  {category:"Bản quyền",q:"Sử dụng hợp lý (Fair Use/Fair Dealing) thường phục vụ mục đích nào?",options:["Phi thương mại như trích dẫn hợp lý, giảng dạy, nghiên cứu, bình luận","Sao chép toàn bộ để bán","Dùng không cần ghi nguồn","Tải nhạc cho video thương mại"],correct:0,explanation:"Fair use vẫn cần mức độ hợp lý và ghi rõ nguồn gốc."},
+  {category:"Bản quyền",q:"Creative Commons (CC) ra đời để giải quyết bài toán gì?",options:["Chia sẻ nhưng vẫn bảo vệ quyền của tác giả","Cho phép ăn cắp nội dung","Xóa bỏ mọi bản quyền","Thay thế mọi trích dẫn"],correct:0,explanation:"CC là bộ giấy phép linh hoạt cho phép chia sẻ với điều kiện nhất định."},
+  {category:"Bản quyền",q:"CC BY yêu cầu điều kiện gì?",options:["Phải ghi công tác giả gốc","Không được dùng tác phẩm","Chỉ dùng phi thương mại","Không được phân phối"],correct:0,explanation:"CC BY cho phép sao chép, phân phối, sửa đổi, kể cả thương mại nếu ghi công."},
+  {category:"Bản quyền",q:"CC BY-SA có thêm điều kiện gì so với CC BY?",options:["Tác phẩm phái sinh phải chia sẻ với cùng giấy phép","Không được sửa đổi","Chỉ dùng cá nhân","Không cần ghi công"],correct:0,explanation:"SA là Share Alike - chia sẻ tương tự."},
+  {category:"Bản quyền",q:"CC BY-NC nghĩa là gì?",options:["Ghi công - Phi thương mại","Ghi công - Không phái sinh","Không cần ghi công","Chia sẻ tương tự bắt buộc thương mại"],correct:0,explanation:"NC là NonCommercial, chỉ cho mục đích phi thương mại."},
+  {category:"Bản quyền",q:"CC BY-ND nghĩa là gì?",options:["Ghi công - Không phái sinh, không sửa đổi tác phẩm","Ghi công - Phi thương mại","Không cần ghi nguồn","Bắt buộc remix"],correct:0,explanation:"ND là No Derivatives, cho phép phân phối bản gốc nhưng không tạo phái sinh."},
+  {category:"Bản quyền",q:"Nguồn ảnh mở được gợi ý để tránh vi phạm bản quyền gồm gì?",options:["Unsplash, Pexels, Pixabay","Ảnh bất kỳ trên Google Images","Tin nhắn riêng","Ảnh không rõ nguồn"],correct:0,explanation:"Sinh viên nên ưu tiên tài nguyên có giấy phép mở hoặc tự tạo."},
+  {category:"Công cụ văn bản",q:"Microsoft Word phù hợp nhất khi nào?",options:["Viết bài tập, báo cáo, luận văn cần định dạng chuẩn, chuyên nghiệp và nộp file","Cộng tác real-time đơn giản nhất","Tạo ảnh AI","Dựng video TikTok"],correct:0,explanation:"Word mạnh về định dạng và văn bản chính thức."},
+  {category:"Công cụ văn bản",q:"Google Docs phù hợp nhất khi nào?",options:["Làm việc nhóm cùng chỉnh sửa tài liệu, bình luận, xem lịch sử thay đổi","Chỉnh âm thanh chuyên nghiệp","Xóa nền ảnh","Tạo video từ văn bản"],correct:0,explanation:"Docs miễn phí, lưu trên Drive và mạnh về cộng tác trực tuyến."},
+  {category:"Công cụ văn bản",q:"Notion, Evernote, OneNote được ví như gì?",options:["Bộ não số thứ hai","Phần mềm dựng phim","Công cụ tạo ảnh AI","Nền tảng dịch thuật"],correct:0,explanation:"Chúng linh hoạt để ghi chú, lên dàn ý, quản lý thông tin và đa phương tiện."},
+  {category:"Công cụ văn bản",q:"Notion/Evernote/OneNote nên dùng ở giai đoạn nào?",options:["Thu thập thông tin, ghi chú, lưu tài liệu tham khảo, phác thảo dàn ý","Xuất bản video cuối cùng","Tạo nhạc nền","Xóa nền ảnh"],correct:0,explanation:"Các công cụ ghi chú rất phù hợp giai đoạn ý tưởng và tổ chức thông tin."},
+  {category:"Công cụ văn bản",q:"Grammarly hỗ trợ gì?",options:["Kiểm tra chính tả, ngữ pháp, dấu câu, văn phong, gợi ý từ đồng nghĩa, kiểm tra đạo văn","Dựng video","Tạo ảnh diffusion","Ghi âm podcast"],correct:0,explanation:"Grammarly là trợ lý ngôn ngữ thông minh."},
+  {category:"Công cụ văn bản",q:"Microsoft Editor tích hợp ở đâu?",options:["Word và trình duyệt Edge","Discord","CapCut","Audacity"],correct:0,explanation:"Editor kiểm tra lỗi cơ bản và gợi ý cải thiện trong hệ Microsoft."},
+  {category:"Công cụ văn bản",q:"Khi nào nên dùng Grammarly/Microsoft Editor?",options:["Trước khi nộp bài hoặc gửi email quan trọng","Sau khi đã nộp xong","Chỉ khi làm video","Không nên dùng"],correct:0,explanation:"Rà soát ngôn ngữ thể hiện sự chuyên nghiệp và tôn trọng người đọc."},
+  {category:"Công cụ văn bản",q:"ChatGPT, Gemini, Copilot hỗ trợ viết lách bằng AI ở việc nào?",options:["Brainstorm, lên dàn ý, viết nháp, diễn đạt lại, tóm tắt","Chỉ xóa nền ảnh","Chỉ chỉnh màu video","Chỉ tạo file ZIP"],correct:0,explanation:"Các LLM hỗ trợ nhiều thao tác văn bản nhưng không được dùng để gian lận."},
+  {category:"Liêm chính AI",q:"Lưu ý quan trọng khi dùng AI viết bài là gì?",options:["AI hỗ trợ tư duy và sáng tạo, không làm thay bạn","Sao chép nguyên văn để nộp","Không cần kiểm chứng","AI chịu trách nhiệm cuối cùng"],correct:0,explanation:"Người học chịu trách nhiệm cuối cùng cho sản phẩm."},
+  {category:"Liêm chính AI",q:"Hành vi nào bị xem là đạo văn khi dùng AI?",options:["Sao chép nguyên văn nội dung AI tạo ra để nộp bài","Dùng AI gợi ý dàn ý rồi tự viết","Kiểm chứng thông tin AI","Biên tập và thêm trải nghiệm cá nhân"],correct:0,explanation:"Nộp nguyên văn AI tạo ra vi phạm liêm chính học thuật."},
+  {category:"Công cụ hình ảnh",q:"Canva phù hợp nhất khi nào?",options:["Cần thiết kế nhanh, đẹp, chuyên nghiệp mà không cần kỹ năng chuyên sâu","Cần chỉnh ảnh chuyên nghiệp phức tạp","Cần dựng phim màu điện ảnh","Cần ghi podcast dài"],correct:0,explanation:"Canva có giao diện kéo-thả và kho template lớn."},
+  {category:"Công cụ hình ảnh",q:"Canva có mẹo nào dành cho sinh viên?",options:["Canva for Education miễn phí cho sinh viên, mở khóa nhiều tính năng cao cấp","Chỉ dùng được khi trả phí doanh nghiệp","Không có template","Không hỗ trợ sinh viên"],correct:0,explanation:"PDF gợi ý tìm và đăng ký Canva for Education."},
+  {category:"Công cụ hình ảnh",q:"Microsoft Designer nổi bật ở điểm nào?",options:["Tích hợp AI tạo ảnh DALL-E 3, tạo thiết kế từ mô tả","Chỉ là trình ghi âm","Chỉ là trình soạn thảo văn bản","Chỉ là công cụ dịch"],correct:0,explanation:"Designer giúp tạo nhiều phương án thiết kế nhanh từ prompt."},
+  {category:"Công cụ hình ảnh",q:"Khi nào nên dùng Microsoft Designer?",options:["Khi bí ý tưởng hoặc cần thiết kế độc đáo nhanh từ vài dòng mô tả","Khi chỉnh âm thanh podcast","Khi cần viết luận văn chính thức","Khi cần quản lý database"],correct:0,explanation:"Designer tận dụng AI để sinh ý tưởng thiết kế."},
+  {category:"Công cụ hình ảnh",q:"Figma phù hợp nhất với mục đích nào?",options:["Thiết kế UI/UX và cộng tác thời gian thực trên cùng file thiết kế","Ghi âm nhanh","Tạo bản dịch","Tạo nhạc nền"],correct:0,explanation:"Figma mạnh cho thiết kế giao diện và nhóm cùng thao tác mượt."},
+  {category:"Công cụ hình ảnh",q:"Photoshop được mô tả như gì?",options:["Ông vua chỉnh sửa ảnh, mạnh nhưng phức tạp và tốn phí","Công cụ đơn giản nhất cho mọi sinh viên","Công cụ ghi âm miễn phí","Công cụ tạo lịch"],correct:0,explanation:"Photoshop phù hợp khi muốn đi sâu vào nhiếp ảnh/thiết kế chuyên nghiệp."},
+  {category:"Công cụ hình ảnh",q:"GIMP và Photopea là gì?",options:["Giải pháp thay thế miễn phí tốt cho Photoshop","Công cụ tạo video từ văn bản","Nền tảng podcast","Trình tạo slide AI"],correct:0,explanation:"GIMP là mã nguồn mở cần cài; Photopea chạy online với giao diện gần Photoshop."},
+  {category:"Công cụ hình ảnh",q:"Khi nào nên dùng GIMP hoặc Photopea?",options:["Cần xóa vật thể/ghép ảnh nâng cao mà Canva không làm được, không muốn trả phí Photoshop","Cần cộng tác Google Docs","Cần lên lịch họp","Cần podcast"],correct:0,explanation:"Chúng phù hợp chỉnh ảnh nâng cao miễn phí."},
+  {category:"Công cụ hình ảnh",q:"Remove.bg dùng tốt nhất để làm gì?",options:["Xóa nền ảnh nhanh","Viết bài blog","Tạo podcast","Dựng video dài"],correct:0,explanation:"Remove.bg là công cụ online đơn giản chuyên xóa nền."},
+  {category:"Công cụ hình ảnh",q:"Fotor và Pixlr phù hợp khi nào?",options:["Cần chỉnh ảnh online nhanh như cắt, xoay, thêm filter","Cần lập luận học thuật","Cần tạo lịch AI","Cần tóm tắt bài báo khoa học"],correct:0,explanation:"Đây là công cụ online 'mì ăn liền' cho tác vụ ảnh đơn giản."},
+  {category:"AI tạo ảnh",q:"Microsoft Designer, Bing Image Creator, Canva Text to Image thuộc nhóm nào?",options:["Công cụ tạo ảnh bằng AI từ văn bản","Công cụ chỉnh âm thanh","Công cụ quản lý tài liệu","Công cụ viết email"],correct:0,explanation:"Chúng tích hợp DALL-E 3 hoặc AI tạo ảnh, dùng prompt để tạo hình."},
+  {category:"AI tạo ảnh",q:"Khi nào nên dùng Text-to-Image?",options:["Khi cần ảnh minh họa độc đáo đúng ý tưởng mà không tìm thấy trên mạng","Khi cần văn bản thuần túy","Khi cần bảng Excel","Khi cần nén file"],correct:0,explanation:"Ví dụ tạo ảnh 'phi hành gia sinh viên đọc sách trên mặt trăng'."},
+  {category:"AI tạo ảnh",q:"Midjourney và Stable Diffusion phù hợp khi nào?",options:["Muốn khám phá sâu nghệ thuật AI và yêu cầu thẩm mỹ cao","Chỉ muốn ghi âm bài giảng","Chỉ muốn kiểm tra chính tả","Chỉ muốn làm email"],correct:0,explanation:"Hai công cụ này mạnh nhưng phức tạp hơn cho người mới."},
+  {category:"AI tạo ảnh",q:"Nguyên lý diffusion trong tạo ảnh AI là gì?",options:["Bắt đầu từ nhiễu ngẫu nhiên rồi tinh chỉnh dần thành ảnh rõ theo prompt","Sao chép nguyên ảnh trên Google","Chỉ ghép ảnh thủ công","Nén ảnh thành ZIP"],correct:0,explanation:"Mô hình học liên hệ văn bản-hình ảnh và tạo ảnh mới qua quá trình khuếch tán."},
+  {category:"AI tạo ảnh",q:"Khi dùng ảnh trên Google, cần nhớ gì?",options:["Không phải ảnh nào cũng được dùng tự do; ưu tiên nguồn mở hoặc tự tạo","Mọi ảnh đều miễn phí","Không cần ghi nguồn","Chỉ cần tải về là được"],correct:0,explanation:"Bản quyền hình ảnh là rủi ro quan trọng khi sáng tạo nội dung."},
+  {category:"AI tạo ảnh",q:"Khi dùng ảnh AI trong bài tập/dự án quan trọng, nên làm gì nếu được yêu cầu?",options:["Ghi chú minh bạch rằng hình ảnh do AI tạo","Giấu hoàn toàn","Nói là ảnh tự chụp","Không kiểm tra điều khoản công cụ"],correct:0,explanation:"Minh bạch về AI thể hiện trách nhiệm và tuân thủ quy định."},
+  {category:"Âm thanh",q:"Ứng dụng ghi âm có sẵn phù hợp khi nào?",options:["Ghi nhanh ý tưởng, phỏng vấn, bài giảng để nghe lại","Chỉnh âm thanh chuyên sâu","Tạo video từ script","Thiết kế UI"],correct:0,explanation:"Điện thoại/laptop thường có công cụ ghi âm đủ dùng cho mục đích cá nhân."},
+  {category:"Âm thanh",q:"Audacity được ví như gì?",options:["Word cho file âm thanh","Photoshop cho ảnh AI","Canva cho slide","Google Docs cho lịch"],correct:0,explanation:"Audacity miễn phí, mạnh và phổ biến cho người mới chỉnh âm thanh."},
+  {category:"Âm thanh",q:"Audacity phù hợp khi nào?",options:["Cắt ghép ghi âm, lọc tạp âm, thêm nhạc nền, làm podcast","Tạo ảnh AI","Làm infographic","Tạo lịch họp"],correct:0,explanation:"Audacity là công cụ phải có nếu muốn làm podcast ở mức nghiêm túc."},
+  {category:"Âm thanh",q:"Adobe Audition phù hợp với ai?",options:["Người theo đuổi dự án âm thanh chuyên sâu, chuyên nghiệp và có trả phí","Người chỉ cần ghi âm nhanh","Người chỉ cần xóa nền ảnh","Người chỉ cần viết dàn ý"],correct:0,explanation:"Audition là công cụ tiêu chuẩn trong công nghiệp âm thanh chuyên nghiệp."},
+  {category:"Âm thanh",q:"Adobe Podcast Enhance dùng để làm gì?",options:["Làm sạch file âm thanh kém, giảm vang/ồn, giúp giọng trong như phòng thu","Tạo slide web","Dựng video từ văn bản","Tạo ảnh diffusion"],correct:0,explanation:"Đây là công cụ AI online hữu ích khi file ghi âm quan trọng nhưng chất lượng tệ."},
+  {category:"Âm thanh",q:"Descript thay đổi cách chỉnh audio như thế nào?",options:["Chuyển giọng nói thành transcript, sửa văn bản thì audio thay đổi theo","Chỉ tăng âm lượng","Chỉ tạo ảnh","Chỉ làm phụ đề video ngắn"],correct:0,explanation:"Descript rất tiết kiệm thời gian khi chỉnh phỏng vấn/podcast dài."},
+  {category:"Video",q:"CapCut phù hợp nhất với loại video nào?",options:["Video ngắn mạng xã hội như TikTok, Reels và nhiều video bài tập thông thường","Chỉ phim điện ảnh chuyên nghiệp","Chỉ tài liệu Word","Chỉ podcast audio"],correct:0,explanation:"CapCut phổ biến, thân thiện, có trên điện thoại và máy tính."},
+  {category:"Video",q:"Tính năng AI hữu ích của CapCut gồm gì?",options:["Tạo phụ đề tự động và xóa nền video","Tạo văn bản Word","Kiểm tra đạo văn","Lập lịch họp"],correct:0,explanation:"Các tính năng AI trong CapCut tiết kiệm thời gian dựng video."},
+  {category:"Video",q:"Canva Video Editor nên dùng khi nào?",options:["Khi đã quen Canva và muốn chèn video ngắn vào slide/thuyết trình","Khi cần chỉnh màu điện ảnh chuyên sâu","Khi cần ghi âm podcast dài","Khi cần viết luận văn"],correct:0,explanation:"Canva Video Editor đơn giản, tiện nếu đã dùng hệ Canva."},
+  {category:"Video",q:"OpenShot và DaVinci Resolve bản miễn phí phù hợp khi nào?",options:["Muốn kiểm soát nhiều hơn về màu sắc, hiệu ứng, âm thanh, kỹ xảo phức tạp","Chỉ cắt video rất nhanh trên điện thoại","Chỉ tạo email","Chỉ xóa nền ảnh"],correct:0,explanation:"Chúng mạnh hơn nhưng cần thời gian học và làm quen."},
+  {category:"Video AI",q:"Pictory.ai và InVideo AI dùng để làm gì?",options:["Biến bài viết/kịch bản văn bản thành video với stock và giọng đọc AI","Xóa nền ảnh","Kiểm tra ngữ pháp","Ghi chú bài giảng"],correct:0,explanation:"Chúng hỗ trợ tạo video tóm tắt kiến thức hoặc giải thích vấn đề khi không tự quay."},
+  {category:"Video AI",q:"Khi nào nên dùng Pictory.ai hoặc InVideo AI?",options:["Cần làm video tóm tắt/giải thích từ văn bản mà thiếu thời gian hoặc nguồn lực tự quay","Cần viết báo cáo chính thức","Cần chỉnh ảnh nâng cao","Cần lập lịch họp"],correct:0,explanation:"AI tự tìm stock phù hợp và kết hợp giọng đọc."},
+  {category:"Trình bày tương tác",q:"Gamma.app và Tome.app tạo ra dạng nội dung nào?",options:["Bài trình bày dạng web tương tác","File âm thanh podcast","Ảnh PNG nền trong suốt","Bảng tính Excel"],correct:0,explanation:"Gamma/Tome cho phép nhúng video, link và yếu tố tương tác."},
+  {category:"Trình bày tương tác",q:"Khi nào nên dùng Gamma hoặc Tome?",options:["Thay vì video thuyết trình nhàm chán, tạo bài trình bày tương tác phong phú","Khi cần lọc tạp âm","Khi cần xóa nền ảnh","Khi cần kiểm tra chính tả"],correct:0,explanation:"Chúng phù hợp bài trình bày dạng web sinh động hơn slide/video thường."},
+  {category:"Âm thanh/video bản quyền",q:"Khi làm video cần dùng nhạc/hiệu ứng âm thanh, nên tìm nguồn nào?",options:["Royalty-free như YouTube Audio Library, Pixabay Music, Freesound","Nhạc bất kỳ trên TikTok","Nhạc thương mại không xin phép","File không rõ nguồn"],correct:0,explanation:"Nguồn royalty-free giúp tránh vấn đề pháp lý."},
+  {category:"AI trong sáng tạo",q:"Ở giai đoạn lên ý tưởng, GenAI đóng vai trò gì?",options:["Bộ não phụ giúp mở rộng khả năng, tìm góc nhìn và gợi ý chủ đề","Người làm thay toàn bộ sản phẩm","Công cụ nén file","Công cụ ghi âm duy nhất"],correct:0,explanation:"AI có thể brainstorm và nghiên cứu sơ bộ dựa trên prompt."},
+  {category:"AI trong sáng tạo",q:"Prompt nào phù hợp để brainstorm chủ đề?",options:["Tôi cần viết bài blog về kỹ năng mềm cho sinh viên. Hãy gợi ý 5 chủ đề cụ thể và hấp dẫn.","Viết gì đó đi.","Tạo file ZIP.","Đăng bài ngay."],correct:0,explanation:"Prompt cụ thể nêu bối cảnh và số lượng kết quả mong muốn."},
+  {category:"AI trong sáng tạo",q:"AI hỗ trợ nghiên cứu chủ đề bằng cách nào?",options:["Tóm tắt tài liệu phức tạp, giải thích khái niệm khó, tìm thông tin cơ bản","Thay thế kiểm chứng nguồn","Tự bảo đảm mọi số liệu đúng","Không cần người đọc"],correct:0,explanation:"AI tăng tốc nghiên cứu nhưng chỉ là điểm khởi đầu."},
+  {category:"AI trong sáng tạo",q:"Khi dùng AI nghiên cứu, lưu ý quan trọng là gì?",options:["Luôn kiểm chứng thông tin, đặc biệt số liệu và sự kiện","Tin AI tuyệt đối","Không cần nguồn","Không cần tư duy phản biện"],correct:0,explanation:"AI có thể sai hoặc bịa thông tin."},
+  {category:"AI trong sáng tạo",q:"AI có thể giúp xác định đối tượng mục tiêu bằng cách nào?",options:["Mô tả chân dung, mối quan tâm và vấn đề của nhóm người xem dựa trên thông tin cung cấp","Tự đăng bài lên mọi kênh","Xóa đối tượng mục tiêu","Chỉ chọn màu"],correct:0,explanation:"Hiểu audience là chìa khóa thành công của nội dung."},
+  {category:"AI viết lách",q:"AI tạo dàn ý chi tiết giúp gì?",options:["Cấu trúc bài viết/thuyết trình logic và chặt chẽ từ chủ đề lớn","Tạo ảnh minh họa","Xóa nền video","Tự đăng YouTube"],correct:0,explanation:"LLM có thể hỗ trợ tổ chức ý tưởng thành dàn ý."},
+  {category:"AI viết lách",q:"Bản nháp đầu tiên do AI tạo nên được xem là gì?",options:["Nguyên liệu thô cần biên tập, không phải thành phẩm","Sản phẩm cuối có thể nộp ngay","Bằng chứng tự viết","Nội dung không cần kiểm tra"],correct:0,explanation:"Cần thêm kiến thức, trải nghiệm và giọng văn cá nhân."},
+  {category:"AI viết lách",q:"Paraphrasing bằng AI là gì?",options:["Viết lại câu/đoạn theo cách khác như đơn giản hơn, trang trọng hơn, ngắn gọn hơn","Tạo video từ văn bản","Tạo ảnh AI","Tạo nhạc nền"],correct:0,explanation:"AI có thể diễn đạt lại nhưng vẫn cần giữ ý đúng và tránh đạo văn."},
+  {category:"AI viết lách",q:"Mở rộng ý bằng AI nghĩa là gì?",options:["Biến một ý ngắn thành đoạn văn đầy đủ, giàu lập luận","Rút gọn mọi văn bản thành một từ","Tạo ảnh minh họa","Nén file"],correct:0,explanation:"AI có thể phát triển luận điểm, nhưng người dùng phải kiểm tra và cá nhân hóa."},
+  {category:"AI đa phương tiện",q:"AI tạo ảnh minh họa nên dùng công cụ nào theo Chương 5?",options:["Microsoft Designer hoặc Canva AI/Text-to-Image","Audacity","Grammarly","Calendly"],correct:0,explanation:"Text-to-Image tạo ảnh từ prompt mô tả chi tiết."},
+  {category:"AI đa phương tiện",q:"AI tạo video từ văn bản nên dùng công cụ nào?",options:["Pictory hoặc InVideo AI","Remove.bg","Microsoft Editor","Notion"],correct:0,explanation:"Pictory/InVideo biến kịch bản thành video có stock và giọng đọc AI."},
+  {category:"AI đa phương tiện",q:"AI tạo slide thuyết trình nhanh từ dàn ý nên dùng gì?",options:["Gamma hoặc Tome","Audacity","Photopea","DeepL"],correct:0,explanation:"Gamma/Tome đề xuất bố cục và hình ảnh cho slide/bài trình bày."},
+  {category:"AI đa phương tiện",q:"AI tạo nhạc nền không bản quyền được nhắc đến gồm gì?",options:["Soundraw, AIVA","Word, Docs","GIMP, Photopea","Calendly, Reclaim"],correct:0,explanation:"Soundraw và AIVA có thể tạo nhạc nền cho video/podcast."},
+  {category:"Đánh giá AI",q:"Giai đoạn quan trọng nhất khi dùng AI tạo sinh là gì?",options:["Đánh giá và tinh chỉnh nội dung do AI tạo ra","Nhận kết quả rồi nộp ngay","Chỉ viết prompt một lần","Không cần xem lại"],correct:0,explanation:"Sản phẩm chất lượng cao cần dấu ấn và kiểm soát của con người."},
+  {category:"Đánh giá AI",q:"Checklist đánh giá nội dung AI gồm tiêu chí nào?",options:["Accuracy, Originality & Personalization, Relevance, Bias, Coherence & Logic","Volume, Velocity, Variety","LAN, WAN, NFC","Input, Output, Storage"],correct:0,explanation:"Các tiêu chí giúp kiểm tra chất lượng và trách nhiệm của sản phẩm AI."},
+  {category:"Đánh giá AI",q:"Tính chính xác (Accuracy) cần kiểm tra gì?",options:["Thông tin, dữ liệu, số liệu, sự kiện có đúng; nguồn có đáng tin; có kiểm chứng chéo không","Màu sắc có đẹp không","Video có viral không","Tên file có dài không"],correct:0,explanation:"AI có thể sai nên phải kiểm chứng bằng nguồn uy tín."},
+  {category:"Đánh giá AI",q:"Originality & Personalization yêu cầu gì?",options:["Thêm giọng văn, phong cách, ví dụ, phân tích hoặc trải nghiệm cá nhân","Giữ nguyên văn AI tạo","Xóa mọi dấu ấn cá nhân","Chỉ tổng hợp máy móc"],correct:0,explanation:"Nội dung cần độc đáo và có dấu ấn người tạo."},
+  {category:"Đánh giá AI",q:"Relevance khi đánh giá AI hỏi điều gì?",options:["Nội dung có đáp ứng đúng prompt/mục tiêu và phù hợp khán giả không","Có bao nhiêu file đính kèm","Có nhiều hiệu ứng không","Có dùng font lạ không"],correct:0,explanation:"Nội dung đúng phải phù hợp mục tiêu ban đầu và audience."},
+  {category:"Đánh giá AI",q:"Bias trong nội dung AI cần kiểm tra điều gì?",options:["Thiên kiến tiêu cực về giới, chủng tộc, văn hóa, vùng miền; sự đa dạng trong hình ảnh","Tốc độ render","Kích thước file","Độ dài tiêu đề"],correct:0,explanation:"AI học từ Internet nên có thể tái tạo định kiến xã hội."},
+  {category:"Đánh giá AI",q:"Coherence & Logic nghĩa là gì?",options:["Luận điểm sắp xếp hợp lý, dòng chảy mượt, dẫn đến kết luận thuyết phục","Ảnh có nền trong suốt","Âm thanh đủ to","File nén đúng"],correct:0,explanation:"Nội dung cần mạch lạc để người đọc/xem dễ theo dõi."},
+  {category:"Đánh giá AI",q:"Minh bạch về việc sử dụng AI có thể thể hiện bằng cách nào?",options:["Ghi nhận mức độ AI hỗ trợ, ví dụ dàn ý/bản nháp được hỗ trợ bởi GPT-4 nếu quy định yêu cầu","Giấu toàn bộ việc dùng AI","Nói tác phẩm hoàn toàn tự làm dù dùng AI","Không cần quan tâm quy định"],correct:0,explanation:"Minh bạch cho thấy người dùng AI có ý thức và trách nhiệm."},
+  {category:"Đánh giá AI",q:"Khi dùng sản phẩm AI cho mục đích thương mại, cần làm gì?",options:["Kiểm tra điều khoản sử dụng của công cụ về bản quyền thương mại","Mặc định được dùng mọi nơi","Không cần kiểm tra","Chỉ đổi màu sản phẩm"],correct:0,explanation:"Mỗi công cụ có quy định riêng về quyền sử dụng đầu ra."},
+  {category:"Đánh giá AI",q:"AI tạo sinh nên được xem như gì?",options:["Công cụ hỗ trợ mạnh mẽ, người cầm lái vẫn là bạn","Người thay thế hoàn toàn tư duy","Nguồn tuyệt đối đúng","Cách để bỏ qua bản quyền"],correct:0,explanation:"AI giúp đi nhanh hơn, nhưng con người quyết định mục tiêu, kiểm chứng và dấu ấn sáng tạo."},
+  {category:"Tổng kết Chương 5",q:"Chương 5 trang bị nền tảng nào?",options:["Bản chất nội dung số, quy trình sáng tạo, công cụ, AI, bản quyền và đạo đức","Chỉ cách dùng Zoom","Chỉ lịch sử AI","Chỉ phần cứng"],correct:0,explanation:"Tóm tắt chương nêu toàn bộ nội dung cốt lõi này."},
+  {category:"Tổng kết Chương 5",q:"Tóm tắt chương nói quy trình sáng tạo chuyên nghiệp gồm điều gì?",options:["Từ xác định mục tiêu, lên ý tưởng, sản xuất, quảng bá đến đo lường và tối ưu","Chỉ đăng bài ngay","Chỉ dùng Canva","Chỉ tạo ảnh AI"],correct:0,explanation:"Quy trình có mục đích giúp nội dung hiệu quả."},
+  {category:"Tổng kết Chương 5",q:"Các công cụ AI phổ biến được tóm tắt cuối chương gồm gì?",options:["Canva, Microsoft Designer, Pictory, Gamma","Zoom, Teams, Meet","Windows, Linux, macOS","RAM, ROM, SSD"],correct:0,explanation:"Các công cụ này định hướng thực hành infographic, video, bản trình chiếu."},
+  {category:"Tổng kết Chương 5",q:"Trách nhiệm và đạo đức trong Chương 5 nhấn mạnh điều gì?",options:["Tôn trọng bản quyền, dùng Creative Commons hợp lý, liêm chính học thuật và trách nhiệm số","Tăng lượt xem bằng mọi giá","Không cần ghi nguồn","Sao chép nội dung nhanh"],correct:0,explanation:"Sáng tạo nội dung số phải hợp pháp và có trách nhiệm."}
+];
+
+const quizQuestionsChapter6 = [
+  ["Tổng quan","Chương 6 tập trung vào chủ đề chính nào?","An toàn và liêm chính học thuật trong môi trường số","Thiết kế đồ họa nâng cao","Lập trình ứng dụng di động","Quản trị mạng doanh nghiệp","Chương 6 kết hợp an toàn thông tin, sức khỏe số, công dân số, liêm chính học thuật và AI có trách nhiệm."],
+  ["Tổng quan","Mục tiêu nào thuộc Chương 6?","Nhận diện nguy cơ an ninh mạng và bảo vệ thông tin cá nhân","Tối ưu tốc độ render video","Thiết kế logo bằng Figma","Tạo website thương mại điện tử","Sinh viên cần nhận diện rủi ro, bảo vệ thiết bị và dữ liệu cá nhân."],
+  ["Tổng quan","Chương 6 xem an toàn và liêm chính số là gì?","Hai mặt của việc trở thành công dân số có năng lực và đạo đức","Hai phần hoàn toàn không liên quan","Chỉ là kỹ năng dùng phần mềm","Chỉ là quy định thi cử","Tóm tắt chương nhấn mạnh cả an toàn lẫn đạo đức trong kỷ nguyên số."],
+  ["Dấu chân số","Dấu chân số là gì?","Toàn bộ dấu vết dữ liệu cá nhân tạo ra hoặc để lại khi dùng Internet","Mật khẩu duy nhất của một tài khoản","Tên thật trên căn cước công dân","Dung lượng lưu trữ đám mây","Dấu chân số gồm web đã truy cập, email, bài đăng, lượt thích, bình luận và dữ liệu bị thu thập."],
+  ["Dấu chân số","Dấu chân số chủ động là dữ liệu như thế nào?","Dữ liệu người dùng cố ý chia sẻ công khai","Dữ liệu website âm thầm thu thập","Dữ liệu bị mã hóa bởi ransomware","Dữ liệu bị xóa khỏi thiết bị","Ví dụ: đăng ảnh, cập nhật trạng thái, bình luận blog hoặc gửi email."],
+  ["Dấu chân số","Ví dụ nào là dấu chân số chủ động?","Đăng ảnh lên Instagram","Website ghi lại địa chỉ IP","Ứng dụng truy cập vị trí nền","Trình duyệt lưu cookie quảng cáo","Đăng ảnh là hành động người dùng chủ ý chia sẻ."],
+  ["Dấu chân số","Dấu chân số bị động là gì?","Dữ liệu được thu thập dù người dùng không trực tiếp cung cấp","Bài viết người dùng tự đăng","Email người dùng tự gửi","Bình luận người dùng tự viết","Ví dụ: địa chỉ IP, lịch sử tìm kiếm, tần suất truy cập hoặc dữ liệu vị trí do ứng dụng thu thập."],
+  ["Dấu chân số","Ví dụ nào là dấu chân số bị động?","Trang web thu thập tần suất truy cập của bạn","Bạn viết bình luận trên blog","Bạn gửi email cho giảng viên","Bạn đăng trạng thái Facebook","Bị động nghĩa là dữ liệu được hệ thống thu thập phía sau hành vi sử dụng."],
+  ["Danh tính số","Danh tính số được hình thành chủ yếu từ đâu?","Từ các dấu chân số và thông tin định danh trong môi trường số","Từ số seri máy tính","Từ kích thước màn hình","Từ dung lượng RAM","Danh tính số gồm tên, tuổi, hình ảnh, quan hệ, sở thích, kỹ năng và cách bạn thể hiện trực tuyến."],
+  ["Danh tính số","Quản lý danh tính số có lợi ích gì?","Bảo vệ quyền riêng tư và xây dựng hình ảnh cá nhân tích cực","Làm tăng độ sáng màn hình","Tự động xóa mọi dữ liệu","Thay thế hoàn toàn bằng cấp","Danh tính số tốt hỗ trợ học tập, uy tín và cơ hội nghề nghiệp."],
+  ["Danh tính số","Tư duy đúng về quyền riêng tư trong chương 6 là gì?","Không chỉ chú ý điều mình chia sẻ mà còn chú ý điều đang bị thu thập","Chỉ cần không đăng bài là an toàn tuyệt đối","Chỉ cần dùng tên giả là xong","Không cần quan tâm quyền ứng dụng","Dấu chân số bị động làm ta cần quản lý quyền riêng tư chủ động."],
+  ["Phishing","Phishing là hình thức tấn công nào?","Giả mạo đơn vị uy tín để lừa người dùng tiết lộ thông tin nhạy cảm","Làm máy tính chạy nhanh hơn","Tạo bản sao lưu an toàn","Mã hóa dữ liệu để bảo vệ người dùng","Phishing thường giả danh ngân hàng, trường học hoặc nhà cung cấp dịch vụ."],
+  ["Phishing","Smishing là biến thể phishing qua kênh nào?","Tin nhắn","Máy in","Ổ cứng ngoài","Bluetooth nội bộ","Smishing dùng SMS/tin nhắn để dẫn dụ người dùng bấm link hoặc cung cấp thông tin."],
+  ["Phishing","QR Code Phishing nguy hiểm vì sao?","Mã QR độc hại có thể dẫn tới trang web lừa đảo","Mã QR luôn tự xóa dữ liệu","Mã QR chỉ dùng trong lớp học","Mã QR không thể chứa đường dẫn","PDF nêu ví dụ mã QR độc hại dán trên áp phích/thông báo trong khuôn viên trường."],
+  ["Phishing","Dấu hiệu phổ biến của phishing là gì?","Yêu cầu hành động khẩn cấp, link lạ, đòi mật khẩu hoặc OTP","Email có đầy đủ chữ ký nên chắc chắn an toàn","Tin nhắn đến từ người lạ luôn hợp pháp","Trang web càng màu sắc càng đáng tin","Cần cảnh giác với yêu cầu bất thường và xác minh qua kênh chính thức."],
+  ["Phishing","Cách phòng tránh phishing phù hợp nhất là gì?","Không nhấp link lạ, xác minh qua kênh chính thức và bật 2FA","Gửi OTP để kiểm tra nhanh","Dùng cùng một mật khẩu cho dễ nhớ","Chụp ảnh thẻ ngân hàng gửi lại","Bảng 6.1 nhấn mạnh xác minh và dùng 2FA."],
+  ["Malware","Malware là gì?","Phần mềm độc hại được thiết kế để xâm nhập và gây hại hệ thống","Phần mềm tăng tốc Internet","Ứng dụng quản lý tài liệu tham khảo","Chuẩn trích dẫn học thuật","Malware là nhóm rộng gồm nhiều phần mềm gây hại."],
+  ["Ransomware","Ransomware hoạt động như thế nào?","Mã hóa dữ liệu nạn nhân rồi đòi tiền chuộc để giải mã","Tự động chấm điểm bài luận","Tạo bản sao dữ liệu trên cloud","Kiểm tra chính tả văn bản","Ransomware đặc biệt nguy hiểm vì làm mất quyền truy cập dữ liệu."],
+  ["Ransomware","Dấu hiệu của ransomware là gì?","Tệp không mở được, có đuôi lạ và xuất hiện thông báo đòi tiền","Máy tính hiện hình nền mới hợp lệ","Email có lời chào lịch sự","Pin điện thoại sạc nhanh hơn","Bảng 6.1 nêu các tệp bị khóa và thông báo đòi tiền chuộc."],
+  ["Ransomware","Biện pháp quan trọng để giảm thiệt hại ransomware là gì?","Sao lưu dữ liệu thường xuyên theo quy tắc 3-2-1","Tắt mọi cập nhật bảo mật","Tải file đính kèm bất kỳ","Dùng Wi-Fi công cộng không VPN","Sao lưu giúp khôi phục dữ liệu khi bị mã hóa."],
+  ["DDoS","Tấn công DDoS là gì?","Dùng lượng truy cập khổng lồ từ botnet để làm quá tải máy chủ","Trích dẫn sai chuẩn Harvard","Gửi email cho giảng viên","Tạo hình ảnh AI","DDoS làm dịch vụ trực tuyến bị tê liệt."],
+  ["DDoS","DDoS ảnh hưởng sinh viên như thế nào?","Không truy cập được LMS, tài liệu, nộp bài hoặc xem điểm","Tự động tăng điểm","Làm bài luận hay hơn","Tăng dung lượng máy tính","Nếu hệ thống trường bị DDoS, hoạt động học tập trực tuyến bị gián đoạn."],
+  ["Social engineering","Social engineering nhắm vào yếu tố nào?","Tâm lý con người để khai thác thông tin hoặc thuyết phục hành động có hại","Tốc độ CPU","Độ phân giải màn hình","Cấu trúc thư mục","Lừa đảo qua mạng xã hội thường lợi dụng lòng tin, ham lợi hoặc lòng thương."],
+  ["Social engineering","Cách phòng tránh lừa đảo qua mạng xã hội là gì?","Hạn chế chia sẻ thông tin cá nhân công khai và cảnh giác với người lạ","Công khai mọi thông tin để dễ kết bạn","Tin mọi lời đề nghị hấp dẫn","Gửi mật khẩu nếu người lạ yêu cầu","Bảng 6.1 khuyên không tin tuyệt đối vào thông tin trên mạng."],
+  ["AI threat","Mối đe dọa do AI hỗ trợ có điểm gì mới?","Email lừa đảo có thể tự nhiên, đúng ngữ cảnh và ít lỗi hơn","Email lừa đảo luôn nhiều lỗi chính tả hơn","AI chỉ giúp bảo mật, không bị lạm dụng","Deepfake không liên quan lừa đảo","AI khiến nội dung giả mạo tinh vi hơn."],
+  ["AI threat","Deepfake trong an ninh mạng là gì?","Âm thanh hoặc video giả mạo để mạo danh người khác","Ảnh nén dung lượng thấp","Bản sao lưu offline","Mẫu trích dẫn Harvard","Deepfake có thể mạo danh giảng viên, cán bộ hoặc bạn bè để lừa đảo."],
+  ["AI threat","Vì AI tạo email lừa đảo tốt hơn, lời khuyên cũ nào không còn đủ?","Chỉ nhìn lỗi ngữ pháp/chính tả để phát hiện lừa đảo","Không chia sẻ OTP","Xác minh qua kênh khác","Bật 2FA","PDF nhấn mạnh cần tư duy hoài nghi có phương pháp."],
+  ["AI threat","Tư duy hoài nghi có phương pháp nghĩa là gì?","Xác minh yêu cầu bất ngờ qua kênh liên lạc riêng và đáng tin","Từ chối mọi email hợp lệ","Tin video nếu nhìn thật","Chỉ dựa vào cảm giác","Thông tin nhìn/nghe có vẻ thật vẫn có thể là giả."],
+  ["Mật khẩu","Mật khẩu mạnh tối thiểu nên có gì?","Ít nhất 12 ký tự, gồm chữ hoa, chữ thường, số và ký tự đặc biệt","Chỉ ngày sinh","Chỉ tên thú cưng","Chỉ 4 chữ số","PDF khuyến nghị mật khẩu dài, đa dạng ký tự."],
+  ["Mật khẩu","Điều quan trọng nhất khi dùng mật khẩu là gì?","Không dùng lại cùng một mật khẩu cho nhiều tài khoản","Gửi cho bạn thân giữ hộ","Đặt giống tên đăng nhập","Lưu công khai trong ghi chú","Dùng lại mật khẩu làm một tài khoản lộ kéo theo nhiều tài khoản khác."],
+  ["Mật khẩu","Bitwarden, LastPass, 1Password là nhóm công cụ gì?","Trình quản lý mật khẩu","Công cụ kiểm tra đạo văn","Phần mềm dựng video","Ứng dụng thi trực tuyến","Các công cụ này giúp tạo và lưu trữ mật khẩu an toàn."],
+  ["Mật khẩu","Khi dùng trình quản lý mật khẩu, người dùng chủ yếu cần nhớ gì?","Một mật khẩu chủ duy nhất","Mật khẩu của từng website","Mã màu giao diện","Tên mọi file đã tải","Password manager giảm gánh nặng ghi nhớ nhiều mật khẩu mạnh."],
+  ["2FA","2FA là gì?","Lớp xác thực thứ hai ngoài mật khẩu","Một loại ransomware","Một chuẩn trích dẫn","Một trình chỉnh sửa ảnh","2FA giúp bảo vệ tài khoản khi mật khẩu bị lộ."],
+  ["2FA","Tài khoản nào nên bật 2FA?","Email, mạng xã hội, ngân hàng và tài khoản quan trọng","Chỉ tài khoản không dùng nữa","Chỉ game offline","Không tài khoản nào cần","PDF khuyến nghị bật 2FA cho tài khoản quan trọng."],
+  ["Cập nhật phần mềm","Vì sao cần cập nhật hệ điều hành và ứng dụng?","Bản cập nhật thường vá lỗ hổng bảo mật nghiêm trọng","Để đổi màu icon cho đẹp","Để xóa mọi tài liệu","Để tắt 2FA","Trì hoãn cập nhật có thể để hở cửa cho kẻ tấn công."],
+  ["Antivirus và VPN","Antivirus giúp gì?","Bảo vệ máy khỏi malware và các mối đe dọa khác","Tạo trích dẫn Harvard tự động","Lọc ánh sáng xanh","Viết lại bài luận","Antivirus uy tín là một lớp phòng vệ thiết bị."],
+  ["Antivirus và VPN","VPN hữu ích nhất khi nào?","Khi dùng Wi-Fi công cộng để mã hóa lưu lượng và bảo vệ riêng tư","Khi gõ văn bản offline","Khi đã tắt Internet","Khi in tài liệu","VPN tạo đường hầm mã hóa trên mạng công cộng như quán cà phê, sân bay."],
+  ["Sao lưu","Quy tắc sao lưu 3-2-1 là gì?","3 bản sao, 2 loại phương tiện, 1 bản ở địa điểm khác","3 mật khẩu, 2 email, 1 OTP","3 file Word, 2 PDF, 1 slide","3 lần đăng nhập, 2 lần quét virus, 1 lần tắt máy","Quy tắc này giúp bảo vệ dữ liệu khỏi hỏng hóc và ransomware."],
+  ["Sao lưu","Vì sao dữ liệu học tập cần sao lưu?","Vì đồ án, nghiên cứu và bài tập có thể không thể thay thế","Vì sao lưu làm bài tự đạt điểm cao","Vì sao lưu thay thế trích dẫn","Vì sao lưu xóa virus chắc chắn","Dữ liệu cá nhân/học tập mất đi có thể gây thiệt hại lớn."],
+  ["Sức khỏe số","An sinh số là gì?","Trạng thái cân bằng thể chất và tinh thần khi tương tác với thế giới số","Không sử dụng Internet bao giờ","Dùng mạng càng lâu càng tốt","Chỉ là dùng phần mềm diệt virus","Công nghệ nên phục vụ cuộc sống thay vì kiểm soát nó."],
+  ["Sức khỏe số","Digital Eye Strain gây triệu chứng nào?","Khô mắt, mờ mắt, đau đầu","Tăng trí nhớ tức thì","Tự động ngủ sâu hơn","Mất mật khẩu email","Ngồi lâu trước màn hình có thể gây mỏi mắt kỹ thuật số."],
+  ["Sức khỏe số","Ánh sáng xanh có thể gây vấn đề gì?","Ức chế melatonin và ảnh hưởng giấc ngủ","Tự động diệt malware","Tăng tốc độ Wi-Fi","Tạo trích dẫn tự động","Màn hình buổi tối có thể làm rối loạn giấc ngủ."],
+  ["Sức khỏe số","Quy tắc 20-20-20 là gì?","Sau 20 phút nhìn màn hình, nhìn xa 20 feet khoảng 20 giây","20 giờ học, 20 phút ngủ, 20 lần bấm máy","20 mật khẩu, 20 tài khoản, 20 OTP","20 trang web, 20 ảnh, 20 video","Quy tắc này giúp giảm mỏi mắt."],
+  ["Sức khỏe số","Night Shift hoặc Eye Comfort dùng để làm gì?","Giảm tác động ánh sáng màn hình vào buổi tối","Tự động kiểm tra đạo văn","Mã hóa ổ cứng","Tạo ảnh AI","PDF khuyến nghị bật các chế độ này vào buổi tối."],
+  ["Sức khỏe tinh thần","FOMO là gì?","Nỗi sợ bỏ lỡ trải nghiệm thú vị của người khác","Một loại virus máy tính","Một chuẩn trích dẫn tài liệu","Một ứng dụng quản lý mật khẩu","FOMO là Fear Of Missing Out."],
+  ["Sức khỏe tinh thần","Cyberbullying là gì?","Bắt nạt, chế giễu, đe dọa hoặc phát tán thông tin sai lệch trên mạng","Sao lưu dữ liệu lên cloud","Dùng VPN khi ra sân bay","Tạo danh mục tham khảo","Cyberbullying có thể gây tổn thương tâm lý nghiêm trọng."],
+  ["Sức khỏe tinh thần","So sánh bản thân với hình ảnh hoàn hảo trên mạng có thể dẫn đến gì?","Tự ti, lo âu hoặc không hài lòng","Tự động tăng bảo mật","Tự học trích dẫn Harvard","Tăng tuổi thọ pin","Mạng xã hội có thể ảnh hưởng tiêu cực tới tâm lý."],
+  ["Cân bằng số","Digital Detox là gì?","Dành khoảng thời gian không dùng thiết bị số để tâm trí nghỉ ngơi","Xóa toàn bộ tài khoản vĩnh viễn","Mã hóa tất cả dữ liệu","Tăng độ sáng màn hình","Digital Detox giúp lấy lại cân bằng và kiểm soát công nghệ."],
+  ["Cân bằng số","Screen Time trên iOS và Digital Wellbeing trên Android dùng để làm gì?","Đặt giới hạn thời gian dùng ứng dụng","Tạo mật khẩu ngẫu nhiên","Kiểm tra đạo văn","Tự động trích dẫn AI","Đây là công cụ hỗ trợ giới hạn sử dụng mạng xã hội/ứng dụng."],
+  ["Cân bằng số","Thực hành chánh niệm khi dùng công nghệ nghĩa là gì?","Dùng công nghệ có chủ đích thay vì lướt vô thức","Mở càng nhiều tab càng tốt","Luôn trả lời mọi thông báo ngay","Không bao giờ nghỉ mắt","Mindfulness giúp người dùng chủ động với hành vi số."],
+  ["Công dân số","Netiquette là gì?","Bộ quy tắc ứng xử trên Internet","Phần mềm diệt virus","Dịch vụ lưu trữ mật khẩu","Mã độc tống tiền","Netiquette yêu cầu giao tiếp tôn trọng, có trách nhiệm."],
+  ["Công dân số","Ứng xử đúng khi không đồng tình trên mạng là gì?","Trao đổi tôn trọng và tránh ngôn từ gây thù ghét","Công kích cá nhân","Lan truyền tin chưa kiểm chứng","Tham gia tranh cãi vô bổ","Công dân số cần tôn trọng cộng đồng."],
+  ["Công dân số","Trước khi chia sẻ thông tin lên mạng nên làm gì?","Kiểm chứng để tránh lan truyền tin giả","Chia sẻ ngay nếu tiêu đề giật gân","Ẩn nguồn để bài nhìn gọn","Thêm chi tiết bịa đặt","Trách nhiệm công dân số gồm kiểm chứng thông tin."],
+  ["Môi trường số","Dấu chân carbon của công nghệ liên quan đến gì?","Tác động môi trường của hoạt động và thiết bị số","Dấu vân tay trên điện thoại","Mật khẩu bị lộ","Tỷ lệ tương đồng văn bản","Công nghệ số cũng tiêu thụ năng lượng và tạo rác thải."],
+  ["Môi trường số","E-waste là gì?","Rác thải điện tử","Bản sao lưu đám mây","Email lừa đảo","File trích dẫn Harvard","Rác thải điện tử là loại rác độc hại và tăng nhanh."],
+  ["Môi trường số","Cách giảm tác động môi trường của thiết bị số là gì?","Sửa chữa, kéo dài vòng đời, tiết kiệm năng lượng và thải bỏ đúng nơi","Mua mới ngay khi hơi chậm","Vứt pin vào rác thường","Bật máy 24/7 không cần thiết","PDF khuyên kéo dài vòng đời thiết bị và tái chế an toàn."],
+  ["Liêm chính học thuật","Liêm chính học thuật theo ICAI gồm mấy giá trị cốt lõi?","6 giá trị","3 giá trị","9 giá trị","12 giá trị","Sáu giá trị là trung thực, tin cậy, công bằng, tôn trọng, trách nhiệm và dũng cảm."],
+  ["Liêm chính học thuật","Giá trị nào thuộc liêm chính học thuật?","Trung thực, tin cậy, công bằng, tôn trọng, trách nhiệm, dũng cảm","Tốc độ, màu sắc, âm lượng, độ sáng","Lượt xem, lượt thích, chia sẻ, bình luận","RAM, CPU, SSD, GPU","ICAI nhấn mạnh sáu giá trị đạo đức học thuật."],
+  ["Liêm chính học thuật","Vì sao liêm chính học thuật quan trọng?","Đảm bảo học tập thực chất, bảo vệ giá trị bằng cấp và xây dựng uy tín","Giúp bỏ qua mọi bài kiểm tra","Giúp không cần trích dẫn","Giúp tăng lượt xem mạng xã hội","Liêm chính không chỉ để tránh kỷ luật mà còn bảo vệ giá trị học tập."],
+  ["Liêm chính học thuật","Gian lận gây hại trực tiếp cho ai trước tiên?","Chính người học vì mất cơ hội phát triển tư duy và kỹ năng","Chỉ hệ thống máy chủ","Chỉ phần mềm kiểm tra đạo văn","Chỉ người viết sách","Bài tập được thiết kế để người học rèn năng lực."],
+  ["Đạo văn","Đạo văn là gì?","Dùng ý tưởng, từ ngữ, dữ liệu hoặc công trình của người khác mà không ghi nguồn hợp lệ","Tự viết bài bằng lập luận của mình","Trích dẫn đúng chuẩn","Tóm tắt có ghi nguồn","Plagiarism có thể là sao chép, paraphrase không trích dẫn hoặc chắp vá nguồn."],
+  ["Đạo văn","Patchwork plagiarism là gì?","Chắp vá nhiều nguồn thành sản phẩm của mình mà không ghi nhận đúng","Trích dẫn nguyên văn có ngoặc kép","Dùng Zotero tạo tài liệu tham khảo","Sao lưu dữ liệu 3-2-1","Chắp vá nhiều nguồn vẫn là đạo văn nếu không ghi nguồn hợp lệ."],
+  ["Đạo văn","Diễn giải ý tưởng người khác mà không trích dẫn có phải đạo văn không?","Có, vì ý tưởng vẫn thuộc nguồn gốc ban đầu","Không, miễn đổi vài từ","Không, nếu dùng AI viết lại","Không, nếu bài đủ dài","Paraphrase vẫn cần trích dẫn nguồn."],
+  ["Bịa đặt","Fabrication là gì?","Tự tạo dữ liệu, thông tin hoặc nguồn trích dẫn không có thật","Sử dụng ngoặc kép khi trích dẫn","Ghi nguồn theo Harvard","Đặt giới hạn Screen Time","Ví dụ: bịa số liệu khảo sát hoặc bài báo không tồn tại."],
+  ["Bịa đặt","Ví dụ nào là bịa đặt trong học thuật?","Ghi đã phỏng vấn 20 người dù thực tế chỉ phỏng vấn 5 và tự bịa 15 câu trả lời","Trích dẫn nguồn đầy đủ","Tóm tắt một bài viết có ghi tác giả","Dùng Zotero lưu tài liệu","Fabrication làm sai lệch dữ liệu và kết quả học thuật."],
+  ["Gian lận","Fraud trong học tập gồm hành vi nào?","Chép bài, dùng tài liệu không được phép, nhờ người khác thi hộ","Tự đọc tài liệu trước khi thi","Hỏi giảng viên về yêu cầu bài","Trích dẫn nguồn cuối bài","Fraud là hành vi không trung thực trong học tập và thi cử."],
+  ["Gian lận hợp đồng","Contract cheating là gì?","Thuê hoặc nhờ bên thứ ba làm bài rồi nộp như của mình","Tự kiểm tra similarity report","Đọc kỹ đề bài","Dùng AI brainstorm có khai báo","Đây là thuê ngoài quá trình lao động trí tuệ."],
+  ["Gian lận hợp đồng","Nộp bài gần như hoàn toàn do AI viết khi không được phép có thể bị xem là gì?","Một dạng gian lận hợp đồng","Một bản trích dẫn hợp lệ","Một hình thức sao lưu","Một cách dùng VPN","PDF nêu rõ AI tạo toàn bộ bài có thể là thuê ngoài tư duy."],
+  ["Gian lận hợp đồng","Câu hỏi cốt lõi khi AI và contract cheating xuất hiện là gì?","Ai là người thực sự đang tư duy?","File nặng bao nhiêu MB?","Dùng font gì đẹp nhất?","Có bao nhiêu ảnh minh họa?","Mối đe dọa mới không chỉ là sao chép mà là thay thế quá trình tư duy."],
+  ["Diễn giải","Diễn giải hiệu quả không phải là gì?","Chỉ thay vài từ trong câu gốc","Đọc hiểu sâu ý tưởng","Viết lại bằng ngôn ngữ của mình","Trích dẫn nguồn sau khi diễn giải","Paraphrasing cần thay cấu trúc và cách diễn đạt, không chỉ thay từ đồng nghĩa."],
+  ["Diễn giải","Bước đầu tiên của quy trình diễn giải tốt là gì?","Đọc kỹ đoạn gốc nhiều lần để nắm chắc ý nghĩa","Đổi vài từ bằng từ đồng nghĩa","Xóa tên tác giả","Nộp ngay bản AI viết lại","Hiểu đúng ý là nền tảng để diễn giải trung thực."],
+  ["Diễn giải","Sau khi viết lại ý bằng lời mình, cần làm gì?","So sánh với bản gốc và trích dẫn nguồn","Xóa nguồn gốc","Thêm số liệu bịa","Đổi font chữ","Cần đảm bảo không sao chép cấu trúc/cụm từ đặc trưng và vẫn giữ đúng nghĩa."],
+  ["Trích dẫn","Quoting là gì?","Dùng chính xác từng từ của tác giả trong ngoặc kép","Trình bày ngắn gọn toàn bài","Viết lại bằng lời của mình","Tạo dữ liệu không có thật","Trích dẫn nguyên văn cần ngoặc kép và ghi nguồn."],
+  ["Trích dẫn","Khi nào nên dùng trích dẫn nguyên văn?","Khi lời tác giả độc đáo, súc tích và mạnh mẽ","Khi muốn lấp đầy bài viết","Khi không hiểu nội dung","Khi muốn tránh mọi phân tích","PDF khuyên chỉ dùng quote khi cách diễn đạt gốc thật sự cần giữ."],
+  ["Tóm tắt","Summarizing là gì?","Trình bày lại ý chính của toàn bộ bài hoặc phần lớn văn bản một cách ngắn gọn","Sao chép từng từ của tác giả","Đổi vài từ trong một câu","Tạo nguồn không tồn tại","Tóm tắt rút gọn ý chính bằng lời của mình và vẫn cần ghi nguồn nếu dùng ý người khác."],
+  ["Diễn giải","Paraphrasing khác summarizing ở điểm nào?","Paraphrasing thường diễn đạt lại một ý cụ thể với độ dài tương đương bản gốc","Paraphrasing luôn ngắn hơn rất nhiều","Paraphrasing không cần hiểu nghĩa","Paraphrasing không cần trích dẫn","Tóm tắt nén ý lớn, diễn giải chuyển một ý cụ thể sang lời của mình."],
+  ["Harvard","Chuẩn Harvard yêu cầu mấy phần chính?","Trích dẫn trong văn bản và danh mục tài liệu tham khảo cuối bài","Chỉ tiêu đề bài viết","Chỉ đường link trong ngoặc","Chỉ tên trường","Harvard gồm in-text citation và reference list."],
+  ["Harvard","Ví dụ trích dẫn trong văn bản theo Harvard có dạng nào?","(Hùng, 2022)","[Không cần nguồn]","@Hùng#2022","Hùng.exe","PDF đưa ví dụ trích dẫn trong văn bản ngay sau thông tin được dùng."],
+  ["Harvard","Danh mục tài liệu tham khảo Harvard thường được sắp xếp theo gì?","Thứ tự alphabet của tên tác giả","Số lượt xem bài viết","Dung lượng file","Ngày tải xuống ngẫu nhiên","Reference list cần đầy đủ và sắp xếp theo tên tác giả."],
+  ["Công cụ học thuật","Turnitin là công cụ gì?","Công cụ kiểm tra tương đồng/đạo văn thường tích hợp trong LMS","Trình quản lý mật khẩu","Ứng dụng detox số","VPN miễn phí","Turnitin có cơ sở dữ liệu lớn và thường được trường dùng."],
+  ["Công cụ học thuật","Similarity report của Turnitin nên hiểu thế nào?","Báo cáo trùng khớp văn bản, không tự động là kết luận đạo văn","Bằng chứng chắc chắn 100% là đạo văn","Chỉ số càng cao càng tốt","Báo cáo thay thế việc đọc bài","Sinh viên phải đọc hiểu, phân biệt trích dẫn hợp lệ, thuật ngữ và trùng khớp đáng lo."],
+  ["Công cụ học thuật","Tỷ lệ tương đồng nhất định có thể bình thường vì sao?","Có thuật ngữ chuyên ngành, tên riêng hoặc trích dẫn hợp lệ","Mọi trùng khớp đều là gian lận","Turnitin luôn sai","AI tự động sửa hết","PDF lưu ý similarity không đồng nghĩa trực tiếp với plagiarism."],
+  ["Công cụ học thuật","Quetext phù hợp khi nào?","Cần công cụ kiểm tra nhanh, có gói miễn phí cho bài ngắn","Cần quản lý hàng trăm PDF nghiên cứu","Cần bật 2FA","Cần dựng video","Bảng 6.4 mô tả Quetext có DeepSearch, tạo trích dẫn, ColorGrade feedback."],
+  ["Công cụ học thuật","Grammarly trong chương 6 được nhắc như công cụ gì?","Công cụ có thể hỗ trợ kiểm tra đạo văn/tương đồng ở một số phiên bản","Trình quản lý tài liệu tham khảo mã nguồn mở","Ứng dụng VPN","Công cụ sao lưu 3-2-1","PDF nêu Grammarly cùng Turnitin, Quetext trong nhóm kiểm tra đạo văn."],
+  ["Công cụ học thuật","Zotero là công cụ gì?","Quản lý tài liệu tham khảo, tạo trích dẫn và danh mục tham khảo tự động","Phần mềm ransomware","Mạng xã hội giải trí","Trình tạo deepfake","Zotero mã nguồn mở, miễn phí, linh hoạt."],
+  ["Công cụ học thuật","Ưu điểm nổi bật của Zotero là gì?","Mã nguồn mở, miễn phí, tùy biến cao và không giới hạn thành viên nhóm","Chỉ dùng được khi trả phí cao","Không tạo được trích dẫn","Chỉ kiểm tra virus","Bảng 6.4 đánh giá Zotero mạnh cho sinh viên/nhà nghiên cứu cần công cụ miễn phí."],
+  ["Công cụ học thuật","Nhược điểm của Zotero theo bảng là gì?","Giao diện hơi cũ và lưu trữ đám mây miễn phí thấp khoảng 300 MB","Không có tính năng trích dẫn","Không dùng được với Word","Không lưu được tài liệu","Bảng 6.4 nêu hạn chế về giao diện và dung lượng cloud miễn phí."],
+  ["Công cụ học thuật","Mendeley phù hợp với ai?","Sinh viên mới bắt đầu cần giao diện thân thiện và dung lượng cloud lớn hơn","Người cần công cụ mã hóa ổ cứng","Người muốn tấn công DDoS","Người không dùng tài liệu PDF","Mendeley có giao diện hiện đại và lưu trữ đám mây miễn phí 2 GB."],
+  ["Công cụ học thuật","Mendeley có tính năng nào ngoài quản lý tài liệu?","Đọc/ghi chú PDF và mạng xã hội học thuật cho nhà nghiên cứu","Tạo ransomware","Tắt mọi thông báo mạng xã hội","Tạo mật khẩu dùng một lần","Bảng 6.4 mô tả Mendeley là quản lý tài liệu tham khảo và mạng xã hội học thuật."],
+  ["Công cụ học thuật","Zotero/Mendeley giúp giảm lỗi nào?","Lỗi trích dẫn do thao tác thủ công","Lỗi ánh sáng xanh","Lỗi pin điện thoại","Lỗi Wi-Fi công cộng","Chúng tự động chèn trích dẫn và tạo danh mục tham khảo trong Word/Google Docs."],
+  ["AI tạo sinh","AI tạo sinh là gì?","Lĩnh vực AI tạo nội dung mới như văn bản, hình ảnh, mã lập trình","AI chỉ phân loại dữ liệu có sẵn","Một loại VPN","Một chuẩn sao lưu","Generative AI tạo nội dung mới thay vì chỉ phân tích/phân loại."],
+  ["AI tạo sinh","Ví dụ công cụ AI tạo văn bản trong chương 6 là gì?","ChatGPT và Gemini","Zotero và Mendeley","Bitwarden và 1Password","Turnitin và Quetext","PDF nêu ChatGPT, Gemini trong nhóm tạo văn bản."],
+  ["AI tạo sinh","Ví dụ công cụ AI tạo hình ảnh trong chương 6 là gì?","Midjourney và DALL-E","Screen Time và Digital Wellbeing","Bitwarden và LastPass","Zotero và Mendeley","PDF nêu Midjourney, DALL-E cho hình ảnh."],
+  ["AI và liêm chính","AI-assisted plagiarism là gì?","Lạm dụng AI để paraphrase hoặc tạo nội dung mà người dùng không hiểu/không đóng góp tư duy đáng kể","Trích dẫn AI đúng chuẩn","Dùng AI brainstorm rồi tự phát triển","Kiểm tra lỗi chính tả có khai báo","Vấn đề nằm ở việc thay thế tư duy thật bằng đầu ra AI."],
+  ["AI và liêm chính","AI hallucination là gì?","AI tự tin bịa thông tin, số liệu hoặc trích dẫn không tồn tại","AI tự động sao lưu dữ liệu","AI mã hóa kết nối VPN","AI chặn ánh sáng xanh","Hallucination rất nguy hiểm nếu người dùng không kiểm chứng."],
+  ["AI và liêm chính","Rủi ro nào xảy ra nếu dùng thông tin AI không kiểm chứng?","Sai sót nghiêm trọng trong bài làm","Bài tự động đúng hơn","Không cần trích dẫn","Không cần đọc tài liệu","AI có thể tạo thông tin hợp lý nhưng sai sự thật."],
+  ["AI và liêm chính","AI Bias là gì?","AI tái tạo thiên kiến từ dữ liệu huấn luyện","AI luôn trung lập tuyệt đối","AI chỉ lỗi khi mất Internet","AI tự động sửa mọi bất công","Dữ liệu Internet có thể chứa định kiến về giới, chủng tộc, văn hóa."],
+  ["AI đạo đức","Nguyên tắc Minh bạch khi dùng AI yêu cầu gì?","Công khai dùng công cụ AI nào và dùng vào mục đích gì","Che giấu hoàn toàn việc dùng AI","Xóa lịch sử prompt","Nộp bài AI viết nguyên văn","Transparency là nền tảng của sử dụng AI có trách nhiệm."],
+  ["AI đạo đức","Nguyên tắc Trách nhiệm khi dùng AI nghĩa là gì?","Người học chịu trách nhiệm cuối cùng cho nội dung, không phải AI","AI chịu trách nhiệm thay người học","Giảng viên chịu trách nhiệm sửa mọi lỗi AI","Không ai cần chịu trách nhiệm","Accountability yêu cầu kiểm tra tính chính xác, logic và phù hợp."],
+  ["AI đạo đức","Honesty and Originality yêu cầu dùng AI như thế nào?","Hỗ trợ tư duy, không thay thế tư duy","Viết toàn bộ bài luận thay mình","Tạo lập luận cốt lõi thay mình","Phân tích dữ liệu thay mình khi không được phép","AI có thể brainstorm, gợi ý, tóm tắt hoặc kiểm tra ngữ pháp."],
+  ["AI đạo đức","Human Oversight nghĩa là gì?","Con người luôn xem xét, đánh giá và chỉnh sửa kết quả AI","Sao chép dán mù quáng","Không đọc lại đầu ra AI","Tin mọi trích dẫn AI","Giám sát con người giúp phát hiện sai, thiếu logic, thiên kiến."],
+  ["AI đạo đức","Data Privacy khi dùng chatbot công khai yêu cầu gì?","Tránh nhập thông tin cá nhân, dữ liệu nhạy cảm hoặc tài liệu chưa công bố","Dán toàn bộ dữ liệu riêng tư để AI xử lý","Gửi mật khẩu cho chatbot","Đưa đề thi mật vào prompt","Dữ liệu nhập vào công cụ công khai có thể bị dùng cho huấn luyện hoặc lưu trữ."],
+  ["AI đạo đức","Ví dụ nào là dùng AI có trách nhiệm?","Dùng ChatGPT brainstorm ý tưởng rồi tự nghiên cứu và phát triển lập luận từ nguồn đáng tin","Nộp bài gần như toàn bộ do ChatGPT viết","Dùng AI bịa nguồn học thuật","Ẩn việc dùng AI khi quy định yêu cầu khai báo","PDF đưa ví dụ được phép là brainstorm có tự nghiên cứu sau đó."],
+  ["AI đạo đức","Ví dụ nào không được phép theo chương 6?","Nộp bài luận gần như hoàn toàn do ChatGPT viết, chỉ sửa vài câu chữ","Dùng AI liệt kê ý tưởng ban đầu","Dùng AI kiểm tra ngữ pháp có khai báo","Dùng AI tóm tắt tài liệu để tự đọc tiếp","Việc để AI làm thay sản phẩm cốt lõi vi phạm liêm chính nếu không được phép."],
+  ["Trích dẫn AI","Khi giảng viên cho phép dùng AI, vì sao vẫn phải trích dẫn?","Để đảm bảo minh bạch về nguồn hỗ trợ và cách dùng AI","Để làm bài dài hơn","Để tránh đọc lại bài","Để tăng điểm tự động","Trích dẫn AI là một phần của trách nhiệm học thuật."],
+  ["Trích dẫn AI","Văn bản AI có URL chia sẻ theo Harvard cần thông tin gì?","Nhà phát triển, năm, tên công cụ, phản hồi cho ai/ngày tháng và URL","Chỉ tên người dùng","Chỉ màu giao diện chatbot","Chỉ dung lượng file","Bảng 6.3 đưa cấu trúc có URL chia sẻ được."],
+  ["Trích dẫn AI","Nếu văn bản AI không có URL chia sẻ, trích dẫn Harvard vẫn cần gì?","Nhà phát triển, năm, tên công cụ, phản hồi cho ai và ngày tháng","Không cần trích dẫn nữa","Chỉ ghi 'AI'","Chỉ chụp màn hình","Không có URL vẫn cần minh bạch thông tin công cụ và phiên tương tác."],
+  ["Trích dẫn AI","Hình ảnh từ Midjourney/DALL-E theo Harvard cần nêu gì?","Nhà phát triển, năm, mô tả prompt và ghi [Nghệ thuật số]","Chỉ ghi kích thước ảnh","Chỉ ghi định dạng PNG","Không cần nguồn vì là ảnh","Bảng 6.3 hướng dẫn trích dẫn hình ảnh AI."],
+  ["Trích dẫn AI","Lưu ý quan trọng nhất về trích dẫn AI là gì?","Luôn kiểm tra quy định cụ thể của giảng viên hoặc khoa","Một chuẩn duy nhất áp dụng mọi nơi mãi mãi","Không cần trích dẫn nếu AI miễn phí","Chỉ trích dẫn khi bị phát hiện","PDF nhấn mạnh hướng dẫn trích dẫn AI còn đang hoàn thiện."],
+  ["Pháp luật Việt Nam","Luật An ninh mạng 2018 cấm hành vi nào?","Đăng thông tin sai sự thật gây hoang mang, xúc phạm danh dự, lừa đảo, vi phạm pháp luật","Trích dẫn đúng nguồn","Bật 2FA","Sao lưu dữ liệu","Người dùng chịu trách nhiệm về nội dung đăng tải và tài khoản số."],
+  ["Pháp luật Việt Nam","Theo Luật An ninh mạng, người dùng phải chịu trách nhiệm về gì?","Nội dung mình đăng tải và hoạt động của tài khoản số","Mọi lỗi của nhà mạng","Mọi bài viết của người khác","Tốc độ Internet quốc gia","Chương 6 nhấn mạnh trách nhiệm cá nhân trên không gian mạng."],
+  ["Pháp luật Việt Nam","Nghị định 13/2023/NĐ-CP liên quan đến vấn đề gì?","Bảo vệ dữ liệu cá nhân","Quản lý rác thải nhựa","Chuẩn trích dẫn ảnh AI","Thiết kế bài thuyết trình","Nghị định này cụ thể hóa quy định về bảo vệ dữ liệu cá nhân."],
+  ["Pháp luật Việt Nam","Theo Nghị định 13/2023/NĐ-CP, tổ chức xử lý dữ liệu cá nhân cần gì?","Sự đồng ý rõ ràng của cá nhân khi thu thập, xử lý dữ liệu","Không cần thông báo","Chỉ cần đổi tên dữ liệu","Chỉ cần lưu trong Excel","PDF nêu trường học/công ty công nghệ phải có sự đồng ý rõ ràng."],
+  ["Pháp luật Việt Nam","Cá nhân có quyền gì với dữ liệu cá nhân theo nội dung chương?","Được biết, truy cập, chỉnh sửa và xóa dữ liệu","Bị buộc công khai mọi dữ liệu","Không được hỏi dữ liệu dùng thế nào","Chỉ được xem nhưng không sửa","Chương 6 nêu các quyền cơ bản của chủ thể dữ liệu."],
+  ["Pháp luật Việt Nam","Luật Sở hữu trí tuệ bảo vệ gì?","Quyền tác giả với bài viết, sách, phần mềm, tác phẩm nghệ thuật","Mật khẩu Wi-Fi công cộng","Địa chỉ IP của router","Tốc độ CPU","Nội dung số trên Internet cũng chịu nguyên tắc quyền tác giả."],
+  ["Pháp luật Việt Nam","Hành vi nào vi phạm Luật Sở hữu trí tuệ?","Sao chép, sử dụng tác phẩm không được phép của tác giả","Trích dẫn đúng nguồn theo yêu cầu","Tự sáng tạo nội dung mới","Dùng tài nguyên được cấp phép hợp lệ","Luật bảo vệ công trình sáng tạo và quyền tác giả."],
+  ["Pháp luật Việt Nam","Luật Bảo vệ dữ liệu cá nhân 2025 có hiệu lực khi nào theo PDF?","01/01/2026","01/01/2024","07/2023","20/10/2024","PDF nêu Luật số 91/2025/QH15 có hiệu lực từ 01/01/2026."],
+  ["Pháp luật Việt Nam","Luật Bảo vệ dữ liệu cá nhân 2025 thiết lập điều gì?","Khuôn khổ pháp lý bảo đảm an toàn thông tin và quyền riêng tư cá nhân","Quy định điểm thi đại học","Chuẩn định dạng file Excel","Cách dùng Canva","Luật quy định dữ liệu cá nhân, quyền/nghĩa vụ và trách nhiệm các bên xử lý."],
+  ["Tình huống","Bạn nhận email 'nhà trường' yêu cầu nhập mật khẩu ngay qua link lạ. Việc nên làm là gì?","Không bấm link, xác minh qua kênh chính thức và dùng 2FA","Nhập mật khẩu để tránh khóa tài khoản","Chuyển tiếp OTP cho email đó","Tải file đính kèm ngay","Đây là tình huống phishing có yếu tố khẩn cấp và link lạ."],
+  ["Tình huống","Bạn thấy mã QR dán ở bảng thông báo yêu cầu đăng nhập tài khoản trường. Nên làm gì?","Cảnh giác, kiểm tra nguồn chính thức trước khi quét/đăng nhập","Quét ngay và nhập mật khẩu","Gửi mã OTP cho trang đó","Chia sẻ mã cho cả lớp","QR Code Phishing là rủi ro được chương 6 nhắc riêng."],
+  ["Tình huống","Một video giống giảng viên yêu cầu chuyển tiền gấp. Cách xử lý đúng là gì?","Xác minh bằng kênh liên lạc khác như gọi trực tiếp","Tin ngay vì video rất thật","Chuyển tiền trước rồi hỏi sau","Đăng công khai mọi thông tin cá nhân","Deepfake có thể giả mạo âm thanh/video."],
+  ["Tình huống","Bạn đang làm bài nghiên cứu và AI đưa ra một bài báo nghe rất thật. Nên làm gì?","Kiểm tra nguồn thật trước khi dùng hoặc trích dẫn","Dùng ngay vì AI tự tin","Bịa thêm DOI cho đầy đủ","Không cần đọc bài gốc","AI hallucination có thể tạo trích dẫn không tồn tại."],
+  ["Tình huống","Bạn dùng một đoạn ý tưởng từ sách nhưng viết lại bằng lời mình. Cần làm gì?","Vẫn trích dẫn nguồn vì ý tưởng thuộc tác giả gốc","Không cần ghi nguồn vì đã đổi lời","Chỉ đổi vài từ nữa là đủ","Đưa vào bài như ý tưởng cá nhân","Paraphrase vẫn phải ghi nguồn."],
+  ["Tình huống","Bạn muốn kiểm tra bài trước khi nộp bằng Turnitin. Điều nào đúng?","Dùng báo cáo tương đồng để xem chỗ cần sửa, không xem nó là kết luận đạo văn tự động","Xóa mọi đoạn bị tô màu dù trích dẫn đúng","Cứ tỷ lệ thấp là chắc chắn không đạo văn","Cứ tỷ lệ cao là chắc chắn gian lận","Similarity cần được đọc và diễn giải cẩn thận."],
+  ["Tình huống","Bạn làm việc nhóm nghiên cứu với nhiều tài liệu và cần tự động tạo reference list. Nên dùng gì?","Zotero hoặc Mendeley","VPN hoặc Antivirus","Screen Time hoặc Eye Comfort","Bitwarden hoặc 1Password","Zotero/Mendeley chuyên quản lý tài liệu tham khảo."],
+  ["Tình huống","Bạn cần nhớ nhiều mật khẩu mạnh khác nhau. Nên dùng gì?","Trình quản lý mật khẩu như Bitwarden, LastPass hoặc 1Password","Một mật khẩu chung cho tất cả","Ghi mật khẩu lên mạng xã hội","Gửi mật khẩu cho bạn giữ hộ","Password manager giúp tạo/lưu mật khẩu an toàn."],
+  ["Tình huống","Bạn chuẩn bị dùng Wi-Fi quán cà phê để đăng nhập tài khoản quan trọng. Nên làm gì?","Dùng VPN và tránh thao tác nhạy cảm nếu không cần thiết","Tắt antivirus","Chia sẻ mật khẩu Wi-Fi lên mạng","Tắt 2FA cho nhanh","VPN mã hóa lưu lượng trên Wi-Fi công cộng."],
+  ["Tình huống","Bạn có đồ án quan trọng chỉ lưu trong laptop. Rủi ro lớn nhất là gì?","Mất dữ liệu nếu máy hỏng hoặc bị ransomware vì không có bản sao","Bài tự động bị đạo văn","Máy tự động tăng điểm","Không thể bật Night Shift","Quy tắc 3-2-1 giúp tránh mất dữ liệu."],
+  ["Tình huống","Bạn muốn dùng AI để hỗ trợ bài luận đúng chuẩn liêm chính. Cách nào phù hợp?","Dùng AI brainstorm, sau đó tự nghiên cứu, viết, kiểm chứng và khai báo nếu cần","Yêu cầu AI viết toàn bộ rồi nộp","Dùng AI bịa số liệu khảo sát","Dùng AI paraphrase nguồn để khỏi trích dẫn","AI nên hỗ trợ tư duy, không thay thế tư duy."],
+  ["Tình huống","Bạn định nhập dữ liệu cá nhân của người tham gia khảo sát vào chatbot công khai. Điều gì cần nhớ?","Không đưa dữ liệu nhạy cảm/chưa công bố vào chatbot công khai","Cứ nhập vì AI luôn bảo mật tuyệt đối","Nhập cả số điện thoại và căn cước để AI phân tích","Không cần xin phép người tham gia","Data Privacy là nguyên tắc cốt lõi khi dùng AI."],
+  ["Tổng kết","Nội dung nào KHÔNG thuộc Chương 6?","Dựng hoạt hình 3D bằng Three.js","Phishing và ransomware","Liêm chính học thuật và đạo văn","AI có trách nhiệm và pháp luật dữ liệu","Chương 6 không tập trung vào lập trình đồ họa 3D."],
+  ["Tổng kết","Bộ kỹ năng Chương 6 hữu ích trong khoảng thời gian nào?","Trong đại học và cả sự nghiệp/cuộc sống sau này","Chỉ trong một bài kiểm tra","Chỉ khi dùng Turnitin","Chỉ khi học online","Tóm tắt chương gọi đây là hành trang lâu dài."],
+  ["Tổng kết","Điểm chung giữa an toàn số và liêm chính học thuật là gì?","Đều đòi hỏi trách nhiệm, tỉnh táo và đạo đức khi sống trong môi trường số","Đều chỉ là vấn đề kỹ thuật máy tính","Đều không liên quan con người","Đều chỉ cần phần mềm tự động xử lý","Chương 6 nhấn mạnh năng lực, bản lĩnh và đạo đức số."]
+].map(([category, q, correctAnswer, wrongA, wrongB, wrongC, explanation]) => ({
+  category,
+  q,
+  options: [correctAnswer, wrongA, wrongB, wrongC],
+  correct: 0,
+  explanation
+}));
+
+const quizQuestionsUnique = [
+  ["Elicit thường được dùng để làm gì?","Thiết kế logo và chỉnh sửa ảnh","Tìm kiếm, tóm tắt và hỗ trợ nghiên cứu tài liệu học thuật","Tính toán đại số phức tạp theo từng bước","Dịch video và tạo phụ đề tự động","B","Elicit thường được dùng để tìm kiếm, tóm tắt và hỗ trợ nghiên cứu tài liệu học thuật."],
+  ["Công cụ nào phù hợp nhất để hỗ trợ tìm bài báo khoa học và làm literature review?","QuillBot","Elicit","Canva","Grammarly","B","Elicit phù hợp cho việc tìm bài báo khoa học và hỗ trợ literature review."],
+  ["QuillBot chủ yếu dùng để làm gì?","Tạo mã lập trình backend","Paraphrase, viết lại câu, kiểm tra ngữ pháp và cải thiện văn bản","Tìm kiếm paper học thuật chuyên sâu","Tính toán vật lý và toán học","B","QuillBot nổi bật ở paraphrase, viết lại câu, kiểm tra ngữ pháp và cải thiện văn bản."],
+  ["Khi muốn viết lại một đoạn văn cho tự nhiên hơn, công cụ nào phù hợp nhất?","QuillBot","Wolfram Alpha","Google Scholar","Excel","A","QuillBot là lựa chọn phù hợp khi cần viết lại đoạn văn tự nhiên hơn."],
+  ["Iterative prompting là gì?","Viết một prompt thật dài và không sửa nữa","Hỏi AI một lần rồi dùng ngay kết quả","Đưa prompt, xem kết quả, chỉnh prompt và lặp lại đến khi đạt yêu cầu","Chỉ dùng AI để dịch văn bản","C","Iterative prompting là quá trình lặp lại việc thử, xem kết quả và chỉnh prompt."],
+  ["Điểm cốt lõi của iterative prompting là gì?","Lặp lại quá trình cải thiện prompt và kết quả","Không cần kiểm tra câu trả lời của AI","Chỉ dùng câu hỏi có/không","Không được thay đổi yêu cầu ban đầu","A","Cốt lõi là lặp lại để cải thiện prompt và kết quả đầu ra."],
+  ["Khi người dùng dùng AI để hỗ trợ ra quyết định, yếu tố quan trọng nhất là gì?","Dựa vào cảm xúc của AI","Dựa vào dữ liệu, thông tin và tri thức phù hợp","Dựa vào câu trả lời dài nhất","Dựa vào giao diện đẹp của AI","B","Ra quyết định với AI cần dựa trên dữ liệu, thông tin và tri thức phù hợp."],
+  ["Dữ liệu khác thông tin ở điểm nào?","Dữ liệu là số liệu thô, thông tin là dữ liệu đã được xử lý có ý nghĩa","Dữ liệu luôn đúng, thông tin luôn sai","Dữ liệu chỉ dùng trong văn học","Thông tin là thứ chưa được xử lý","A","Dữ liệu là đầu vào thô; thông tin là dữ liệu đã được xử lý và có ý nghĩa."],
+  ["Tri thức trong quá trình ra quyết định có thể hiểu là gì?","Dữ liệu chưa được xử lý","Tập tin được lưu trong máy tính","Hiểu biết được rút ra từ thông tin để áp dụng vào quyết định","Một loại bộ nhớ máy tính","C","Tri thức là hiểu biết rút ra từ thông tin để áp dụng vào quyết định."],
+  ["CTA là viết tắt của gì?","Call To Action","Computer Text Analysis","Creative Tool Assistant","Content Type Algorithm","A","CTA là viết tắt của Call To Action."],
+  ["CTA có vai trò gì trong nội dung?","Chỉ để trang trí cuối bài","Kêu gọi người đọc thực hiện hành động cụ thể","Thay thế toàn bộ nội dung chính","Là phần bắt buộc chỉ có trong bài nghiên cứu","B","CTA dùng để kêu gọi người đọc thực hiện một hành động cụ thể."],
+  ["Việc xác định CTA nằm ở giai đoạn nào để đảm bảo tính chiến lược?","Chỉ ở giai đoạn xuất bản","Giai đoạn lập kế hoạch / chiến lược nội dung","Sau khi nội dung đã đăng được một tháng","Không cần xác định giai đoạn","B","CTA nên được xác định từ giai đoạn lập kế hoạch hoặc chiến lược nội dung."],
+  ["Vì sao nên xác định CTA từ giai đoạn lập kế hoạch?","Vì CTA cần gắn với mục tiêu nội dung và hành động mong muốn","Vì CTA chỉ dùng để tăng số chữ","Vì CTA không liên quan đến chiến lược","Vì CTA luôn giống nhau ở mọi bài viết","A","CTA cần gắn với mục tiêu nội dung và hành động mong muốn của người đọc."],
+  ["Xác định tone giọng và phong cách cho AI thuộc tiêu chí nào trong prompt?","Style / tone / voice","Storage","RAM","Citation","A","Tone giọng và phong cách thuộc nhóm style, tone hoặc voice trong prompt."],
+  ["Nếu trong đáp án chỉ có “context” và “role”, yêu cầu về tone giọng thường gần với tiêu chí nào hơn?","Context / instruction","Role duy nhất","Hardware","Dataset","A","Yêu cầu về tone giọng thường gần với phần context hoặc instruction hơn là role thuần túy."],
+  ["Role trong prompt thường có nghĩa là gì?","AI cần trả lời dài bao nhiêu chữ","AI đóng vai ai, ví dụ giáo viên, chuyên gia marketing, cố vấn học tập","AI lưu dữ liệu ở đâu","AI dùng font chữ nào","B","Role là vai mà AI cần đảm nhận khi trả lời."],
+  ["Tone trong prompt là gì?","Tốc độ xử lý của máy tính","Giọng điệu trả lời, ví dụ thân thiện, chuyên nghiệp, hài hước, nghiêm túc","Dung lượng ổ cứng","Một loại công cụ tìm kiếm học thuật","B","Tone là giọng điệu trả lời mà người dùng muốn AI thể hiện."],
+  ["RAM là gì?","Bộ nhớ tạm thời dùng khi máy đang chạy chương trình","Bộ nhớ lưu trữ lâu dài như SSD/HDD","Công cụ viết lại văn bản","Công cụ tìm bài báo khoa học","A","RAM là bộ nhớ tạm thời dùng khi máy đang chạy chương trình."],
+  ["Storage là gì?","Bộ nhớ tạm mất dữ liệu khi tắt máy","Bộ nhớ lưu trữ lâu dài như SSD hoặc HDD","Nơi xử lý prompt của AI","Công cụ paraphrase văn bản","B","Storage là bộ nhớ lưu trữ lâu dài như SSD hoặc HDD."],
+  ["Điểm khác biệt đúng giữa RAM và Storage là gì?","RAM lưu lâu dài, Storage mất dữ liệu khi tắt máy","RAM nhanh và tạm thời, Storage lưu lâu dài","RAM là phần mềm, Storage là mạng Internet","RAM chỉ dùng để lưu ảnh, Storage chỉ dùng để chạy app","B","RAM nhanh và tạm thời, còn Storage lưu trữ dữ liệu lâu dài."],
+  ["Khi tắt máy, dữ liệu trong RAM thường sẽ thế nào?","Vẫn lưu mãi mãi","Bị mất","Tự chuyển thành file PDF","Tự sao lưu lên Google Scholar","B","RAM là bộ nhớ tạm nên dữ liệu thường bị mất khi tắt máy."],
+  ["Khi tắt máy, dữ liệu trong Storage thường sẽ thế nào?","Vẫn được lưu nếu chưa bị xóa","Mất hoàn toàn giống RAM","Biến thành bộ nhớ tạm","Không thể mở lại","A","Dữ liệu trong Storage vẫn được lưu nếu chưa bị xóa hoặc hỏng."],
+  ["Công cụ nào phù hợp nhất để brainstorm nhờ khả năng ngôn ngữ linh hoạt?","Wolfram Alpha","Google Scholar","ChatGPT","Máy tính bỏ túi","C","ChatGPT phù hợp để brainstorm nhờ khả năng ngôn ngữ linh hoạt."],
+  ["Vì sao ChatGPT phù hợp để brainstorm ý tưởng?","Vì mạnh về ngôn ngữ tự nhiên, mở rộng ý tưởng và diễn đạt linh hoạt","Vì chỉ dùng để tính tích phân","Vì chỉ tìm được bài báo học thuật","Vì không thể sáng tạo nội dung","A","ChatGPT mạnh về ngôn ngữ tự nhiên, mở rộng ý tưởng và diễn đạt linh hoạt."],
+  ["Wolfram Alpha phù hợp nhất cho việc nào?","Brainstorm slogan quảng cáo","Tính toán, toán học, khoa học và dữ liệu có cấu trúc","Viết lại câu văn cho mượt hơn","Tìm kiếm bài báo học thuật như Google Scholar","B","Wolfram Alpha phù hợp với tính toán, khoa học và dữ liệu có cấu trúc."],
+  ["Google Scholar chủ yếu dùng để làm gì?","Tìm kiếm tài liệu học thuật, bài báo khoa học, luận văn và trích dẫn","Chỉnh sửa ảnh","Tăng RAM cho máy tính","Viết lại câu văn theo nhiều phong cách","A","Google Scholar dùng để tìm kiếm tài liệu học thuật, bài báo khoa học, luận văn và trích dẫn."],
+  ["Nếu muốn tìm nguồn học thuật để trích dẫn trong bài nghiên cứu, nên dùng công cụ nào?","Google Scholar","QuillBot","Paint","Calculator","A","Google Scholar phù hợp để tìm nguồn học thuật phục vụ trích dẫn."],
+  ["Nếu muốn paraphrase một đoạn văn tiếng Anh, nên dùng công cụ nào?","Elicit","QuillBot","Wolfram Alpha","Google Scholar","B","QuillBot phù hợp để paraphrase văn bản tiếng Anh."],
+  ["Nếu muốn tìm và tóm tắt nhiều bài nghiên cứu theo một câu hỏi nghiên cứu, nên dùng công cụ nào?","Elicit","QuillBot","RAM","Storage","A","Elicit phù hợp để tìm và tóm tắt nhiều bài nghiên cứu theo câu hỏi nghiên cứu."],
+  ["Câu nào mô tả đúng nhất về việc dùng AI hiệu quả?","Chỉ cần hỏi một lần, không cần kiểm tra","Cần cung cấp mục tiêu, bối cảnh, vai trò, tone và điều chỉnh qua nhiều vòng nếu cần","Không cần dữ liệu hay thông tin","Prompt càng mơ hồ càng tốt","B","Dùng AI hiệu quả cần mục tiêu, bối cảnh, vai trò, tone và điều chỉnh qua nhiều vòng khi cần."],
+  ["Dùng AI tạo ảnh “Mickey uống cà phê” có thể vi phạm vấn đề gì?","Vi phạm bản quyền hoặc quyền sở hữu trí tuệ vì Mickey là nhân vật được bảo hộ","Vi phạm quyền riêng tư cá nhân","Vi phạm an toàn dữ liệu cá nhân","Vi phạm quy định về định dạng ảnh","A","Tạo hoặc sử dụng hình ảnh nhân vật được bảo hộ như Mickey có thể liên quan đến bản quyền hoặc quyền sở hữu trí tuệ."],
+  ["Nội dung nào sau đây thuộc nhóm “tài nguyên và nội dung số”?","Internet, ebook, điện thoại, laptop","Bàn ghế, sách giấy, bảng viết","Máy khoan, tua vít, dây điện","Bút bi, thước kẻ, giấy kiểm tra","A","Trong các lựa chọn, Internet và ebook thuộc nhóm tài nguyên hoặc nội dung số."],
+  ["Khi đánh giá tên miền “tin-tuc-24.co”, người dùng nên có thái độ nào?","Tin tưởng hoàn toàn vì có chữ “tin tức”","Cảnh giác vì tên miền có thể là giả mạo hoặc gây nhầm lẫn","Chắc chắn đây là trang báo chính thống","Không cần kiểm tra vì đuôi “.co” luôn an toàn","B","Tên miền lạ hoặc dễ gây nhầm lẫn cần được kiểm tra trước khi tin tưởng."],
+  ["Việc dùng ChatGPT sao chép y nguyên, không chỉnh sửa gì rồi nộp bài được xem là gì?","Học tập chủ động","Trích dẫn hợp lệ","Gian lận học thuật / gian lận hợp đồng","Tối ưu hóa thời gian hợp pháp tuyệt đối","C","Sao chép nguyên văn nội dung AI và nộp như bài của mình là hành vi không trung thực học thuật."],
+  ["Cơ chế tạo ảnh của DALL·E được hiểu đúng nhất là gì?","Sao chép nguyên ảnh có sẵn trên Internet","Học mối liên hệ giữa văn bản và hình ảnh để sinh ra điểm ảnh mới","Chỉ ghép các ảnh có sẵn lại với nhau","Tìm kiếm ảnh trên Google rồi chỉnh màu","B","DALL·E tạo ảnh mới dựa trên các mối liên hệ đã học giữa mô tả văn bản và đặc điểm hình ảnh."],
+  ["Một bạn lấy thông tin từ ChatGPT và trích dẫn nguồn chỉ là “ChatGPT”. Lỗi chính là gì?","Thiếu tên nhà phát hành, năm và ngày truy cập","Thiếu màu nền của giao diện ChatGPT","Thiếu số lượng câu hỏi đã nhập","Thiếu tên máy tính đang sử dụng","A","Khi quy định yêu cầu trích dẫn AI, cần ghi đủ thông tin như công cụ, nhà phát hành và thời gian truy cập."],
+  ["Dữ liệu, thông tin, tri thức thường được trình bày theo dạng hình học nào?","Hình tròn đồng tâm","Hình vuông ma trận","Kim tự tháp phân cấp","Đường thẳng thời gian","C","Mô hình dữ liệu, thông tin, tri thức thường được biểu diễn như một kim tự tháp phân cấp."],
+  ["Học sinh F sử dụng toàn bộ AI để làm bài thay mình có thể bị xem là vi phạm gì?","Vi phạm hợp đồng / gian lận hợp đồng","Vi phạm bản quyền phần cứng","Vi phạm lỗi mạng Internet","Vi phạm quyền sở hữu laptop","A","Dùng AI làm thay toàn bộ bài rồi nộp như của mình có thể bị xem là gian lận hợp đồng."],
+  ["Vì sao việc tạo ảnh nhân vật nổi tiếng như Mickey bằng AI có thể nhạy cảm về pháp lý?","Vì nhân vật đó có thể thuộc quyền sở hữu trí tuệ của một công ty","Vì AI không thể tạo ảnh màu","Vì ảnh hoạt hình luôn bị cấm tuyệt đối","Vì cà phê là sản phẩm thương mại","A","Nhân vật nổi tiếng có thể được bảo hộ bởi quyền sở hữu trí tuệ."],
+  ["Đâu là ví dụ đúng về tài nguyên số?","Ebook và dữ liệu trên Internet","Ghế nhựa và bảng đen","Sách giấy và bút chì","Phòng học và máy chiếu hỏng","A","Ebook và dữ liệu trên Internet là ví dụ về tài nguyên số."],
+  ["Khi thấy một tên miền lạ có dạng gần giống trang tin tức, người dùng nên làm gì?","Kiểm tra độ tin cậy, nguồn gốc và dấu hiệu giả mạo","Chia sẻ ngay vì có vẻ nóng hổi","Nhập thông tin cá nhân để xác minh","Tin tuyệt đối nếu giao diện đẹp","A","Người dùng nên kiểm tra độ tin cậy và dấu hiệu giả mạo trước khi chia sẻ hoặc nhập thông tin."],
+  ["Hành vi nào sau đây thể hiện việc dùng AI không trung thực trong học tập?","Dùng AI gợi ý ý tưởng rồi tự viết lại","Dùng AI kiểm tra lỗi chính tả","Sao chép nguyên văn bài do AI viết và nộp như bài của mình","Hỏi AI giải thích một khái niệm khó","C","Sao chép nguyên văn bài do AI viết và nộp như bài của mình là dùng AI không trung thực."],
+  ["DALL·E tạo ảnh mới dựa trên yếu tố nào?","Mối liên hệ đã học giữa mô tả bằng chữ và đặc điểm hình ảnh","Mã số căn cước của người dùng","Tốc độ mạng của máy tính","Số lượng tab trình duyệt đang mở","A","DALL·E sinh ảnh dựa trên mối liên hệ đã học giữa mô tả văn bản và hình ảnh."],
+  ["Trích dẫn nguồn ChatGPT cần chú ý điều gì?","Cần ghi rõ công cụ, nhà phát hành, thời gian hoặc ngày truy cập nếu quy định yêu cầu","Chỉ cần ghi “AI” là đủ","Không bao giờ cần trích dẫn AI","Chỉ cần ghi tên người dùng ChatGPT","A","Trích dẫn ChatGPT cần tuân theo quy định, thường gồm công cụ, nhà phát hành và thời gian truy cập."],
+  ["Mô hình “dữ liệu → thông tin → tri thức” thường thể hiện điều gì?","Sự phân cấp từ dữ kiện thô đến hiểu biết có ý nghĩa","Quá trình tăng dung lượng pin","Cách máy tính lưu ảnh","Cách đặt tên miền website","A","Mô hình này thể hiện sự phát triển từ dữ liệu thô đến thông tin và tri thức có ý nghĩa."],
+  ["“Gian lận hợp đồng” trong học tập có thể hiểu là gì?","Nhờ hoặc dùng công cụ khác làm thay phần lớn/toàn bộ bài rồi nộp như của mình","Tự học và tự làm bài","Đọc tài liệu tham khảo có trích dẫn","Hỏi giáo viên để hiểu đề bài","A","Gian lận hợp đồng là để người hoặc công cụ khác làm thay bài rồi nộp như của mình."],
+  ["Câu nào mô tả đúng nhất rủi ro của tên miền “tin-tuc-24.co”?","Có thể cố tình tạo cảm giác giống trang tin tức để đánh lừa người đọc","Chắc chắn là trang chính phủ","Luôn đáng tin vì có số 24","Không thể là giả mạo vì có dấu gạch ngang","A","Tên miền như vậy có thể được tạo để gây nhầm lẫn và đánh lừa người đọc."],
+  ["Trong học tập, cách dùng ChatGPT nào hợp lý hơn?","Dùng để gợi ý, giải thích, sau đó tự kiểm tra và viết bằng hiểu biết của mình","Sao chép toàn bộ câu trả lời và nộp ngay","Dùng để thay hoàn toàn quá trình học","Không cần đọc lại nội dung AI tạo ra","A","Cách dùng hợp lý là dùng AI để hỗ trợ, sau đó tự kiểm tra và viết bằng hiểu biết của mình."],
+  ["Nếu một bài làm do AI tạo toàn bộ nhưng học sinh đứng tên mình, vấn đề chính là gì?","Thiếu tính trung thực học thuật","Tăng độ sáng màn hình","Sai định dạng bàn phím","Lỗi phần mềm trình duyệt","A","Đứng tên bài do AI làm toàn bộ gây vấn đề về trung thực học thuật."],
+  ["Phát biểu nào đúng về hình ảnh do AI tạo ra?","AI có thể tạo ảnh mới từ mô tả, nhưng vẫn cần chú ý bản quyền, nhân vật/thương hiệu và mục đích sử dụng","Ảnh AI luôn không liên quan đến pháp luật","Ảnh AI luôn được phép thương mại hóa","Ảnh AI chắc chắn là ảnh chụp thật","A","Ảnh AI có thể được tạo từ mô tả nhưng vẫn cần chú ý bản quyền, thương hiệu và mục đích sử dụng."]
+].map(([q, optionA, optionB, optionC, optionD, answer, explanation]) => ({
+  category: "Các câu hỏi độc lạ",
+  q,
+  options: [optionA, optionB, optionC, optionD],
+  correct: { A: 0, B: 1, C: 2, D: 3 }[answer],
+  explanation
+}));
+
+const REVIEW_QUESTIONS_PER_PART = 9;
+const REVIEW_UNIQUE_QUESTIONS = 5;
+
+function shuffleQuestions(questions) {
+  const shuffled = [...questions];
+  for (let i = shuffled.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+function pickRandomQuestions(questions, count) {
+  return shuffleQuestions(questions).slice(0, Math.min(count, questions.length));
+}
+
+function tagReviewQuestion(question, partName) {
+  return {
+    ...question,
+    category: `${partName} - ${question.category}`
+  };
+}
+
+function buildReviewQuestions(parts, uniqueQuestions) {
+  const regularQuestions = parts.flatMap(part => {
+    return pickRandomQuestions(part.questions, REVIEW_QUESTIONS_PER_PART)
+      .map(question => tagReviewQuestion(question, part.title));
+  });
+  const randomUniqueQuestions = pickRandomQuestions(uniqueQuestions, REVIEW_UNIQUE_QUESTIONS);
+
+  return shuffleQuestions([...regularQuestions, ...randomUniqueQuestions]);
+}
+
+const reviewQuestionParts = [
+  { title: "Chương 1", questions: quizQuestions },
+  { title: "Chương 2", questions: quizQuestionsChapter2 },
+  { title: "Chương 3", questions: quizQuestionsChapter3 },
+  { title: "Chương 4", questions: quizQuestionsChapter4 },
+  { title: "Chương 5", questions: quizQuestionsChapter5 },
+  { title: "Chương 6", questions: quizQuestionsChapter6 }
+];
+
+const quizQuestionsReview = buildReviewQuestions(reviewQuestionParts, quizQuestionsUnique);
+
+const quizChapters = [
+  {
+    id: "chuong-1",
+    title: "Chương 1",
+    name: "Máy tính và các thiết bị ngoại vi",
+    source: "tmpfqjivc_chuong-1.pdf",
+    status: "ready",
+    questions: quizQuestions
+  },
+  {
+    id: "chuong-2",
+    title: "Chương 2",
+    name: "Khai thác dữ liệu và thông tin",
+    source: "tmpca1a2g_chuong-2.pdf",
+    status: "ready",
+    questions: quizQuestionsChapter2
+  },
+  {
+    id: "chuong-3",
+    title: "Chương 3",
+    name: "Tổng quan về trí tuệ nhân tạo",
+    source: "tmpmwchwk_chuong-3.pdf",
+    status: "ready",
+    questions: quizQuestionsChapter3
+  },
+  {
+    id: "on-dinh-dang-tep",
+    title: "Ôn tập",
+    name: "Định dạng tệp Chương 2",
+    source: "tmpca1a2g_chuong-2.pdf",
+    status: "ready",
+    questions: quizQuestionsFileFormats
+  },
+  {
+    id: "chuong-4",
+    title: "Chương 4",
+    name: "Giao tiếp và hợp tác trong môi trường số",
+    source: "tmpvyasoq_chuong-4.pdf",
+    status: "ready",
+    questions: quizQuestionsChapter4
+  },
+  {
+    id: "chuong-5",
+    title: "Chương 5",
+    name: "Sáng tạo nội dung số",
+    source: "tmptfxedo_chuong-5.pdf",
+    status: "ready",
+    questions: quizQuestionsChapter5
+  },
+  {
+    id: "chuong-6",
+    title: "Chương 6",
+    name: "An toàn và liêm chính học thuật trong môi trường số",
+    source: "tmpndghko_chuong-6.pdf",
+    status: "ready",
+    questions: quizQuestionsChapter6
+  },
+  {
+    id: "de-on-tong-hop",
+    title: "Ôn tập",
+    name: "Đề ôn tổng hợp",
+    source: "generated",
+    status: "ready",
+    questions: quizQuestionsReview
+  },
+  {
+    id: "cac-cau-hoi-doc-la",
+    title: "Ôn tập",
+    name: "Các câu hỏi độc lạ",
+    source: "pasted-text.txt",
+    status: "ready",
+    questions: quizQuestionsUnique
+  }
+];
