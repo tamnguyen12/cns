@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thi trắc nghiệm Chương 1</title>
+  <link rel="stylesheet" href="styles.css?v=16">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Ngân hàng trắc nghiệm</p>
+        <h1>Tin học đại cương</h1>
+        <p class="subtitle">Chọn chương, làm bài trực tiếp, xem giải thích ngay sau khi bấm đáp án.</p>
+      </div>
+      <img src="assets/tech-learning-banner.png" alt="Minh họa môi trường học tập công nghệ">
+    </section>
+
+    <section class="workspace">
+      <aside class="chapter-panel">
+        <div class="panel-title">
+          <strong>Danh sách chương</strong>
+          <span id="chapterCount"></span>
+        </div>
+        <div id="chapterList" class="chapter-list"></div>
+        <section class="pdf-panel" aria-label="Tài liệu PDF">
+          <div class="panel-title pdf-title">
+            <strong>Tài liệu PDF</strong>
+            <span>6 file</span>
+          </div>
+          <div class="pdf-list">
+            <a href="pdfs/chuong-1.pdf" target="_blank" rel="noopener">PDF Chương 1</a>
+            <a href="pdfs/chuong-2.pdf" target="_blank" rel="noopener">PDF Chương 2</a>
+            <a href="pdfs/chuong-3.pdf" target="_blank" rel="noopener">PDF Chương 3</a>
+            <a href="pdfs/chuong-4.pdf" target="_blank" rel="noopener">PDF Chương 4</a>
+            <a href="pdfs/chuong-5.pdf" target="_blank" rel="noopener">PDF Chương 5</a>
+            <a href="pdfs/chuong-6.pdf" target="_blank" rel="noopener">PDF Chương 6</a>
+          </div>
+        </section>
+      </aside>
+
+      <div class="quiz-area">
+        <section class="exam-generator">
+          <div class="exam-generator-head">
+            <div>
+              <p class="eyebrow">Tạo đề thi</p>
+              <h2>Generate đề 40 câu theo mẫu</h2>
+              <p>Bấm Generate để tạo một đề 40 câu rồi làm trực tiếp bằng cách chọn A, B, C, D như các chương.</p>
+            </div>
+            <div class="exam-actions">
+              <button id="generateExamBtn" type="button">Generate đề thi</button>
+            </div>
+          </div>
+          <div id="examOutput" class="exam-output" hidden></div>
+        </section>
+
+        <section class="chapter-summary">
+          <div>
+            <p id="activeChapterTitle" class="eyebrow">Chương 1</p>
+            <h2 id="activeChapterName"></h2>
+          </div>
+          <div class="coverage-note">
+            <strong id="activeQuestionTotal"></strong>
+            <span>câu trắc nghiệm</span>
+          </div>
+        </section>
+
+        <section class="toolbar" aria-label="Điều khiển bài thi">
+          <div class="stat">
+            <span id="answeredCount">0</span>
+            <small>đã trả lời</small>
+          </div>
+          <div class="stat">
+            <span id="scoreCount">0</span>
+            <small>đúng</small>
+          </div>
+          <div class="progress-wrap" aria-label="Tiến độ">
+            <div id="progressBar"></div>
+          </div>
+          <button id="resetBtn" type="button">Làm lại</button>
+        </section>
+
+        <section class="quiz-layout">
+          <aside class="question-map">
+            <div class="map-header">
+              <strong>Danh sách câu</strong>
+              <span id="totalCount">100 câu</span>
+            </div>
+            <div id="questionGrid" class="question-grid"></div>
+          </aside>
+
+          <article class="question-panel">
+            <div class="question-top">
+              <span id="categoryLabel"></span>
+              <span id="questionIndex"></span>
+            </div>
+            <h2 id="questionText"></h2>
+            <div id="options" class="options"></div>
+            <div id="explanation" class="explanation" hidden></div>
+            <div class="nav-row">
+              <button id="prevBtn" type="button">Câu trước</button>
+              <button id="nextBtn" type="button">Câu sau</button>
+            </div>
+          </article>
+        </section>
+        <div id="emptyState" class="empty-state" hidden>
+          <strong>Chương này chưa có câu hỏi.</strong>
+          <span>Khi bạn thêm PDF chương mới, dữ liệu câu hỏi có thể được đưa vào `quiz-data.js` theo cấu trúc sẵn có.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="quiz-data.js?v=16"></script>
+  <script src="app.js?v=16"></script>
+</body>
+</html>
